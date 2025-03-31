@@ -1,6 +1,6 @@
 
-import React, { useState, useRef, MouseEvent } from "react";
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import React, { useState, useRef, MouseEvent, useCallback } from "react";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, type CarouselApi } from "@/components/ui/carousel";
 
 interface CardHoverProps {
   children: React.ReactNode;
@@ -63,8 +63,25 @@ const Card3DHover: React.FC<CardHoverProps> = ({ children, className = "", isAct
 
 export const ResultsSection: React.FC = () => {
   const [activeCard, setActiveCard] = useState(0);
+  const [api, setApi] = useState<CarouselApi | null>(null);
   const profileCards = [1, 2, 3, 4];
   const statsCards = [1, 2, 3, 4];
+
+  // Update the active card when the carousel changes
+  useCallback(() => {
+    if (!api) return;
+    
+    const handleSelect = () => {
+      setActiveCard(api.selectedScrollSnap());
+    };
+
+    api.on("select", handleSelect);
+    
+    // Cleanup
+    return () => {
+      api.off("select", handleSelect);
+    };
+  }, [api]);
 
   return (
     <section className="bg-[#181615] flex w-full flex-col items-center px-20 max-md:max-w-full max-md:px-5">
@@ -76,12 +93,7 @@ export const ResultsSection: React.FC = () => {
               loop: true,
               align: "start"
             }}
-            onSelect={(api) => {
-              if (api) {
-                const selectedIndex = api.selectedScrollSnap();
-                setActiveCard(selectedIndex);
-              }
-            }}
+            setApi={setApi}
           >
             <CarouselContent>
               {profileCards.map((_, i) => (
