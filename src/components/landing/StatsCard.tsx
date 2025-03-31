@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useState, useRef, MouseEvent } from "react";
 
 interface StatsCardProps {
   title: string;
@@ -11,8 +12,47 @@ export const StatsCard: React.FC<StatsCardProps> = ({
   value,
   percentage,
 }) => {
+  const [rotation, setRotation] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    if (cardRef.current) {
+      const rect = cardRef.current.getBoundingClientRect();
+      
+      // Calcular la posición del mouse relativa a la tarjeta
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      // Calcular la rotación basada en la posición del mouse
+      const rotateX = ((y / rect.height) - 0.5) * -10;
+      const rotateY = ((x / rect.width) - 0.5) * 10;
+      
+      setRotation({ x: rotateX, y: rotateY });
+    }
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    setRotation({ x: 0, y: 0 });
+  };
+
   return (
-    <div className="border shadow-[3px_5px_20px_0px_rgba(0,0,0,0.50)] bg-[#181615] w-full mx-auto px-7 py-6 rounded-[20px] border-solid border-[#29292E] max-md:px-5">
+    <div
+      ref={cardRef}
+      className="border shadow-[3px_5px_20px_0px_rgba(0,0,0,0.50)] bg-[#181615] w-full mx-auto px-7 py-6 rounded-[20px] border-solid border-[#29292E] max-md:px-5 transition-transform duration-200 hover:shadow-[0px_10px_25px_rgba(0,0,0,0.6)] relative"
+      style={{
+        transform: isHovered ? `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg) scale(1.03)` : 'perspective(1000px) rotateX(0) rotateY(0)',
+        transition: 'all 0.3s ease-out'
+      }}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="items-center content-center flex-wrap bg-[#181615] flex w-full gap-2 rounded-lg">
         <div className="self-stretch text-base text-white font-normal flex-1 shrink basis-4 my-auto rounded-lg">
           {title}
