@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Avatar } from '../components/ui/avatar';
+import { Avatar, AvatarImage, AvatarFallback } from '../components/ui/avatar';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Link } from 'react-router-dom';
@@ -74,8 +75,8 @@ const ConsultarMiCrecimiento = () => {
             <div className="absolute right-8 bottom-[-40px] bg-[#4f1092] rounded-xl overflow-hidden shadow-lg w-[180px] z-20">
               <div className="p-3 flex flex-col items-center">
                 <Avatar className="w-14 h-14 border-2 border-white mb-1">
-                  <Avatar.Image src="/lovable-uploads/444ad407-0b2e-40b7-8274-d0fb9db9bb5a.png" alt="Profile" />
-                  <Avatar.Fallback>SA</Avatar.Fallback>
+                  <AvatarImage src="/lovable-uploads/444ad407-0b2e-40b7-8274-d0fb9db9bb5a.png" alt="Profile" />
+                  <AvatarFallback>SA</AvatarFallback>
                 </Avatar>
                 <h3 className="text-white text-sm font-medium">socialai_user</h3>
                 <p className="text-gray-300 text-xs">Lifestyle Influencer</p>
@@ -165,8 +166,8 @@ const ConsultarMiCrecimiento = () => {
             <div className="absolute right-8 bottom-[-40px] bg-[#4f1092] rounded-xl overflow-hidden shadow-lg w-[180px] z-20">
               <div className="p-3 flex flex-col items-center">
                 <Avatar className="w-14 h-14 border-2 border-white mb-1">
-                  <Avatar.Image src="/placeholder.svg?height=56&width=56" alt="Profile" />
-                  <Avatar.Fallback>NK</Avatar.Fallback>
+                  <AvatarImage src="/placeholder.svg?height=56&width=56" alt="Profile" />
+                  <AvatarFallback>NK</AvatarFallback>
                 </Avatar>
                 <h3 className="text-white text-sm font-medium">nkchaudhary01</h3>
                 <p className="text-gray-300 text-xs">Wildlife Photographer</p>
@@ -299,8 +300,8 @@ const ConsultarMiCrecimiento = () => {
             <div className="absolute right-8 bottom-[-40px] bg-[#4f1092] rounded-xl overflow-hidden shadow-lg w-[180px] z-20">
               <div className="p-3 flex flex-col items-center">
                 <Avatar className="w-14 h-14 border-2 border-white mb-1">
-                  <Avatar.Image src="/placeholder.svg?height=56&width=56" alt="Profile" />
-                  <Avatar.Fallback>NK</Avatar.Fallback>
+                  <AvatarImage src="/placeholder.svg?height=56&width=56" alt="Profile" />
+                  <AvatarFallback>NK</AvatarFallback>
                 </Avatar>
                 <h3 className="text-white text-sm font-medium">nkchaudhary01</h3>
                 <p className="text-gray-300 text-xs">Wildlife Photographer</p>

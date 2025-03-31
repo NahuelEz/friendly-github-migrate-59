@@ -1,5 +1,7 @@
+
 import React, { useState, useRef, MouseEvent } from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
 interface ProfileCardProps {
   username: string;
   profession: string;
@@ -8,6 +10,7 @@ interface ProfileCardProps {
   avgLikes: string;
   profileImage?: string;
 }
+
 export const ProfileCard: React.FC<ProfileCardProps> = ({
   username,
   profession,
@@ -22,6 +25,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
   });
   const [isHovered, setIsHovered] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
+
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     if (cardRef.current) {
       const rect = cardRef.current.getBoundingClientRect();
@@ -39,9 +43,11 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
       });
     }
   };
+
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
+
   const handleMouseLeave = () => {
     setIsHovered(false);
     setRotation({
@@ -49,6 +55,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
       y: 0
     });
   };
+
   return <div ref={cardRef} className="bg-[#5D27A3] rounded-lg shadow-lg p-5 flex flex-col items-center transition-all duration-300" style={{
     transform: isHovered ? `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg) scale(1.03)` : 'perspective(1000px) rotateX(0) rotateY(0)',
     transition: 'all 0.3s ease-out',
@@ -56,7 +63,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
   }} onMouseMove={handleMouseMove} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       {/* Profile Image */}
       <Avatar className="w-20 h-20 border-2 border-white">
-        
+        {profileImage && <AvatarImage src={profileImage} alt={username} />}
         <AvatarFallback className="bg-purple-300 text-purple-800">{username.slice(0, 2).toUpperCase()}</AvatarFallback>
       </Avatar>
       
@@ -80,4 +87,5 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
       </div>
     </div>;
 };
+
 export default ProfileCard;
