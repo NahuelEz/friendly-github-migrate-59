@@ -33,7 +33,7 @@ export const InstagramSearchBar: React.FC<InstagramSearchBarProps> = ({
           type="submit" 
           className="text-white grow shrink w-[225px] cursor-pointer"
         >
-          | Consultar mi crecimiento
+          |
         </button>
       </div>
     </form>
