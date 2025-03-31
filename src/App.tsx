@@ -6,6 +6,7 @@ import NotFound from './pages/NotFound';
 import Pricing from './pages/Pricing';
 import CaseStudies from './pages/CaseStudies';
 import ArticulosDeInteres from './pages/ArticulosDeInteres';
+import ConsultarMiCrecimiento from './pages/ConsultarMiCrecimiento';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/articulos-de-interes" element={<ArticulosDeInteres />} />
+      <Route path="/consultar-mi-crecimiento" element={<ConsultarMiCrecimiento />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
