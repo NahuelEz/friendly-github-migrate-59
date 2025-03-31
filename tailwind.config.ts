@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -89,7 +90,11 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+			},
+			fontFamily: {
+				'formula': ['Formula Condensed', 'sans-serif'],
+				'formula-condensed': ['"Formula Condensed-Regular"', 'Helvetica', 'sans-serif'],
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
