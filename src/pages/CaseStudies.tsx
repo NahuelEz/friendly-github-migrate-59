@@ -1,9 +1,11 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import ProfileCard from '@/components/landing/ProfileCard';
+
 const CaseStudies = () => {
   return <div className="flex flex-col min-h-screen">
       {/* Header */}
@@ -62,37 +64,58 @@ const CaseStudies = () => {
             <CarouselContent>
               {/* Profile Card 1 - Purple */}
               <CarouselItem className="md:basis-1/4">
-                <div className="bg-purple-800 rounded-lg overflow-hidden">
-                  <ProfileCard username="nickoshandy01" profession="Wildlife Photographer" followers="39,389" followersGained="39,389" avgLikes="1,800+" />
-                </div>
+                <ProfileCard 
+                  username="nkchaudhary01" 
+                  profession="Wildlife Photographer" 
+                  followers="511k" 
+                  followersGained="39,389" 
+                  avgLikes="1,800+" 
+                  profileImage="/lovable-uploads/165c84d8-3d2d-4ea0-9a35-f87b170fe220.png"
+                />
               </CarouselItem>
               
               {/* Profile Card 2 - Orange */}
               <CarouselItem className="md:basis-1/4">
-                <div className="bg-orange-500 rounded-lg overflow-hidden">
-                  <ProfileCard username="nickoshandy01" profession="Wildlife Photographer" followers="39,389" followersGained="39,389" avgLikes="1,800+" />
-                </div>
+                <ProfileCard 
+                  username="nkchaudhary01" 
+                  profession="Wildlife Photographer" 
+                  followers="511k" 
+                  followersGained="39,389" 
+                  avgLikes="1,800+" 
+                />
               </CarouselItem>
               
               {/* Profile Card 3 - Purple */}
               <CarouselItem className="md:basis-1/4">
-                <div className="bg-purple-800 rounded-lg overflow-hidden">
-                  <ProfileCard username="nickoshandy01" profession="Wildlife Photographer" followers="39,389" followersGained="39,389" avgLikes="1,800+" />
-                </div>
+                <ProfileCard 
+                  username="nkchaudhary01" 
+                  profession="Wildlife Photographer" 
+                  followers="511k" 
+                  followersGained="39,389" 
+                  avgLikes="1,800+" 
+                />
               </CarouselItem>
               
               {/* Profile Card 4 - Purple */}
               <CarouselItem className="md:basis-1/4">
-                <div className="bg-purple-800 rounded-lg overflow-hidden">
-                  <ProfileCard username="nickoshandy01" profession="Wildlife Photographer" followers="39,389" followersGained="39,389" avgLikes="1,800+" />
-                </div>
+                <ProfileCard 
+                  username="nkchaudhary01" 
+                  profession="Wildlife Photographer" 
+                  followers="511k" 
+                  followersGained="39,389" 
+                  avgLikes="1,800+" 
+                />
               </CarouselItem>
               
               {/* Additional cards for scrolling */}
               <CarouselItem className="md:basis-1/4">
-                <div className="bg-purple-800 rounded-lg overflow-hidden">
-                  <ProfileCard username="nickoshandy01" profession="Wildlife Photographer" followers="39,389" followersGained="39,389" avgLikes="1,800+" />
-                </div>
+                <ProfileCard 
+                  username="nkchaudhary01" 
+                  profession="Wildlife Photographer" 
+                  followers="511k" 
+                  followersGained="39,389" 
+                  avgLikes="1,800+" 
+                />
               </CarouselItem>
             </CarouselContent>
             <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white border-none hover:bg-orange-600 z-20" />
