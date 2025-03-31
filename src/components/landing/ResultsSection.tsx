@@ -1,5 +1,6 @@
 
 import React, { useState, useRef, MouseEvent } from "react";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 
 interface CardHoverProps {
   children: React.ReactNode;
@@ -15,11 +16,11 @@ const Card3DHover: React.FC<CardHoverProps> = ({ children, className = "" }) => 
     if (cardRef.current) {
       const rect = cardRef.current.getBoundingClientRect();
       
-      // Calcular la posición del mouse relativa a la tarjeta
+      // Calculate mouse position relative to card
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
       
-      // Calcular la rotación basada en la posición del mouse
+      // Calculate rotation based on mouse position
       const rotateX = ((y / rect.height) - 0.5) * -10;
       const rotateY = ((x / rect.width) - 0.5) * 10;
       
@@ -78,9 +79,9 @@ export const ResultsSection: React.FC = () => {
         <div className="mt-[69px] max-md:max-w-full max-md:mt-10">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
             {[1, 2, 3, 4].map(i => <div key={i} className="w-3/12 max-md:w-full max-md:ml-0">
-                <Card3DHover className="shadow-[3px_5px_20px_0px_rgba(0,0,0,0.50)] bg-white flex grow flex-col items-stretch text-6xl text-[#181615] font-normal whitespace-nowrap text-center w-full py-[60px] rounded-[20px] max-md:text-[40px] max-md:mt-5">
-                  <div className="self-center max-md:text-[40px]">39,389</div>
-                  <div className="shrink-0 h-0 mt-[43px] border-black max-md:mt-10" />
+                <Card3DHover className="shadow-[3px_5px_20px_0px_rgba(0,0,0,0.50)] bg-white flex grow flex-col items-center text-center w-full py-10 px-6 rounded-[20px] max-md:mt-5">
+                  <div className="text-[#181615] text-5xl font-bold">39,389</div>
+                  <div className="text-gray-600 text-sm mt-3">Followers Gained</div>
                 </Card3DHover>
               </div>)}
           </div>
