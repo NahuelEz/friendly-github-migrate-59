@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface InstagramSearchBarProps {
   onSearch?: (username: string) => void;
@@ -29,12 +30,15 @@ export const InstagramSearchBar: React.FC<InstagramSearchBarProps> = ({
           value={username} 
           onChange={e => setUsername(e.target.value)} 
         />
-        <button 
-          type="submit" 
-          className="text-white grow shrink w-[225px] cursor-pointer"
-        >
-          |
-        </button>
+        <div className="flex items-center">
+          <span className="text-white mx-2">|</span>
+          <Link 
+            to="/consultar-mi-crecimiento" 
+            className="text-white grow shrink w-[225px] cursor-pointer"
+          >
+            Consultar mi crecimiento
+          </Link>
+        </div>
       </div>
     </form>
   );
