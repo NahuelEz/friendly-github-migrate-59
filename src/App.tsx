@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import NotFound from './pages/NotFound';
 import Pricing from './pages/Pricing';
 import CaseStudies from './pages/CaseStudies';
+import ArticulosDeInteres from './pages/ArticulosDeInteres';
 import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/case-studies" element={<CaseStudies />} />
+      <Route path="/articulos-de-interes" element={<ArticulosDeInteres />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
