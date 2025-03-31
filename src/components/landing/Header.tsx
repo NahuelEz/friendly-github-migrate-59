@@ -75,28 +75,28 @@ export const Header: React.FC = () => {
               </Link>
             </li>
             <li>
-              <Link
-                to="/case-studies"
+              <a
+                href="#estudios"
                 className="text-white text-sm font-medium hover:text-[#B762F7] transition-colors block py-1"
               >
                 Estudios de caso
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/articulos-de-interes"
+              <a
+                href="#comentarios"
                 className="text-white text-sm font-medium hover:text-[#B762F7] transition-colors block py-1"
               >
                 Comentarios
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/consultar-mi-crecimiento"
+              <a
+                href="#recursos"
                 className="text-white text-sm font-medium hover:text-[#B762F7] transition-colors block py-1"
               >
-                Consultar mi crecimiento
-              </Link>
+                Recursos
+              </a>
             </li>
           </ul>
         </nav>
