@@ -2,7 +2,7 @@ import React from "react";
 
 export const InstagramPost: React.FC = () => {
   return (
-    <div className="bg-[rgba(20,20,20,1)] shadow-[3px_5px_20px_rgba(0,0,0,0.5)] border z-10 flex w-full flex-col self-stretch items-stretch px-[5px] py-[15px] rounded-[20px] border-[rgba(41,41,46,1)] border-solid">
+    <div className="bg-[rgba(20,20,20,1)] shadow-[3px_5px_20px_rgba(0,0,0,0.5)] border z-10 flex w-full flex-col self-stretch items-stretch px-[5px] py-[15px] rounded-[20px] border-[rgba(41,41,46,1)] border-solid ml">
       <div className="flex items-stretch gap-2.5 font-medium mx-2.5">
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/615bc2edc683f47f7dccd2524d945fd1c00d83a3886f48b7a805e1d29fe575cf?placeholderIfAbsent=true"

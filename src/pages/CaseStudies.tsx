@@ -70,7 +70,7 @@ const CaseStudies = () => {
                   followers="511k" 
                   followersGained="39,389" 
                   avgLikes="1,800+" 
-                  profileImage="/lovable-uploads/165c84d8-3d2d-4ea0-9a35-f87b170fe220.png"
+                  profileImage=""
                 />
               </CarouselItem>
               

@@ -3,13 +3,16 @@ import React from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '../components/ui/avatar';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
+import Header from "@/components/landing/Header";
 import { Link } from 'react-router-dom';
 
+
 const ConsultarMiCrecimiento = () => {
+  
   return (
+    
     <div className="container mx-auto max-w-7xl py-8 px-4">
       <h1 className="text-3xl font-bold text-[#4f1092] mb-8 text-center">Consulta tu Crecimiento</h1>
-      
       <section className="w-full max-w-6xl mx-auto py-12 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6">

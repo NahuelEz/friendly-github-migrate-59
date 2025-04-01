@@ -3,50 +3,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Header from "@/components/landing/Header";
 import InstagramSearchBar from "@/components/ui/InstagramSearchBar";
 
 export default function ArticulosDeInteres() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#4F1092] to-[#B762F7]">
-      <header className="container mx-auto py-6 px-4 flex items-center justify-between">
-        <div className="text-white text-2xl font-bold">
-          <Link to="/">
-            <div className="flex items-center">
-              <span className="text-white">Social</span>
-              <span className="text-white ml-1">AI</span>
-            </div>
-          </Link>
-        </div>
 
-        <div className="flex items-center space-x-2 md:space-x-4">
-          <div className="bg-[#B762F7]/50 rounded-full px-4 py-2 flex items-center">
-            <input
-              type="text"
-              placeholder="Introducir tu usuario de Instagram"
-              className="bg-transparent text-white placeholder-white/70 outline-none w-40 md:w-auto"
-            />
-            <div className="h-5 mx-2 border-r border-white/30"></div>
-            <Button variant="link" className="text-white whitespace-nowrap">
-              Consultar mi crecimiento
-            </Button>
-          </div>
 
-          <nav className="hidden md:flex items-center space-x-4 text-white">
-            <Link to="/pricing" className="hover:text-white/80">
-              Tarifas
-            </Link>
-            <Link to="/case-studies" className="hover:text-white/80">
-              Estudios de caso
-            </Link>
-            <Link to="#" className="hover:text-white/80">
-              Comentarios
-            </Link>
-            <Link to="#" className="hover:text-white/80">
-              Recursos
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main className="container mx-auto px-4 py-12">
         <h1 className="text-white text-5xl md:text-7xl font-bold mb-12">ARTICULOS DE INTERES</h1>
