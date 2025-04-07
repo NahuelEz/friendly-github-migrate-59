@@ -57,7 +57,7 @@ export const Hero: React.FC = () => {
 
         {/* Phone mockup - positioned to extend beyond the section border */}
         <div className="absolute right-[5%] bottom-[-350px] z-20 mr-9">
-          <img src="/lovable-uploads/444ad407-0b2e-40b7-8274-d0fb9db9bb5a.png" alt="Instagram en smartphone" className="w-auto h-[750px] filter drop-shadow-2xl object-contain" />
+          <img src="/uploads/444ad407-0b2e-40b7-8274-d0fb9db9bb5a.png" alt="Instagram en smartphone" className="w-auto h-[750px] filter drop-shadow-2xl object-contain" />
         </div>
       </div>
     </section>;

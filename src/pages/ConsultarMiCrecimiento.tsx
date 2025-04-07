@@ -78,7 +78,7 @@ const ConsultarMiCrecimiento = () => {
             <div className="absolute right-8 bottom-[-40px] bg-[#4f1092] rounded-xl overflow-hidden shadow-lg w-[180px] z-20">
               <div className="p-3 flex flex-col items-center">
                 <Avatar className="w-14 h-14 border-2 border-white mb-1">
-                  <AvatarImage src="/lovable-uploads/444ad407-0b2e-40b7-8274-d0fb9db9bb5a.png" alt="Profile" />
+                  <AvatarImage src="/uploads/444ad407-0b2e-40b7-8274-d0fb9db9bb5a.png" alt="Profile" />
                   <AvatarFallback>SA</AvatarFallback>
                 </Avatar>
                 <h3 className="text-white text-sm font-medium">socialai_user</h3>

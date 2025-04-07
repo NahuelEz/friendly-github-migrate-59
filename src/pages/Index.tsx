@@ -18,7 +18,7 @@ const Index = () => {
       {/* Background gradient image */}
       <div className="absolute top-0 left-0 w-full h-[1060px] -z-10">
         <img 
-          src="/lovable-uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png" 
+          src="/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png" 
           alt="Fondo degradado" 
           className="w-full h-full object-cover" 
         />
@@ -26,7 +26,7 @@ const Index = () => {
 
       <div className="absolute w-auto-[800px] mt-[3250px] ml-[900px] z-10 opacity-50">
         <img 
-          src="/lovable-uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png" 
+          src="/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png" 
           alt="Fondo degradado" 
           className="w-full h-full object-cover" 
         />
@@ -34,7 +34,7 @@ const Index = () => {
 
       <div className="absolute w-auto-[800px] mt-[3490px] ml-[900px] -z-10 opacity-40">
         <img 
-          src="/lovable-uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png" 
+          src="/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png" 
           alt="Fondo degradado" 
           className="w-full h-full object-cover" 
         />
@@ -42,7 +42,7 @@ const Index = () => {
 
       <div className="absolute w-auto-[800px] mt-[4800px] ml-[2px] z-10 opacity-40 rotate-180">
         <img 
-          src="/lovable-uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png" 
+          src="/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png" 
           alt="Fondo degradado" 
           className="w-full h-full object-cover" 
         />
