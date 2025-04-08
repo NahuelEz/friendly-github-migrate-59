@@ -14,7 +14,12 @@ const CaseStudies = () => {
       {/* Hero Section with gradient background */}
       <div className="relative w-full bg-gradient-to-r from-purple-700 via-orange-500 to-pink-500 py-20">
         <div className="absolute inset-0 z-0">
-          
+          <img 
+            src="/lovable-uploads/41b34e54-7328-4cf4-ba81-2a3f85b0e59d.png" 
+            alt="People taking selfie on smartphone" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl text-white">
