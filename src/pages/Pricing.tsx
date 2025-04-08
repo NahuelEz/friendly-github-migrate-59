@@ -12,10 +12,13 @@ const Pricing = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#4f1092] to-[#b762f7] py-24">
+      <section className="relative py-24">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -left-20 top-0 w-[600px] h-[600px] rounded-full bg-[#b762f7]/30 blur-3xl"></div>
-          <div className="absolute right-0 bottom-0 w-[500px] h-[500px] rounded-full bg-[#b762f7]/30 blur-3xl"></div>
+          <img 
+            src="/lovable-uploads/e2fb0665-1dcc-41d0-8506-fc55c3cd7e8d.png" 
+            alt="Purple gradient background" 
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="container mx-auto px-4 relative z-10 flex flex-col items-center">
           <div className="bg-[#b762f7]/30 backdrop-blur-sm p-12 rounded-lg text-white text-center max-w-md">
