@@ -22,8 +22,8 @@ const CaseStudies = () => {
           <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-2xl text-white">
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-4">
+          <div className="max-w-2xl ml-auto text-white"> {/* Added ml-auto to push content to the right */}
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-4 text-right"> {/* Added text-right class */}
               HISTORIAS DE CLIENTES QUE DESTACAN SU CRECIMIENTO Y ÉXITO GRACIAS A SOCIAL AI
             </h1>
           </div>
