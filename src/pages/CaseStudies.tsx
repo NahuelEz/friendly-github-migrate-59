@@ -95,7 +95,7 @@ const CaseStudies = () => {
       </div>
 
       {/* Success Cases Section */}
-      <div className="py-16  mx-auto px-4">
+      <div className="py-16 container mx-auto px-4">
         <h2 className="text-5xl font-bold text-purple-900 mb-12">MAS DE X CASOS DE EXITOS</h2>
         
         {/* Updated card carousel */}
@@ -105,7 +105,7 @@ const CaseStudies = () => {
               <ChevronLeft className="w-5 h-5" />
             </CarouselPrevious>
             
-            <CarouselContent className="pl-8 pr-8 md:pl-12 md:pr-12">
+            <CarouselContent className="pl-8 pr-8 md:pl-12 md:pr-12 py-0 px-[210px]">
               {successCards.map(card => <CarouselItem key={card.id} className="md:basis-1/4">
                   <div className={`${card.color} rounded-lg flex-shrink-0 shadow-md overflow-hidden`}>
                     <div className="flex flex-col items-center pt-6 pb-2">
