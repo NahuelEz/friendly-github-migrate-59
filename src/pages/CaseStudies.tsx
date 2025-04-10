@@ -1,10 +1,12 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
-import { ChevronLeft } from 'lucide-react';
+import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+
 const CaseStudies = () => {
   const successCards = [{
     id: 1,
@@ -152,14 +154,270 @@ const CaseStudies = () => {
           </Carousel>
         </div>
 
-        {/* Additional Detailed Stats (Below the Carousel) */}
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
-          
+        {/* New "Esta Hecho Para Vos" section */}
+        <section className="relative w-full bg-gradient-to-r from-[#4f1092] via-[#d8b8ff] to-[#ff6200] py-12 mt-16 rounded-lg overflow-hidden">
+          {/* Heading */}
+          <div className="container mx-auto px-4">
+            <h2 className="text-[#ffffff] text-5xl md:text-6xl lg:text-7xl font-bold mb-16 tracking-tight">
+              ESTA HECHO PARA VOS
+            </h2>
 
-          
+            {/* Carousel section */}
+            <div className="relative h-[450px] max-w-4xl mx-auto">
+              {/* Navigation arrows */}
+              <button className="absolute left-0 top-1/2 -translate-y-1/2 z-50 bg-[#ff6200] rounded-full p-3 text-white">
+                <ChevronLeft size={24} />
+              </button>
+              <button className="absolute right-0 top-1/2 -translate-y-1/2 z-50 bg-[#ff6200] rounded-full p-3 text-white">
+                <ChevronRight size={24} />
+              </button>
 
-          
-        </div>
+              {/* Cards - staggered layout */}
+              <div className="relative h-full flex justify-center">
+                {/* Card 1 */}
+                <div className="absolute left-[calc(50%-320px)] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-10">
+                  <div className="p-3 flex justify-between items-center">
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-full overflow-hidden bg-gray-300">
+                        <img src="/placeholder.svg" alt="Profile" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="text-xs">
+                        <div className="font-medium">nicknamehey01</div>
+                        <div className="text-[#3c3e40]">Mumbai, India</div>
+                      </div>
+                    </div>
+                    <button>
+                      <MoreHorizontal size={16} />
+                    </button>
+                  </div>
+
+                  {/* Content area */}
+                  <div className="flex-1 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#b762f7] to-transparent opacity-80"></div>
+                  </div>
+                </div>
+
+                {/* Card 2 */}
+                <div className="absolute left-[calc(50%-180px)] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-20">
+                  <div className="p-3 flex justify-between items-center">
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-full overflow-hidden bg-gray-300">
+                        <img src="/placeholder.svg" alt="Profile" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="text-xs">
+                        <div className="font-medium">nicknamehey01</div>
+                        <div className="text-[#3c3e40]">Mumbai, India</div>
+                      </div>
+                    </div>
+                    <button>
+                      <MoreHorizontal size={16} />
+                    </button>
+                  </div>
+
+                  {/* Content area */}
+                  <div className="flex-1 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#b762f7] to-transparent opacity-80"></div>
+                  </div>
+                </div>
+
+                {/* Card 3 */}
+                <div className="absolute left-[calc(50%-40px)] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-30">
+                  <div className="p-3 flex justify-between items-center">
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-full overflow-hidden bg-gray-300">
+                        <img src="/placeholder.svg" alt="Profile" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="text-xs">
+                        <div className="font-medium">nicknamehey01</div>
+                        <div className="text-[#3c3e40]">Mumbai, India</div>
+                      </div>
+                    </div>
+                    <button>
+                      <MoreHorizontal size={16} />
+                    </button>
+                  </div>
+
+                  {/* Content area */}
+                  <div className="flex-1 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#b762f7] to-transparent opacity-80"></div>
+                  </div>
+                </div>
+
+                {/* Card 4 */}
+                <div className="absolute left-[calc(50%+100px)] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-40">
+                  <div className="p-3 flex justify-between items-center">
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-full overflow-hidden bg-gray-300">
+                        <img src="/placeholder.svg" alt="Profile" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="text-xs">
+                        <div className="font-medium">nicknamehey01</div>
+                        <div className="text-[#3c3e40]">Mumbai, India</div>
+                      </div>
+                    </div>
+                    <button>
+                      <MoreHorizontal size={16} />
+                    </button>
+                  </div>
+
+                  {/* Content area */}
+                  <div className="flex-1 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#b762f7] to-transparent opacity-80"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials section with orange decoration */}
+        <section className="relative bg-white py-16 mt-16 overflow-hidden">
+          {/* Orange hourglass decoration */}
+          <div className="absolute right-0 top-0 w-[400px] h-[800px]">
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-[#ff6200] translate-x-1/4 -translate-y-1/4 opacity-80"></div>
+            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#ff6200] translate-x-1/4 translate-y-1/4 opacity-80"></div>
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="grid grid-cols-12 gap-6">
+              {/* First testimonial - small */}
+              <div className="col-span-12 md:col-span-4 lg:col-span-3">
+                <div className="bg-white rounded-lg p-5 shadow-md">
+                  {/* Star rating */}
+                  <div className="flex mb-3">
+                    {[1, 2, 3, 4].map((star) => (
+                      <span key={star} className="text-[#ff6200]">
+                        ★
+                      </span>
+                    ))}
+                    <span className="text-[#d9d9d9]">★</span>
+                  </div>
+
+                  {/* Profile */}
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h3 className="font-bold">Regina Miles</h3>
+                      <p className="text-sm text-[#76777e]">Designer</p>
+                    </div>
+                    <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+                      <img src="/placeholder.svg" alt="Regina Miles" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+
+                  {/* Testimonial text */}
+                  <p className="text-xs text-[#3c3e40]">
+                    Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque
+                    elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus
+                    pellentesque pretium urna magna.
+                  </p>
+                </div>
+              </div>
+
+              {/* Second testimonial - medium */}
+              <div className="col-span-12 md:col-span-8 lg:col-span-5">
+                <div className="bg-white rounded-lg p-5 shadow-md">
+                  {/* Star rating */}
+                  <div className="flex mb-3">
+                    {[1, 2, 3, 4].map((star) => (
+                      <span key={star} className="text-[#ff6200]">
+                        ★
+                      </span>
+                    ))}
+                    <span className="text-[#d9d9d9]">★</span>
+                  </div>
+
+                  {/* Profile */}
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h3 className="font-bold">Regina Miles</h3>
+                      <p className="text-sm text-[#76777e]">Designer</p>
+                    </div>
+                    <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+                      <img src="/placeholder.svg" alt="Regina Miles" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+
+                  {/* Testimonial text */}
+                  <p className="text-xs text-[#3c3e40]">
+                    Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque
+                    elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus
+                    pellentesque pretium urna magna. Tellus gravida vitae auctor malesuada vitae sagittis sed ac.
+                    Phasellus pellentesque est velit suspendisse pulvinar pharetra. Mauris ullamcorper euismod tellus
+                    neque neque. Ante ac tincidunt egestas sem. Adipiscing orci mauris amet eget mi condimentum.
+                  </p>
+                </div>
+              </div>
+
+              {/* Third testimonial - small */}
+              <div className="col-span-12 md:col-span-4 lg:col-span-3">
+                <div className="bg-white rounded-lg p-5 shadow-md">
+                  {/* Star rating */}
+                  <div className="flex mb-3">
+                    {[1, 2, 3, 4].map((star) => (
+                      <span key={star} className="text-[#ff6200]">
+                        ★
+                      </span>
+                    ))}
+                    <span className="text-[#d9d9d9]">★</span>
+                  </div>
+
+                  {/* Profile */}
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h3 className="font-bold">Regina Miles</h3>
+                      <p className="text-sm text-[#76777e]">Designer</p>
+                    </div>
+                    <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+                      <img src="/placeholder.svg" alt="Regina Miles" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+
+                  {/* Testimonial text */}
+                  <p className="text-xs text-[#3c3e40]">
+                    Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque
+                    elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus
+                    pellentesque pretium urna magna.
+                  </p>
+                </div>
+              </div>
+
+              {/* Fourth testimonial - large */}
+              <div className="col-span-12 md:col-span-8 lg:col-span-4 md:col-start-3 lg:col-start-5">
+                <div className="bg-white rounded-lg p-5 shadow-md">
+                  {/* Star rating */}
+                  <div className="flex mb-3">
+                    {[1, 2, 3, 4].map((star) => (
+                      <span key={star} className="text-[#ff6200]">
+                        ★
+                      </span>
+                    ))}
+                    <span className="text-[#d9d9d9]">★</span>
+                  </div>
+
+                  {/* Profile */}
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h3 className="font-bold">Regina Miles</h3>
+                      <p className="text-sm text-[#76777e]">Designer</p>
+                    </div>
+                    <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+                      <img src="/placeholder.svg" alt="Regina Miles" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+
+                  {/* Testimonial text */}
+                  <p className="text-xs text-[#3c3e40]">
+                    Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque
+                    elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus
+                    pellentesque pretium urna magna. Tellus gravida vitae auctor malesuada vitae sagittis sed ac.
+                    Phasellus pellentesque est velit suspendisse pulvinar pharetra. Mauris ullamcorper euismod tellus
+                    neque neque. Ante ac tincidunt egestas sem. Adipiscing orci mauris amet eget mi condimentum.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
 
       {/* Call to Action */}
