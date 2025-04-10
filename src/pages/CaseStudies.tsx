@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/landing/Header';
@@ -97,7 +96,7 @@ const CaseStudies = () => {
       </div>
 
       {/* Success Cases Section */}
-      <div className="py-16 container mx-auto px-4">
+      <div className="py-16 px-4 w-full">
         <h2 className="text-5xl font-bold text-purple-900 mb-12">MAS DE X CASOS DE EXITOS</h2>
         
         {/* Updated card carousel */}
