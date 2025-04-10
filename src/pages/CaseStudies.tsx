@@ -1,12 +1,20 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
+import { ChevronLeft } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
-import ProfileCard from '@/components/landing/ProfileCard';
 
 const CaseStudies = () => {
+  const successCards = [
+    { id: 1, color: "bg-purple-800 text-white", username: "nkchaudhary01", profession: "Wildlife Photographer", followers: "61K", followersGained: "39,389", avgLikes: "1,800+" },
+    { id: 2, color: "bg-orange-500 text-white", username: "wildexplorer", profession: "Travel Influencer", followers: "83K", followersGained: "52,745", avgLikes: "2,400+" },
+    { id: 3, color: "bg-purple-800 text-white", username: "fitnessguru", profession: "Fitness Coach", followers: "47K", followersGained: "31,256", avgLikes: "1,650+" },
+    { id: 4, color: "bg-purple-800 text-white", username: "foodielove", profession: "Food Blogger", followers: "72K", followersGained: "45,897", avgLikes: "2,100+" },
+    { id: 5, color: "bg-purple-800 text-white", username: "techreview", profession: "Tech Reviewer", followers: "55K", followersGained: "36,743", avgLikes: "1,950+" },
+  ];
+
   return <div className="flex flex-col min-h-screen">
       {/* Header */}
       <Header />
@@ -62,68 +70,56 @@ const CaseStudies = () => {
       <div className="py-16 container mx-auto px-4">
         <h2 className="text-5xl font-bold text-purple-900 mb-12">MAS DE X CASOS DE EXITOS</h2>
         
-        {/* Carousel with Profile Cards */}
+        {/* Updated card carousel */}
         <div className="relative">
           <Carousel className="w-full">
-            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white border-none hover:bg-orange-600 z-20" />
-            <CarouselContent>
-              {/* Profile Card 1 - Purple */}
-              <CarouselItem className="md:basis-1/4">
-                <ProfileCard 
-                  username="nkchaudhary01" 
-                  profession="Wildlife Photographer" 
-                  followers="511k" 
-                  followersGained="39,389" 
-                  avgLikes="1,800+" 
-                  profileImage=""
-                />
-              </CarouselItem>
-              
-              {/* Profile Card 2 - Orange */}
-              <CarouselItem className="md:basis-1/4">
-                <ProfileCard 
-                  username="nkchaudhary01" 
-                  profession="Wildlife Photographer" 
-                  followers="511k" 
-                  followersGained="39,389" 
-                  avgLikes="1,800+" 
-                />
-              </CarouselItem>
-              
-              {/* Profile Card 3 - Purple */}
-              <CarouselItem className="md:basis-1/4">
-                <ProfileCard 
-                  username="nkchaudhary01" 
-                  profession="Wildlife Photographer" 
-                  followers="511k" 
-                  followersGained="39,389" 
-                  avgLikes="1,800+" 
-                />
-              </CarouselItem>
-              
-              {/* Profile Card 4 - Purple */}
-              <CarouselItem className="md:basis-1/4">
-                <ProfileCard 
-                  username="nkchaudhary01" 
-                  profession="Wildlife Photographer" 
-                  followers="511k" 
-                  followersGained="39,389" 
-                  avgLikes="1,800+" 
-                />
-              </CarouselItem>
-              
-              {/* Additional cards for scrolling */}
-              <CarouselItem className="md:basis-1/4">
-                <ProfileCard 
-                  username="nkchaudhary01" 
-                  profession="Wildlife Photographer" 
-                  followers="511k" 
-                  followersGained="39,389" 
-                  avgLikes="1,800+" 
-                />
-              </CarouselItem>
+            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white border-none hover:bg-orange-600 z-20 rounded-full">
+              <ChevronLeft className="w-5 h-5" />
+            </CarouselPrevious>
+            
+            <CarouselContent className="pl-8 pr-8 md:pl-12 md:pr-12">
+              {successCards.map((card) => (
+                <CarouselItem key={card.id} className="md:basis-1/4">
+                  <div className={`${card.color} rounded-lg flex-shrink-0 shadow-md overflow-hidden`}>
+                    <div className="flex flex-col items-center pt-6 pb-2">
+                      <Avatar className="w-20 h-20 bg-white mb-2">
+                        <AvatarImage src="/placeholder.svg" alt={card.username} />
+                        <AvatarFallback>{card.username.slice(0, 2).toUpperCase()}</AvatarFallback>
+                      </Avatar>
+                      <h3 className="font-medium text-lg">{card.username}</h3>
+                      <p className="text-white/80 text-sm">{card.profession}</p>
+                      <p className="text-orange-300 text-sm mt-1">{card.followers} Followers</p>
+                    </div>
+
+                    <div className="grid grid-cols-2 border-t border-white/20">
+                      <div className="flex flex-col items-center py-4 px-2 border-r border-white/20">
+                        <span className="text-2xl font-bold">{card.followersGained}</span>
+                        <span className="text-white/80 text-xs text-center">Followers Gained</span>
+                      </div>
+                      <div className="flex flex-col items-center py-4 px-2">
+                        <span className="text-2xl font-bold">
+                          {card.avgLikes.replace('+', '')}<span className="text-lg">+</span>
+                        </span>
+                        <span className="text-white/80 text-xs text-center">Avg. Likes/Post</span>
+                      </div>
+                    </div>
+
+                    {[
+                      { label: "Followers Gained", value: card.followersGained },
+                      { label: "Engagement Rate", value: "5.7%" },
+                      { label: "Account Growth", value: "+214%" }
+                    ].map((row, index) => (
+                      <div key={index} className="grid grid-cols-2 border-t border-white/20">
+                        <div className="py-3 px-4 text-white/80 text-sm">{row.label}</div>
+                        <div className="py-3 px-4 text-right font-medium">{row.value}</div>
+                      </div>
+                    ))}
+                  </div>
+                </CarouselItem>
+              ))}
             </CarouselContent>
-            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white border-none hover:bg-orange-600 z-20" />
+            
+            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white border-none hover:bg-orange-600 z-20 rounded-full" />
           </Carousel>
         </div>
 
