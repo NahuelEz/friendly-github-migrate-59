@@ -2,52 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
-import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
 const CaseStudies = () => {
-  const successCards = [{
-    id: 1,
-    color: "bg-purple-800 text-white",
-    username: "nkchaudhary01",
-    profession: "Wildlife Photographer",
-    followers: "61K",
-    followersGained: "39,389",
-    avgLikes: "1,800+"
-  }, {
-    id: 2,
-    color: "bg-orange-500 text-white",
-    username: "wildexplorer",
-    profession: "Travel Influencer",
-    followers: "83K",
-    followersGained: "52,745",
-    avgLikes: "2,400+"
-  }, {
-    id: 3,
-    color: "bg-purple-800 text-white",
-    username: "fitnessguru",
-    profession: "Fitness Coach",
-    followers: "47K",
-    followersGained: "31,256",
-    avgLikes: "1,650+"
-  }, {
-    id: 4,
-    color: "bg-purple-800 text-white",
-    username: "foodielove",
-    profession: "Food Blogger",
-    followers: "72K",
-    followersGained: "45,897",
-    avgLikes: "2,100+"
-  }, {
-    id: 5,
-    color: "bg-purple-800 text-white",
-    username: "techreview",
-    profession: "Tech Reviewer",
-    followers: "55K",
-    followersGained: "36,743",
-    avgLikes: "1,950+"
-  }];
+  const successCards = [
+    { id: 1, color: "bg-purple-800 text-white", username: "nkchaudhary01", profession: "Wildlife Photographer", followers: "61K", followersGained: "39,389", avgLikes: "1,800+" },
+    { id: 2, color: "bg-orange-500 text-white", username: "wildexplorer", profession: "Travel Influencer", followers: "83K", followersGained: "52,745", avgLikes: "2,400+" },
+    { id: 3, color: "bg-purple-800 text-white", username: "fitnessguru", profession: "Fitness Coach", followers: "47K", followersGained: "31,256", avgLikes: "1,650+" },
+    { id: 4, color: "bg-purple-800 text-white", username: "foodielove", profession: "Food Blogger", followers: "72K", followersGained: "45,897", avgLikes: "2,100+" },
+    { id: 5, color: "bg-purple-800 text-white", username: "techreview", profession: "Tech Reviewer", followers: "55K", followersGained: "36,743", avgLikes: "1,950+" },
+  ];
+
   return <div className="flex flex-col min-h-screen">
       {/* Header */}
       <Header />
@@ -55,7 +22,11 @@ const CaseStudies = () => {
       {/* Hero Section with gradient background */}
       <div className="relative w-full bg-gradient-to-r from-purple-700 via-orange-500 to-pink-500 py-20">
         <div className="absolute inset-0 z-0">
-          <img src="/lovable-uploads/41b34e54-7328-4cf4-ba81-2a3f85b0e59d.png" alt="People taking selfie on smartphone" className="w-full h-full object-cover" />
+          <img 
+            src="/lovable-uploads/41b34e54-7328-4cf4-ba81-2a3f85b0e59d.png" 
+            alt="People taking selfie on smartphone" 
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
@@ -96,7 +67,7 @@ const CaseStudies = () => {
       </div>
 
       {/* Success Cases Section */}
-      <div className="py-16 px-4 w-full">
+      <div className="py-16 container mx-auto px-4">
         <h2 className="text-5xl font-bold text-purple-900 mb-12">MAS DE X CASOS DE EXITOS</h2>
         
         {/* Updated card carousel */}
@@ -107,7 +78,8 @@ const CaseStudies = () => {
             </CarouselPrevious>
             
             <CarouselContent className="pl-8 pr-8 md:pl-12 md:pr-12">
-              {successCards.map(card => <CarouselItem key={card.id} className="md:basis-1/4">
+              {successCards.map((card) => (
+                <CarouselItem key={card.id} className="md:basis-1/4">
                   <div className={`${card.color} rounded-lg flex-shrink-0 shadow-md overflow-hidden`}>
                     <div className="flex flex-col items-center pt-6 pb-2">
                       <Avatar className="w-20 h-20 bg-white mb-2">
@@ -132,291 +104,90 @@ const CaseStudies = () => {
                       </div>
                     </div>
 
-                    {[{
-                  label: "Followers Gained",
-                  value: card.followersGained
-                }, {
-                  label: "Engagement Rate",
-                  value: "5.7%"
-                }, {
-                  label: "Account Growth",
-                  value: "+214%"
-                }].map((row, index) => <div key={index} className="grid grid-cols-2 border-t border-white/20">
+                    {[
+                      { label: "Followers Gained", value: card.followersGained },
+                      { label: "Engagement Rate", value: "5.7%" },
+                      { label: "Account Growth", value: "+214%" }
+                    ].map((row, index) => (
+                      <div key={index} className="grid grid-cols-2 border-t border-white/20">
                         <div className="py-3 px-4 text-white/80 text-sm">{row.label}</div>
                         <div className="py-3 px-4 text-right font-medium">{row.value}</div>
-                      </div>)}
+                      </div>
+                    ))}
                   </div>
-                </CarouselItem>)}
+                </CarouselItem>
+              ))}
             </CarouselContent>
             
             <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white border-none hover:bg-orange-600 z-20 rounded-full" />
           </Carousel>
         </div>
 
-        {/* New "Esta Hecho Para Vos" section */}
-        <section className="relative w-full bg-gradient-to-r from-[#4f1092] via-[#d8b8ff] to-[#ff6200] py-12 mt-16 rounded-lg overflow-hidden">
-          {/* Heading */}
-          <div className="container mx-auto px-4">
-            <h2 className="text-[#ffffff] text-5xl md:text-6xl lg:text-7xl font-bold mb-16 tracking-tight">
-              ESTA HECHO PARA VOS
-            </h2>
-
-            {/* Carousel section */}
-            <div className="relative h-[450px] max-w-4xl mx-auto">
-              {/* Navigation arrows */}
-              <button className="absolute left-0 top-1/2 -translate-y-1/2 z-50 bg-[#ff6200] rounded-full p-3 text-white">
-                <ChevronLeft size={24} />
-              </button>
-              <button className="absolute right-0 top-1/2 -translate-y-1/2 z-50 bg-[#ff6200] rounded-full p-3 text-white">
-                <ChevronRight size={24} />
-              </button>
-
-              {/* Cards - staggered layout */}
-              <div className="relative h-full flex justify-center">
-                {/* Card 1 */}
-                <div className="absolute left-[calc(50%-320px)] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-10">
-                  <div className="p-3 flex justify-between items-center">
-                    <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-full overflow-hidden bg-gray-300">
-                        <img src="/placeholder.svg" alt="Profile" className="w-full h-full object-cover" />
-                      </div>
-                      <div className="text-xs">
-                        <div className="font-medium">nicknamehey01</div>
-                        <div className="text-[#3c3e40]">Mumbai, India</div>
-                      </div>
-                    </div>
-                    <button>
-                      <MoreHorizontal size={16} />
-                    </button>
-                  </div>
-
-                  {/* Content area */}
-                  <div className="flex-1 flex items-center justify-center">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#b762f7] to-transparent opacity-80"></div>
-                  </div>
-                </div>
-
-                {/* Card 2 */}
-                <div className="absolute left-[calc(50%-180px)] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-20">
-                  <div className="p-3 flex justify-between items-center">
-                    <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-full overflow-hidden bg-gray-300">
-                        <img src="/placeholder.svg" alt="Profile" className="w-full h-full object-cover" />
-                      </div>
-                      <div className="text-xs">
-                        <div className="font-medium">nicknamehey01</div>
-                        <div className="text-[#3c3e40]">Mumbai, India</div>
-                      </div>
-                    </div>
-                    <button>
-                      <MoreHorizontal size={16} />
-                    </button>
-                  </div>
-
-                  {/* Content area */}
-                  <div className="flex-1 flex items-center justify-center">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#b762f7] to-transparent opacity-80"></div>
-                  </div>
-                </div>
-
-                {/* Card 3 */}
-                <div className="absolute left-[calc(50%-40px)] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-30">
-                  <div className="p-3 flex justify-between items-center">
-                    <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-full overflow-hidden bg-gray-300">
-                        <img src="/placeholder.svg" alt="Profile" className="w-full h-full object-cover" />
-                      </div>
-                      <div className="text-xs">
-                        <div className="font-medium">nicknamehey01</div>
-                        <div className="text-[#3c3e40]">Mumbai, India</div>
-                      </div>
-                    </div>
-                    <button>
-                      <MoreHorizontal size={16} />
-                    </button>
-                  </div>
-
-                  {/* Content area */}
-                  <div className="flex-1 flex items-center justify-center">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#b762f7] to-transparent opacity-80"></div>
-                  </div>
-                </div>
-
-                {/* Card 4 */}
-                <div className="absolute left-[calc(50%+100px)] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-40">
-                  <div className="p-3 flex justify-between items-center">
-                    <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-full overflow-hidden bg-gray-300">
-                        <img src="/placeholder.svg" alt="Profile" className="w-full h-full object-cover" />
-                      </div>
-                      <div className="text-xs">
-                        <div className="font-medium">nicknamehey01</div>
-                        <div className="text-[#3c3e40]">Mumbai, India</div>
-                      </div>
-                    </div>
-                    <button>
-                      <MoreHorizontal size={16} />
-                    </button>
-                  </div>
-
-                  {/* Content area */}
-                  <div className="flex-1 flex items-center justify-center">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#b762f7] to-transparent opacity-80"></div>
-                  </div>
-                </div>
+        {/* Additional Detailed Stats (Below the Carousel) */}
+        <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="shadow-lg rounded-lg p-8 bg-white">
+            <h3 className="text-xl font-bold text-purple-800 mb-4">Crecimiento Orgánico</h3>
+            <p className="text-gray-700 mb-6">
+              Nuestros clientes experimentan un crecimiento orgánico natural gracias a nuestra estrategia de IA personalizada.
+            </p>
+            <div className="space-y-3">
+              <div className="flex justify-between">
+                <span className="text-gray-600">Followers Gained</span>
+                <span className="font-semibold">39,389</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-600">Engagement Rate</span>
+                <span className="font-semibold">5.7%</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-600">Account Growth</span>
+                <span className="font-semibold">+214%</span>
               </div>
             </div>
           </div>
-        </section>
 
-        {/* Testimonials section with orange decoration */}
-        <section className="relative bg-white py-16 mt-16 overflow-hidden">
-          {/* Orange hourglass decoration */}
-          <div className="absolute right-0 top-0 w-[400px] h-[800px]">
-            <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-[#ff6200] translate-x-1/4 -translate-y-1/4 opacity-80"></div>
-            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#ff6200] translate-x-1/4 translate-y-1/4 opacity-80"></div>
-          </div>
-
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="grid grid-cols-12 gap-6">
-              {/* First testimonial - small */}
-              <div className="col-span-12 md:col-span-4 lg:col-span-3">
-                <div className="bg-white rounded-lg p-5 shadow-md">
-                  {/* Star rating */}
-                  <div className="flex mb-3">
-                    {[1, 2, 3, 4].map((star) => (
-                      <span key={star} className="text-[#ff6200]">
-                        ★
-                      </span>
-                    ))}
-                    <span className="text-[#d9d9d9]">★</span>
-                  </div>
-
-                  {/* Profile */}
-                  <div className="flex justify-between items-start mb-3">
-                    <div>
-                      <h3 className="font-bold">Regina Miles</h3>
-                      <p className="text-sm text-[#76777e]">Designer</p>
-                    </div>
-                    <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
-                      <img src="/placeholder.svg" alt="Regina Miles" className="w-full h-full object-cover" />
-                    </div>
-                  </div>
-
-                  {/* Testimonial text */}
-                  <p className="text-xs text-[#3c3e40]">
-                    Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque
-                    elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus
-                    pellentesque pretium urna magna.
-                  </p>
-                </div>
+          <div className="shadow-lg rounded-lg p-8 bg-white">
+            <h3 className="text-xl font-bold text-purple-800 mb-4">Engagement Aumentado</h3>
+            <p className="text-gray-700 mb-6">
+              Aumentamos significativamente la interacción con tu audiencia a través de estrategias de contenido optimizadas.
+            </p>
+            <div className="space-y-3">
+              <div className="flex justify-between">
+                <span className="text-gray-600">Avg. Comments</span>
+                <span className="font-semibold">215 per post</span>
               </div>
-
-              {/* Second testimonial - medium */}
-              <div className="col-span-12 md:col-span-8 lg:col-span-5">
-                <div className="bg-white rounded-lg p-5 shadow-md">
-                  {/* Star rating */}
-                  <div className="flex mb-3">
-                    {[1, 2, 3, 4].map((star) => (
-                      <span key={star} className="text-[#ff6200]">
-                        ★
-                      </span>
-                    ))}
-                    <span className="text-[#d9d9d9]">★</span>
-                  </div>
-
-                  {/* Profile */}
-                  <div className="flex justify-between items-start mb-3">
-                    <div>
-                      <h3 className="font-bold">Regina Miles</h3>
-                      <p className="text-sm text-[#76777e]">Designer</p>
-                    </div>
-                    <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
-                      <img src="/placeholder.svg" alt="Regina Miles" className="w-full h-full object-cover" />
-                    </div>
-                  </div>
-
-                  {/* Testimonial text */}
-                  <p className="text-xs text-[#3c3e40]">
-                    Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque
-                    elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus
-                    pellentesque pretium urna magna. Tellus gravida vitae auctor malesuada vitae sagittis sed ac.
-                    Phasellus pellentesque est velit suspendisse pulvinar pharetra. Mauris ullamcorper euismod tellus
-                    neque neque. Ante ac tincidunt egestas sem. Adipiscing orci mauris amet eget mi condimentum.
-                  </p>
-                </div>
+              <div className="flex justify-between">
+                <span className="text-gray-600">Avg. Likes</span>
+                <span className="font-semibold">1,800+</span>
               </div>
-
-              {/* Third testimonial - small */}
-              <div className="col-span-12 md:col-span-4 lg:col-span-3">
-                <div className="bg-white rounded-lg p-5 shadow-md">
-                  {/* Star rating */}
-                  <div className="flex mb-3">
-                    {[1, 2, 3, 4].map((star) => (
-                      <span key={star} className="text-[#ff6200]">
-                        ★
-                      </span>
-                    ))}
-                    <span className="text-[#d9d9d9]">★</span>
-                  </div>
-
-                  {/* Profile */}
-                  <div className="flex justify-between items-start mb-3">
-                    <div>
-                      <h3 className="font-bold">Regina Miles</h3>
-                      <p className="text-sm text-[#76777e]">Designer</p>
-                    </div>
-                    <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
-                      <img src="/placeholder.svg" alt="Regina Miles" className="w-full h-full object-cover" />
-                    </div>
-                  </div>
-
-                  {/* Testimonial text */}
-                  <p className="text-xs text-[#3c3e40]">
-                    Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque
-                    elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus
-                    pellentesque pretium urna magna.
-                  </p>
-                </div>
-              </div>
-
-              {/* Fourth testimonial - large */}
-              <div className="col-span-12 md:col-span-8 lg:col-span-4 md:col-start-3 lg:col-start-5">
-                <div className="bg-white rounded-lg p-5 shadow-md">
-                  {/* Star rating */}
-                  <div className="flex mb-3">
-                    {[1, 2, 3, 4].map((star) => (
-                      <span key={star} className="text-[#ff6200]">
-                        ★
-                      </span>
-                    ))}
-                    <span className="text-[#d9d9d9]">★</span>
-                  </div>
-
-                  {/* Profile */}
-                  <div className="flex justify-between items-start mb-3">
-                    <div>
-                      <h3 className="font-bold">Regina Miles</h3>
-                      <p className="text-sm text-[#76777e]">Designer</p>
-                    </div>
-                    <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
-                      <img src="/placeholder.svg" alt="Regina Miles" className="w-full h-full object-cover" />
-                    </div>
-                  </div>
-
-                  {/* Testimonial text */}
-                  <p className="text-xs text-[#3c3e40]">
-                    Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque
-                    elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus
-                    pellentesque pretium urna magna. Tellus gravida vitae auctor malesuada vitae sagittis sed ac.
-                    Phasellus pellentesque est velit suspendisse pulvinar pharetra. Mauris ullamcorper euismod tellus
-                    neque neque. Ante ac tincidunt egestas sem. Adipiscing orci mauris amet eget mi condimentum.
-                  </p>
-                </div>
+              <div className="flex justify-between">
+                <span className="text-gray-600">Story Views</span>
+                <span className="font-semibold">7,265 avg.</span>
               </div>
             </div>
           </div>
-        </section>
+
+          <div className="shadow-lg rounded-lg p-8 bg-white">
+            <h3 className="text-xl font-bold text-purple-800 mb-4">Resultados Garantizados</h3>
+            <p className="text-gray-700 mb-6">
+              Ofrecemos resultados garantizados o te devolvemos el dinero - nuestra promesa de confianza total.
+            </p>
+            <div className="space-y-3">
+              <div className="flex justify-between">
+                <span className="text-gray-600">Success Rate</span>
+                <span className="font-semibold">98.7%</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-600">Client Retention</span>
+                <span className="font-semibold">94.3%</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-600">ROI Average</span>
+                <span className="font-semibold">3.5x</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Call to Action */}
