@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/landing/Header';
@@ -454,282 +453,95 @@ const CaseStudies = () => {
         </div>
       </div>
 
-      {/* Comienza Hoy Section - Added as last section before footer */}
-      <div className="min-h-screen bg-[#b762f7] flex flex-col md:flex-row items-center justify-between p-6 md:p-12 overflow-hidden">
-        {/* Left Section */}
-        <div className="w-full md:w-1/2 text-white z-10 mb-10 md:mb-0">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-wide mb-6">COMIENZA HOY</h1>
-          <p className="text-lg md:text-xl font-light leading-relaxed mb-10 max-w-md">
-            Registrate y mira cómo crecen tus seguidores y tu comunidad en una semana
-          </p>
-          <Link
-            to="/pricing"
-            className="inline-block bg-[#4f1092] hover:bg-[#4f1092]/90 text-white font-medium px-8 py-3 rounded-full transition-colors"
-          >
-            comenzar
-          </Link>
-        </div>
-
-        {/* Right Section - Social Media Posts */}
-        <div className="relative w-full md:w-1/2 h-[400px] md:h-[500px]">
-          {/* Left Post */}
-          <div className="absolute left-0 md:left-10 top-20 w-56 rounded-xl overflow-hidden bg-[#141414] shadow-xl z-10">
-            <div className="p-2 flex items-center gap-2">
-              <div className="w-6 h-6 rounded-full overflow-hidden relative">
-                <img
-                  src="/placeholder.svg"
-                  alt="Profile"
-                  width={24}
-                  height={24}
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <p className="text-white text-xs font-medium">hawkins360</p>
-                <p className="text-gray-400 text-[10px]">New Delhi, India</p>
-              </div>
-              <div className="ml-auto text-gray-400">
-                <span className="text-xs">•••</span>
-              </div>
-            </div>
-            <div className="relative h-48">
-              <div className="absolute inset-0">
-                <img src="/placeholder.svg" alt="Post content" className="w-full h-full object-cover" />
-              </div>
-            </div>
-            <div className="p-2">
-              <div className="flex gap-2 mb-1">
-                <button className="text-[#f0304e]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                  </svg>
-                </button>
-                <button className="text-[#76777e]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-                  </svg>
-                </button>
-                <button className="text-[#76777e]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                  </svg>
-                </button>
-              </div>
-              <p className="text-white text-xs">
-                Liked by <span className="font-medium">Nanny</span> and <span className="font-medium">739 others</span>
-              </p>
-              <p className="text-[#76777e] text-[10px] mt-1">Wed, 26 January 2021</p>
-            </div>
-          </div>
-
-          {/* Middle Post */}
-          <div className="absolute left-20 md:left-32 top-60 w-64 rounded-xl overflow-hidden bg-[#141414] shadow-xl z-20">
-            <div className="p-2 flex items-center gap-2">
-              <div className="w-6 h-6 rounded-full overflow-hidden relative">
-                <img
-                  src="/placeholder.svg"
-                  alt="Profile"
-                  width={24}
-                  height={24}
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <p className="text-white text-xs font-medium">hawkins360</p>
-                <p className="text-gray-400 text-[10px]">New Delhi, India</p>
-              </div>
-              <div className="ml-auto text-gray-400">
-                <span className="text-xs">•••</span>
-              </div>
-            </div>
-            <div className="relative h-64">
-              <div className="absolute inset-0">
-                <img src="/placeholder.svg" alt="Post content" className="w-full h-full object-cover" />
-              </div>
-            </div>
-            <div className="p-2">
-              <div className="flex gap-2 mb-1">
-                <button className="text-[#f0304e]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                  </svg>
-                </button>
-                <button className="text-[#76777e]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-                  </svg>
-                </button>
-                <button className="text-[#76777e]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                  </svg>
-                </button>
-              </div>
-              <p className="text-white text-xs">
-                Liked by <span className="font-medium">Nanny</span> and <span className="font-medium">739 others</span>
-              </p>
-              <p className="text-[#76777e] text-[10px] mt-1">Wed, 26 January 2021</p>
-            </div>
-          </div>
-
-          {/* Right Post */}
-          <div className="absolute right-0 md:right-0 top-10 w-56 rounded-xl overflow-hidden bg-[#141414] shadow-xl z-10">
-            <div className="p-2 flex items-center gap-2">
-              <div className="w-6 h-6 rounded-full overflow-hidden relative">
-                <img
-                  src="/placeholder.svg"
-                  alt="Profile"
-                  width={24}
-                  height={24}
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <p className="text-white text-xs font-medium">hawkins360</p>
-                <p className="text-gray-400 text-[10px]">New Delhi, India</p>
-              </div>
-              <div className="ml-auto text-gray-400">
-                <span className="text-xs">•••</span>
-              </div>
-            </div>
-            <div className="relative h-56">
-              <div className="absolute inset-0">
-                <img src="/placeholder.svg" alt="Post content" className="w-full h-full object-cover" />
-              </div>
-            </div>
-            <div className="p-2">
-              <div className="flex gap-2 mb-1">
-                <button className="text-[#f0304e]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                  </svg>
-                </button>
-                <button className="text-[#76777e]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-                  </svg>
-                </button>
-                <button className="text-[#76777e]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                  </svg>
-                </button>
-              </div>
-              <p className="text-white text-xs">
-                Liked by <span className="font-medium">Nanny</span> and <span className="font-medium">739 others</span>
-              </p>
-              <p className="text-[#76777e] text-[10px] mt-1">Wed, 26 January 2021</p>
-            </div>
-          </div>
-
-          {/* Notification Badge */}
-          <div className="absolute right-16 bottom-20 w-14 h-14 bg-[#4f1092]/80 backdrop-blur-sm rounded-xl flex items-center justify-center z-30 shadow-lg">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="white"
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+      {/* Comienza Hoy Section - Updated to match design */}
+      <div className="min-h-screen bg-[#b762f7] relative overflow-hidden">
+        <div className="container mx-auto px-4 py-16 md:py-24 relative z-10 flex flex-col md:flex-row items-center">
+          {/* Left Section - Text content */}
+          <div className="w-full md:w-1/2 text-white mb-16 md:mb-0">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-wide mb-6">COMIENZA HOY</h1>
+            <p className="text-lg md:text-xl font-light leading-relaxed mb-10 max-w-md">
+              Registrate y mira cómo crecen tus seguidores y tu comunidad en una semana
+            </p>
+            <Link
+              to="/pricing"
+              className="inline-block bg-[#4f1092] hover:bg-[#4f1092]/90 text-white font-medium px-8 py-3 rounded-full transition-colors"
             >
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
+              comenzar
+            </Link>
+          </div>
+          
+          {/* Right Section - Phone mockups with giraffe posts */}
+          <div className="w-full md:w-1/2 relative h-[400px] flex justify-center">
+            {/* Phone 1 - Back left */}
+            <div className="absolute left-4 md:left-20 top-10 w-48 md:w-56 bg-black rounded-2xl overflow-hidden shadow-xl rotate-[-10deg] z-10">
+              <div className="px-2 pt-2 pb-1 flex items-center gap-1">
+                <div className="w-5 h-5 rounded-full overflow-hidden bg-gray-700 flex-shrink-0">
+                  <img src="/placeholder.svg" alt="Profile" className="w-full h-full object-cover" />
+                </div>
+                <p className="text-white text-xs">hawkins360</p>
+              </div>
+              <div className="h-52 md:h-64 relative">
+                <img src="/lovable-uploads/2cbdc6ca-b8b0-432b-834e-8a3a3222abf9.png" alt="Giraffe" className="w-full h-full object-cover" />
+              </div>
+              <div className="p-1 bg-black">
+                <p className="text-white text-[10px]">
+                  Liked by <span className="font-medium">Nanny</span> and <span className="font-medium">739 others</span>
+                </p>
+              </div>
+            </div>
+            
+            {/* Phone 2 - Center */}
+            <div className="absolute left-1/2 -translate-x-1/2 w-48 md:w-56 bg-black rounded-2xl overflow-hidden shadow-xl z-20">
+              <div className="px-2 pt-2 pb-1 flex items-center gap-1">
+                <div className="w-5 h-5 rounded-full overflow-hidden bg-gray-700 flex-shrink-0">
+                  <img src="/placeholder.svg" alt="Profile" className="w-full h-full object-cover" />
+                </div>
+                <p className="text-white text-xs">hawkins360</p>
+              </div>
+              <div className="h-52 md:h-64 relative">
+                <img src="/lovable-uploads/2cbdc6ca-b8b0-432b-834e-8a3a3222abf9.png" alt="Giraffe" className="w-full h-full object-cover" />
+              </div>
+              <div className="p-1 bg-black">
+                <p className="text-white text-[10px]">
+                  Liked by <span className="font-medium">Nanny</span> and <span className="font-medium">739 others</span>
+                </p>
+              </div>
+            </div>
+            
+            {/* Phone 3 - Back right */}
+            <div className="absolute right-4 md:right-20 top-10 w-48 md:w-56 bg-black rounded-2xl overflow-hidden shadow-xl rotate-[10deg] z-10">
+              <div className="px-2 pt-2 pb-1 flex items-center gap-1">
+                <div className="w-5 h-5 rounded-full overflow-hidden bg-gray-700 flex-shrink-0">
+                  <img src="/placeholder.svg" alt="Profile" className="w-full h-full object-cover" />
+                </div>
+                <p className="text-white text-xs">hawkins360</p>
+              </div>
+              <div className="h-52 md:h-64 relative">
+                <img src="/lovable-uploads/2cbdc6ca-b8b0-432b-834e-8a3a3222abf9.png" alt="Giraffe" className="w-full h-full object-cover" />
+              </div>
+              <div className="p-1 bg-black">
+                <p className="text-white text-[10px]">
+                  Liked by <span className="font-medium">Nanny</span> and <span className="font-medium">739 others</span>
+                </p>
+              </div>
+            </div>
+            
+            {/* Checkmark Badge */}
+            <div className="absolute right-16 bottom-10 w-14 h-14 bg-[#4f1092]/80 backdrop-blur-sm rounded-xl flex items-center justify-center z-30 shadow-lg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
