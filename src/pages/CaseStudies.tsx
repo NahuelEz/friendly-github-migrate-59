@@ -5,16 +5,48 @@ import Footer from '@/components/landing/Footer';
 import { ChevronLeft } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
-
 const CaseStudies = () => {
-  const successCards = [
-    { id: 1, color: "bg-purple-800 text-white", username: "nkchaudhary01", profession: "Wildlife Photographer", followers: "61K", followersGained: "39,389", avgLikes: "1,800+" },
-    { id: 2, color: "bg-orange-500 text-white", username: "wildexplorer", profession: "Travel Influencer", followers: "83K", followersGained: "52,745", avgLikes: "2,400+" },
-    { id: 3, color: "bg-purple-800 text-white", username: "fitnessguru", profession: "Fitness Coach", followers: "47K", followersGained: "31,256", avgLikes: "1,650+" },
-    { id: 4, color: "bg-purple-800 text-white", username: "foodielove", profession: "Food Blogger", followers: "72K", followersGained: "45,897", avgLikes: "2,100+" },
-    { id: 5, color: "bg-purple-800 text-white", username: "techreview", profession: "Tech Reviewer", followers: "55K", followersGained: "36,743", avgLikes: "1,950+" },
-  ];
-
+  const successCards = [{
+    id: 1,
+    color: "bg-purple-800 text-white",
+    username: "nkchaudhary01",
+    profession: "Wildlife Photographer",
+    followers: "61K",
+    followersGained: "39,389",
+    avgLikes: "1,800+"
+  }, {
+    id: 2,
+    color: "bg-orange-500 text-white",
+    username: "wildexplorer",
+    profession: "Travel Influencer",
+    followers: "83K",
+    followersGained: "52,745",
+    avgLikes: "2,400+"
+  }, {
+    id: 3,
+    color: "bg-purple-800 text-white",
+    username: "fitnessguru",
+    profession: "Fitness Coach",
+    followers: "47K",
+    followersGained: "31,256",
+    avgLikes: "1,650+"
+  }, {
+    id: 4,
+    color: "bg-purple-800 text-white",
+    username: "foodielove",
+    profession: "Food Blogger",
+    followers: "72K",
+    followersGained: "45,897",
+    avgLikes: "2,100+"
+  }, {
+    id: 5,
+    color: "bg-purple-800 text-white",
+    username: "techreview",
+    profession: "Tech Reviewer",
+    followers: "55K",
+    followersGained: "36,743",
+    avgLikes: "1,950+"
+  }];
   return <div className="flex flex-col min-h-screen">
       {/* Header */}
       <Header />
@@ -22,11 +54,7 @@ const CaseStudies = () => {
       {/* Hero Section with gradient background */}
       <div className="relative w-full bg-gradient-to-r from-purple-700 via-orange-500 to-pink-500 py-20">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="/lovable-uploads/41b34e54-7328-4cf4-ba81-2a3f85b0e59d.png" 
-            alt="People taking selfie on smartphone" 
-            className="w-full h-full object-cover"
-          />
+          <img src="/lovable-uploads/41b34e54-7328-4cf4-ba81-2a3f85b0e59d.png" alt="People taking selfie on smartphone" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
@@ -78,8 +106,7 @@ const CaseStudies = () => {
             </CarouselPrevious>
             
             <CarouselContent className="pl-8 pr-8 md:pl-12 md:pr-12">
-              {successCards.map((card) => (
-                <CarouselItem key={card.id} className="md:basis-1/4">
+              {successCards.map(card => <CarouselItem key={card.id} className="md:basis-1/4">
                   <div className={`${card.color} rounded-lg flex-shrink-0 shadow-md overflow-hidden`}>
                     <div className="flex flex-col items-center pt-6 pb-2">
                       <Avatar className="w-20 h-20 bg-white mb-2">
@@ -104,19 +131,21 @@ const CaseStudies = () => {
                       </div>
                     </div>
 
-                    {[
-                      { label: "Followers Gained", value: card.followersGained },
-                      { label: "Engagement Rate", value: "5.7%" },
-                      { label: "Account Growth", value: "+214%" }
-                    ].map((row, index) => (
-                      <div key={index} className="grid grid-cols-2 border-t border-white/20">
+                    {[{
+                  label: "Followers Gained",
+                  value: card.followersGained
+                }, {
+                  label: "Engagement Rate",
+                  value: "5.7%"
+                }, {
+                  label: "Account Growth",
+                  value: "+214%"
+                }].map((row, index) => <div key={index} className="grid grid-cols-2 border-t border-white/20">
                         <div className="py-3 px-4 text-white/80 text-sm">{row.label}</div>
                         <div className="py-3 px-4 text-right font-medium">{row.value}</div>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
-                </CarouselItem>
-              ))}
+                </CarouselItem>)}
             </CarouselContent>
             
             <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white border-none hover:bg-orange-600 z-20 rounded-full" />
@@ -125,68 +154,11 @@ const CaseStudies = () => {
 
         {/* Additional Detailed Stats (Below the Carousel) */}
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="shadow-lg rounded-lg p-8 bg-white">
-            <h3 className="text-xl font-bold text-purple-800 mb-4">Crecimiento Orgánico</h3>
-            <p className="text-gray-700 mb-6">
-              Nuestros clientes experimentan un crecimiento orgánico natural gracias a nuestra estrategia de IA personalizada.
-            </p>
-            <div className="space-y-3">
-              <div className="flex justify-between">
-                <span className="text-gray-600">Followers Gained</span>
-                <span className="font-semibold">39,389</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-600">Engagement Rate</span>
-                <span className="font-semibold">5.7%</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-600">Account Growth</span>
-                <span className="font-semibold">+214%</span>
-              </div>
-            </div>
-          </div>
+          
 
-          <div className="shadow-lg rounded-lg p-8 bg-white">
-            <h3 className="text-xl font-bold text-purple-800 mb-4">Engagement Aumentado</h3>
-            <p className="text-gray-700 mb-6">
-              Aumentamos significativamente la interacción con tu audiencia a través de estrategias de contenido optimizadas.
-            </p>
-            <div className="space-y-3">
-              <div className="flex justify-between">
-                <span className="text-gray-600">Avg. Comments</span>
-                <span className="font-semibold">215 per post</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-600">Avg. Likes</span>
-                <span className="font-semibold">1,800+</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-600">Story Views</span>
-                <span className="font-semibold">7,265 avg.</span>
-              </div>
-            </div>
-          </div>
+          
 
-          <div className="shadow-lg rounded-lg p-8 bg-white">
-            <h3 className="text-xl font-bold text-purple-800 mb-4">Resultados Garantizados</h3>
-            <p className="text-gray-700 mb-6">
-              Ofrecemos resultados garantizados o te devolvemos el dinero - nuestra promesa de confianza total.
-            </p>
-            <div className="space-y-3">
-              <div className="flex justify-between">
-                <span className="text-gray-600">Success Rate</span>
-                <span className="font-semibold">98.7%</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-600">Client Retention</span>
-                <span className="font-semibold">94.3%</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-600">ROI Average</span>
-                <span className="font-semibold">3.5x</span>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
 
