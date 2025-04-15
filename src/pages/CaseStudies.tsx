@@ -180,10 +180,10 @@ const CaseStudies = () => {
               <ChevronRight size={24} />
             </button>
 
-            {/* Cards - with improved spacing */}
-            <div className="relative h-full flex justify-center">
+            {/* Cards - with proper spacing for 4 cards */}
+            <div className="relative h-full flex justify-center w-[1200px] mx-auto">
               {/* Card 1 */}
-              <div className="absolute left-[calc(50%-400px)] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-10">
+              <div className="absolute left-0 top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-10">
                 <div className="p-3 flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full overflow-hidden">
@@ -206,7 +206,7 @@ const CaseStudies = () => {
               </div>
 
               {/* Card 2 */}
-              <div className="absolute left-[calc(50%-140px)] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-20">
+              <div className="absolute left-[320px] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-20">
                 <div className="p-3 flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full overflow-hidden">
@@ -229,7 +229,30 @@ const CaseStudies = () => {
               </div>
 
               {/* Card 3 */}
-              <div className="absolute left-[calc(50%+120px)] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-30">
+              <div className="absolute left-[640px] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-30">
+                <div className="p-3 flex justify-between items-center">
+                  <div className="flex items-center gap-2">
+                    <div className="w-6 h-6 rounded-full overflow-hidden">
+                      <img src="/placeholder.svg" alt="Profile" width={24} height={24} className="object-cover" />
+                    </div>
+                    <div className="text-xs">
+                      <div className="font-medium">nicknamehey01</div>
+                      <div className="text-[#3c3e40]">Mumbai, India</div>
+                    </div>
+                  </div>
+                  <button>
+                    <MoreHorizontal size={16} />
+                  </button>
+                </div>
+
+                {/* Content area */}
+                <div className="flex-1 flex items-center justify-center">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#b762f7] to-transparent opacity-80"></div>
+                </div>
+              </div>
+
+              {/* Card 4 */}
+              <div className="absolute left-[960px] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-40">
                 <div className="p-3 flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full overflow-hidden">
