@@ -27,7 +27,7 @@ export const StartToday = () => {
           </div>
 
           {/* Right Section - Social Cards - Centered */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-x-0 md:left-auto md:right-10 lg:right-32 xl:right-64 top-0 flex">
+          <div className="absolute right-0 left-0 top-0 flex justify-center items-center">
             <div className="relative">
               {/* First Card - Left */}
               <div className="absolute top-11 left-0">
