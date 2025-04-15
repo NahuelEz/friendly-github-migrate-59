@@ -1,8 +1,10 @@
+
 import React from "react";
 import InstagramPost from "./InstagramPost";
 import StatsCard from "./StatsCard";
 import ProfileCard from "./ProfileCard";
 import TrafficSourceChart from "./TrafficSourceChart";
+
 export const StatsSection: React.FC = () => {
   return <section className="self-center w-full max-w-[1724px] ml-6 mt-[27px] max-md:max-w-full">
       <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
@@ -10,7 +12,12 @@ export const StatsSection: React.FC = () => {
           <div className="grow max-md:max-w-full max-md:mt-5">
             <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
               <div className="w-[28%] max-md:w-full max-md:ml-0">
-                <InstagramPost />
+                <InstagramPost 
+                  imageUrl="/uploads/d6ad7714-19c0-444c-8297-fef26645b1f6.png"
+                  likes="2.5K"
+                  comments="384"
+                  isVideo={true}
+                />
               </div>
               <div className="w-[72%] ml-5 max-md:w-full max-md:ml-0">
                 <div className="shadow-[1px_3px_20px_0px_rgba(0,0,0,0.15)] bg-white flex w-full flex-col mx-auto pt-[60px] px-20 rounded-[20px] max-md:max-w-full max-md:px-5 py-[61px]">
@@ -48,4 +55,5 @@ export const StatsSection: React.FC = () => {
       </div>
     </section>;
 };
+
 export default StatsSection;
