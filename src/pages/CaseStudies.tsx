@@ -8,6 +8,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import SocialCard from '@/components/social/SocialCard';
+import StartToday from '@/components/social/StartToday';
 const CaseStudies = () => {
   const successCards = [{
     id: 1,
