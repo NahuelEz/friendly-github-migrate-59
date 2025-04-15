@@ -181,7 +181,7 @@ const CaseStudies = () => {
             </button>
 
             {/* Cards - with proper spacing for 4 cards */}
-            <div className="relative h-full flex justify-center w-[1200px] mx-auto">
+            <div className="relative h-full flex justify-center w-[1000px] mx-auto">
               {/* Card 1 */}
               <div className="absolute left-0 top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-10">
                 <div className="p-3 flex justify-between items-center">
@@ -206,7 +206,7 @@ const CaseStudies = () => {
               </div>
 
               {/* Card 2 */}
-              <div className="absolute left-[320px] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-20">
+              <div className="absolute left-[260px] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-20">
                 <div className="p-3 flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full overflow-hidden">
@@ -229,7 +229,7 @@ const CaseStudies = () => {
               </div>
 
               {/* Card 3 */}
-              <div className="absolute left-[640px] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-30">
+              <div className="absolute left-[520px] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-30">
                 <div className="p-3 flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full overflow-hidden">
@@ -252,7 +252,7 @@ const CaseStudies = () => {
               </div>
 
               {/* Card 4 */}
-              <div className="absolute left-[960px] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-40">
+              <div className="absolute left-[780px] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-40">
                 <div className="p-3 flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full overflow-hidden">
