@@ -5,7 +5,6 @@ import Footer from '@/components/landing/Footer';
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
-
 const CaseStudies = () => {
   const successCards = [{
     id: 1,
@@ -48,7 +47,6 @@ const CaseStudies = () => {
     followersGained: "36,743",
     avgLikes: "1,950+"
   }];
-  
   return <div className="flex flex-col min-h-screen">
       {/* Header */}
       <Header />
@@ -61,7 +59,7 @@ const CaseStudies = () => {
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl ml-auto text-white"> {/* Added ml-auto to push content to the right */}
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-4 text-right"> {/* Added text-right class */}
+            <h1 className="text-5xl font-bold leading-tight mb-4 text-left md:text-6xl"> {/* Added text-right class */}
               HISTORIAS DE CLIENTES QUE DESTACAN SU CRECIMIENTO Y ÉXITO GRACIAS A SOCIAL AI
             </h1>
           </div>
@@ -295,11 +293,9 @@ const CaseStudies = () => {
               <div className="bg-white rounded-lg p-5 shadow-md">
                 {/* Star rating */}
                 <div className="flex mb-3">
-                  {[1, 2, 3, 4].map((star) => (
-                    <span key={star} className="text-[#ff6200]">
+                  {[1, 2, 3, 4].map(star => <span key={star} className="text-[#ff6200]">
                       ★
-                    </span>
-                  ))}
+                    </span>)}
                   <span className="text-[#d9d9d9]">★</span>
                 </div>
 
@@ -310,13 +306,7 @@ const CaseStudies = () => {
                     <p className="text-sm text-[#76777e]">Designer</p>
                   </div>
                   <div className="w-12 h-12 rounded-full overflow-hidden">
-                    <img
-                      src="/placeholder.svg"
-                      alt="Regina Miles"
-                      width={48}
-                      height={48}
-                      className="object-cover"
-                    />
+                    <img src="/placeholder.svg" alt="Regina Miles" width={48} height={48} className="object-cover" />
                   </div>
                 </div>
 
@@ -334,11 +324,9 @@ const CaseStudies = () => {
               <div className="bg-white rounded-lg p-5 shadow-md">
                 {/* Star rating */}
                 <div className="flex mb-3">
-                  {[1, 2, 3, 4].map((star) => (
-                    <span key={star} className="text-[#ff6200]">
+                  {[1, 2, 3, 4].map(star => <span key={star} className="text-[#ff6200]">
                       ★
-                    </span>
-                  ))}
+                    </span>)}
                   <span className="text-[#d9d9d9]">★</span>
                 </div>
 
@@ -349,13 +337,7 @@ const CaseStudies = () => {
                     <p className="text-sm text-[#76777e]">Designer</p>
                   </div>
                   <div className="w-12 h-12 rounded-full overflow-hidden">
-                    <img
-                      src="/placeholder.svg"
-                      alt="Regina Miles"
-                      width={48}
-                      height={48}
-                      className="object-cover"
-                    />
+                    <img src="/placeholder.svg" alt="Regina Miles" width={48} height={48} className="object-cover" />
                   </div>
                 </div>
 
@@ -375,11 +357,9 @@ const CaseStudies = () => {
               <div className="bg-white rounded-lg p-5 shadow-md">
                 {/* Star rating */}
                 <div className="flex mb-3">
-                  {[1, 2, 3, 4].map((star) => (
-                    <span key={star} className="text-[#ff6200]">
+                  {[1, 2, 3, 4].map(star => <span key={star} className="text-[#ff6200]">
                       ★
-                    </span>
-                  ))}
+                    </span>)}
                   <span className="text-[#d9d9d9]">★</span>
                 </div>
 
@@ -390,13 +370,7 @@ const CaseStudies = () => {
                     <p className="text-sm text-[#76777e]">Designer</p>
                   </div>
                   <div className="w-12 h-12 rounded-full overflow-hidden">
-                    <img
-                      src="/placeholder.svg"
-                      alt="Regina Miles"
-                      width={48}
-                      height={48}
-                      className="object-cover"
-                    />
+                    <img src="/placeholder.svg" alt="Regina Miles" width={48} height={48} className="object-cover" />
                   </div>
                 </div>
 
@@ -414,11 +388,9 @@ const CaseStudies = () => {
               <div className="bg-white rounded-lg p-5 shadow-md">
                 {/* Star rating */}
                 <div className="flex mb-3">
-                  {[1, 2, 3, 4].map((star) => (
-                    <span key={star} className="text-[#ff6200]">
+                  {[1, 2, 3, 4].map(star => <span key={star} className="text-[#ff6200]">
                       ★
-                    </span>
-                  ))}
+                    </span>)}
                   <span className="text-[#d9d9d9]">★</span>
                 </div>
 
@@ -429,13 +401,7 @@ const CaseStudies = () => {
                     <p className="text-sm text-[#76777e]">Designer</p>
                   </div>
                   <div className="w-12 h-12 rounded-full overflow-hidden">
-                    <img
-                      src="/placeholder.svg"
-                      alt="Regina Miles"
-                      width={48}
-                      height={48}
-                      className="object-cover"
-                    />
+                    <img src="/placeholder.svg" alt="Regina Miles" width={48} height={48} className="object-cover" />
                   </div>
                 </div>
 
@@ -462,10 +428,7 @@ const CaseStudies = () => {
             <p className="text-lg md:text-xl font-light leading-relaxed mb-10 max-w-md">
               Registrate y mira cómo crecen tus seguidores y tu comunidad en una semana
             </p>
-            <Link
-              to="/pricing"
-              className="inline-block bg-[#4f1092] hover:bg-[#4f1092]/90 text-white font-medium px-8 py-3 rounded-full transition-colors"
-            >
+            <Link to="/pricing" className="inline-block bg-[#4f1092] hover:bg-[#4f1092]/90 text-white font-medium px-8 py-3 rounded-full transition-colors">
               comenzar
             </Link>
           </div>
@@ -528,17 +491,7 @@ const CaseStudies = () => {
             
             {/* Checkmark Badge */}
             <div className="absolute right-16 bottom-10 w-14 h-14 bg-[#4f1092]/80 backdrop-blur-sm rounded-xl flex items-center justify-center z-30 shadow-lg">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="white"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
             </div>
