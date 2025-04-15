@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
@@ -37,7 +38,7 @@ const Pricing = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-6">
             {/* Pack 1 */}
-            <div className="border rounded-lg overflow-hidden shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black/10 hover:bg-gray-50/50 group">
+            <div className="border rounded-lg overflow-hidden shadow-lg shadow-black/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black/20 group">
               <div className="p-6 border-b group-hover:bg-[#b762f7]/5">
                 <h2 className="text-2xl font-bold text-center group-hover:text-[#b762f7]">PACK 1</h2>
               </div>
@@ -69,7 +70,7 @@ const Pricing = () => {
             </div>
 
             {/* Pack 2 */}
-            <div className="bg-[#b762f7] rounded-lg overflow-hidden shadow-sm text-white transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black/20 group">
+            <div className="bg-[#b762f7] rounded-lg overflow-hidden shadow-lg shadow-black/20 text-white transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black/30 group">
               <div className="p-6 border-b border-white/20 group-hover:bg-[#4f1092]/10">
                 <h2 className="text-2xl font-bold text-center group-hover:text-white/90">PACK 2</h2>
               </div>
@@ -105,7 +106,7 @@ const Pricing = () => {
             </div>
 
             {/* Pack 3 */}
-            <div className="bg-[#4f1092] rounded-lg overflow-hidden shadow-sm text-white transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black/30 group">
+            <div className="bg-[#4f1092] rounded-lg overflow-hidden shadow-lg shadow-black/30 text-white transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black/40 group">
               <div className="p-6 border-b border-white/20 group-hover:bg-[#fe6202]/10">
                 <h2 className="text-2xl font-bold text-center group-hover:text-white/90">PACK 3</h2>
               </div>
