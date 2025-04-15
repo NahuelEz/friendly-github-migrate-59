@@ -171,7 +171,7 @@ const CaseStudies = () => {
           </h1>
 
           {/* Carousel section */}
-          <div className="relative h-[450px] max-w-4xl mx-auto">
+          <div className="relative h-[450px] max-w-[1164px] mx-auto">
             {/* Navigation arrows */}
             <button className="absolute left-0 top-1/2 -translate-y-1/2 z-50 bg-[#ff6200] rounded-full p-3 text-white">
               <ChevronLeft size={24} />
@@ -180,99 +180,31 @@ const CaseStudies = () => {
               <ChevronRight size={24} />
             </button>
 
-            {/* Cards - with proper spacing for 4 cards */}
-            <div className="relative h-full flex justify-center w-[1000px] mx-auto">
-              {/* Card 1 */}
-              <div className="absolute left-0 top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-10">
-                <div className="p-3 flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 rounded-full overflow-hidden">
-                      <img alt="Profile" width={24} height={24} className="object-cover" src="/lovable-uploads/8a081d08-5289-4512-a158-6cc6922f5471.png" />
+            {/* Cards - matching Home page layout */}
+            <div className="flex gap-8 justify-between w-full">
+              {[1, 2, 3, 4].map((i) => (
+                <div key={i} className="bg-[#d9d9d9] rounded-lg w-[270px] h-[380px] flex flex-col">
+                  <div className="p-3 flex justify-between items-center">
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-full overflow-hidden">
+                        <img alt="Profile" width={24} height={24} className="object-cover" src="/lovable-uploads/8a081d08-5289-4512-a158-6cc6922f5471.png" />
+                      </div>
+                      <div className="text-xs">
+                        <div className="font-medium">nicknamehey01</div>
+                        <div className="text-[#3c3e40]">Mumbai, India</div>
+                      </div>
                     </div>
-                    <div className="text-xs">
-                      <div className="font-medium">nicknamehey01</div>
-                      <div className="text-[#3c3e40]">Mumbai, India</div>
-                    </div>
+                    <button>
+                      <MoreHorizontal size={16} />
+                    </button>
                   </div>
-                  <button>
-                    <MoreHorizontal size={16} />
-                  </button>
-                </div>
 
-                {/* Content area */}
-                <div className="flex-1 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#b762f7] to-transparent opacity-80"></div>
-                </div>
-              </div>
-
-              {/* Card 2 */}
-              <div className="absolute left-[260px] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-20">
-                <div className="p-3 flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 rounded-full overflow-hidden">
-                      <img src="/placeholder.svg" alt="Profile" width={24} height={24} className="object-cover" />
-                    </div>
-                    <div className="text-xs">
-                      <div className="font-medium">nicknamehey01</div>
-                      <div className="text-[#3c3e40]">Mumbai, India</div>
-                    </div>
+                  {/* Content area */}
+                  <div className="flex-1 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#b762f7] to-transparent opacity-80"></div>
                   </div>
-                  <button>
-                    <MoreHorizontal size={16} />
-                  </button>
                 </div>
-
-                {/* Content area */}
-                <div className="flex-1 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#b762f7] to-transparent opacity-80"></div>
-                </div>
-              </div>
-
-              {/* Card 3 */}
-              <div className="absolute left-[520px] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-30">
-                <div className="p-3 flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 rounded-full overflow-hidden">
-                      <img src="/placeholder.svg" alt="Profile" width={24} height={24} className="object-cover" />
-                    </div>
-                    <div className="text-xs">
-                      <div className="font-medium">nicknamehey01</div>
-                      <div className="text-[#3c3e40]">Mumbai, India</div>
-                    </div>
-                  </div>
-                  <button>
-                    <MoreHorizontal size={16} />
-                  </button>
-                </div>
-
-                {/* Content area */}
-                <div className="flex-1 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#b762f7] to-transparent opacity-80"></div>
-                </div>
-              </div>
-
-              {/* Card 4 */}
-              <div className="absolute left-[780px] top-0 bg-[#d9d9d9] rounded-lg w-[220px] h-[380px] flex flex-col z-40">
-                <div className="p-3 flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 rounded-full overflow-hidden">
-                      <img src="/placeholder.svg" alt="Profile" width={24} height={24} className="object-cover" />
-                    </div>
-                    <div className="text-xs">
-                      <div className="font-medium">nicknamehey01</div>
-                      <div className="text-[#3c3e40]">Mumbai, India</div>
-                    </div>
-                  </div>
-                  <button>
-                    <MoreHorizontal size={16} />
-                  </button>
-                </div>
-
-                {/* Content area */}
-                <div className="flex-1 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#b762f7] to-transparent opacity-80"></div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
