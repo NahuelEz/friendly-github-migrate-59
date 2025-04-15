@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, MouseEvent } from "react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import VideoPlayButton from '../ui/VideoPlayButton';
@@ -5,9 +6,10 @@ import VideoPlayButton from '../ui/VideoPlayButton';
 interface CardHoverProps {
   children: React.ReactNode;
   className?: string;
+  showVideoButton?: boolean;
 }
 
-const Card3DHover: React.FC<CardHoverProps> = ({ children, className = "" }) => {
+const Card3DHover: React.FC<CardHoverProps> = ({ children, className = "", showVideoButton = false }) => {
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -51,7 +53,7 @@ const Card3DHover: React.FC<CardHoverProps> = ({ children, className = "" }) => 
       onMouseLeave={handleMouseLeave}
     >
       {children}
-      <VideoPlayButton />
+      {showVideoButton && <VideoPlayButton />}
     </div>
   );
 };
@@ -62,7 +64,7 @@ export const ResultsSection: React.FC = () => {
         <div className="self-center w-[1164px] max-w-full">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
             {[1, 2, 3, 4].map(i => <div key={i} className="w-3/12 max-md:w-full max-md:ml-0">
-                <Card3DHover className="bg-[rgba(217,217,217,1)] flex gap-[9px] font-medium w-full pt-6 pb-[443px] px-[19px] max-md:mt-[19px] max-md:pl-5 max-md:pb-[100px]">
+                <Card3DHover className="bg-[rgba(217,217,217,1)] flex gap-[9px] font-medium w-full pt-6 pb-[443px] px-[19px] max-md:mt-[19px] max-md:pl-5 max-md:pb-[100px]" showVideoButton={true}>
                   <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/125fec5088d807ae908654880b7b663832f38666a6c54192d365209cb57e0c4f?placeholderIfAbsent=true" alt="Profile" className="aspect-[1] object-contain w-[34px] shrink-0 rounded-[50%]" />
                   <div className="flex flex-col items-stretch">
                     <div className="flex items-stretch gap-5 text-xs text-white whitespace-nowrap justify-between">
@@ -80,7 +82,7 @@ export const ResultsSection: React.FC = () => {
         <div className="mt-[69px] max-md:max-w-full max-md:mt-10">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
             {[1, 2, 3, 4].map(i => <div key={i} className="w-3/12 max-md:w-full max-md:ml-0">
-                <Card3DHover className="shadow-[3px_5px_20px_0px_rgba(0,0,0,0.50)] bg-white flex grow flex-col items-center text-center w-full py-10 px-6 rounded-[20px] max-md:mt-5">
+                <Card3DHover className="shadow-[3px_5px_20px_0px_rgba(0,0,0,0.50)] bg-white flex grow flex-col items-center text-center w-full py-10 px-6 rounded-[20px] max-md:mt-5" showVideoButton={false}>
                   <div className="text-[#181615] text-5xl font-bold">39,389</div>
                   <div className="text-gray-600 text-sm mt-3">Followers Gained</div>
                 </Card3DHover>
