@@ -162,32 +162,30 @@ const CaseStudies = () => {
         </div>
       </div>
 
-      {/* Esta Hecho Para Vos section */}
-      <div className="relative w-full bg-gradient-to-r from-[#4f1092] via-[#d8b8ff] to-[#ff6200] py-12">
-        {/* Heading */}
-        <div className="container mx-auto px-4">
-          <h1 className="text-[#ffffff] text-5xl md:text-6xl lg:text-7xl font-bold mb-16 tracking-tight">
+      {/* Comienza Hoy Section - Updated to match design */}
+      <div className="min-h-screen bg-[#4f1092] relative overflow-hidden">
+        <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
+          {/* Left Section - Text content */}
+          <h1 className="text-white text-7xl font-bold tracking-wide uppercase mb-16">
             ESTA HECHO PARA VOS
           </h1>
 
-          {/* Carousel section */}
-          <div className="relative h-[450px] max-w-[1164px] mx-auto">
-            {/* Navigation arrows */}
-            <button className="absolute left-0 top-1/2 -translate-y-1/2 z-50 bg-[#ff6200] rounded-full p-3 text-white">
+          {/* Cards Section */}
+          <div className="relative flex justify-center items-center mb-16">
+            {/* Left Navigation Arrow */}
+            <button className="absolute left-0 z-10 bg-[#ff6200] rounded-full p-4 text-white">
               <ChevronLeft size={24} />
             </button>
-            <button className="absolute right-0 top-1/2 -translate-y-1/2 z-50 bg-[#ff6200] rounded-full p-3 text-white">
-              <ChevronRight size={24} />
-            </button>
 
-            {/* Cards - matching Home page layout */}
-            <div className="flex gap-8 justify-between w-full">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="bg-[#d9d9d9] rounded-lg w-[270px] h-[380px] flex flex-col">
+            {/* Social Media Posts */}
+            <div className="flex gap-4 w-[1164px] justify-center">
+              {[1, 2, 3, 4].map((item) => (
+                <div key={item} className="bg-[#d9d9d9] rounded-lg w-[270px] h-[380px] relative">
+                  {/* Profile Header */}
                   <div className="p-3 flex justify-between items-center">
                     <div className="flex items-center gap-2">
                       <div className="w-6 h-6 rounded-full overflow-hidden">
-                        <img alt="Profile" width={24} height={24} className="object-cover" src="/lovable-uploads/8a081d08-5289-4512-a158-6cc6922f5471.png" />
+                        <img src="/placeholder.svg" alt="Profile" width={24} height={24} className="object-cover" />
                       </div>
                       <div className="text-xs">
                         <div className="font-medium">nicknamehey01</div>
@@ -206,7 +204,17 @@ const CaseStudies = () => {
                 </div>
               ))}
             </div>
+
+            {/* Right Navigation Arrow */}
+            <button className="absolute right-0 z-10 bg-[#ff6200] rounded-full p-4 text-white">
+              <ChevronRight size={24} />
+            </button>
           </div>
+        </div>
+
+        {/* Gradient blur background */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          
         </div>
       </div>
 
