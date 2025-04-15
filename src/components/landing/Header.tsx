@@ -1,13 +1,13 @@
+
 import React, { useState } from "react";
 import InstagramSearchBar from "@/components/ui/InstagramSearchBar";
-import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Home, CreditCard, BookOpen, BarChart3 } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useIsMobile();
-  const location = useLocation();
   
   const handleSearch = (username: string) => {
     console.log("Searching for:", username);
@@ -16,10 +16,6 @@ export const Header: React.FC = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-
-  const isActive = (path: string) => {
-    return location.pathname === path;
   };
 
   return (
@@ -48,29 +44,9 @@ export const Header: React.FC = () => {
         </Link>
       </div>
 
-      {/* Navigation bar - visible on all screen sizes */}
-      <div className={`flex items-center bg-black/30 rounded-full px-4 py-2 mx-4 ${isMobile ? 'hidden' : 'flex'}`}>
-        <Link to="/" className={`flex items-center px-3 py-1 rounded-full ${isActive('/') ? 'bg-[#B762F7] text-white' : 'text-white hover:bg-[#B762F7]/30'}`}>
-          <Home size={16} className="mr-1" />
-          <span>Home</span>
-        </Link>
-        <Link to="/pricing" className={`flex items-center px-3 py-1 rounded-full ${isActive('/pricing') ? 'bg-[#B762F7] text-white' : 'text-white hover:bg-[#B762F7]/30'}`}>
-          <CreditCard size={16} className="mr-1" />
-          <span>Tarifas</span>
-        </Link>
-        <Link to="/case-studies" className={`flex items-center px-3 py-1 rounded-full ${isActive('/case-studies') ? 'bg-[#B762F7] text-white' : 'text-white hover:bg-[#B762F7]/30'}`}>
-          <BookOpen size={16} className="mr-1" />
-          <span>Casos</span>
-        </Link>
-        <Link to="/consultar-mi-crecimiento" className={`flex items-center px-3 py-1 rounded-full ${isActive('/consultar-mi-crecimiento') ? 'bg-[#B762F7] text-white' : 'text-white hover:bg-[#B762F7]/30'}`}>
-          <BarChart3 size={16} className="mr-1" />
-          <span>Crecimiento</span>
-        </Link>
-      </div>
-
       {/* Search Bar - Only show on desktop */}
       {!isMobile && (
-        <div className="flex-1 max-w-md mx-4">
+        <div className="flex-1 max-w-xl mx-8">
           <InstagramSearchBar onSearch={handleSearch} />
         </div>
       )}
@@ -88,49 +64,42 @@ export const Header: React.FC = () => {
 
       {/* Navigation and Login Button - Only show on desktop or when menu is open on mobile */}
       <div className={`${isMobile ? 'absolute top-full left-0 right-0 bg-[rgba(79,16,146,0.95)] p-6 transition-all duration-300 shadow-lg z-50' : 'flex items-center space-x-6'} ${isMobile && !isMenuOpen ? 'opacity-0 pointer-events-none -translate-y-4' : 'opacity-100 pointer-events-auto translate-y-0'}`}>
-        {/* Mobile navigation */}
-        {isMobile && (
-          <nav className="mb-4">
-            <ul className="flex flex-col space-y-4">
-              <li>
-                <Link
-                  to="/"
-                  className={`flex items-center text-white text-sm font-medium hover:text-[#B762F7] transition-colors block py-1 ${isActive('/') ? 'text-[#B762F7]' : ''}`}
-                >
-                  <Home size={18} className="mr-2" />
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/pricing"
-                  className={`flex items-center text-white text-sm font-medium hover:text-[#B762F7] transition-colors block py-1 ${isActive('/pricing') ? 'text-[#B762F7]' : ''}`}
-                >
-                  <CreditCard size={18} className="mr-2" />
-                  Tarifas
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/case-studies"
-                  className={`flex items-center text-white text-sm font-medium hover:text-[#B762F7] transition-colors block py-1 ${isActive('/case-studies') ? 'text-[#B762F7]' : ''}`}
-                >
-                  <BookOpen size={18} className="mr-2" />
-                  Estudios de caso
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/consultar-mi-crecimiento"
-                  className={`flex items-center text-white text-sm font-medium hover:text-[#B762F7] transition-colors block py-1 ${isActive('/consultar-mi-crecimiento') ? 'text-[#B762F7]' : ''}`}
-                >
-                  <BarChart3 size={18} className="mr-2" />
-                  Consultar crecimiento
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        )}
+        <nav className={isMobile ? 'mb-4' : ''}>
+          <ul className={`${isMobile ? 'flex flex-col space-y-4' : 'flex items-center space-x-4'}`}>
+            <li>
+              <Link
+                to="/pricing"
+                className="text-white text-sm font-medium hover:text-[#B762F7] transition-colors block py-1"
+              >
+                Tarifas
+              </Link>
+            </li>
+            <li>
+              <a
+                href="#estudios"
+                className="text-white text-sm font-medium hover:text-[#B762F7] transition-colors block py-1"
+              >
+                Estudios de caso
+              </a>
+            </li>
+            <li>
+              <a
+                href="#comentarios"
+                className="text-white text-sm font-medium hover:text-[#B762F7] transition-colors block py-1"
+              >
+                Comentarios
+              </a>
+            </li>
+            <li>
+              <a
+                href="#recursos"
+                className="text-white text-sm font-medium hover:text-[#B762F7] transition-colors block py-1"
+              >
+                Recursos
+              </a>
+            </li>
+          </ul>
+        </nav>
         
         {/* Login button */}
         <Link 
