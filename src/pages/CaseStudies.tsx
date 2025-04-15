@@ -5,6 +5,9 @@ import Footer from '@/components/landing/Footer';
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import SocialCard from '@/components/social/SocialCard';
 const CaseStudies = () => {
   const successCards = [{
     id: 1,
@@ -162,57 +165,61 @@ const CaseStudies = () => {
         </div>
       </div>
 
-      {/* Comienza Hoy Section - Updated to match design */}
-      <div className="min-h-screen bg-[#4f1092] relative overflow-hidden">
-        <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
-          {/* Left Section - Text content */}
-          <h1 className="text-white text-7xl font-bold tracking-wide uppercase mb-16">
-            ESTA HECHO PARA VOS
-          </h1>
+      {/* Comienza Hoy Section */}
+      <div className="bg-[#b762f7] flex flex-row justify-center w-full">
+        <div className="w-full max-w-[1920px] min-h-[852px] relative py-16">
+          <div className="relative w-full max-w-[1605px] mx-auto px-4">
+            {/* Left Section */}
+            <div className="flex flex-col max-w-[440px] mt-16">
+              <h1 className="font-bold text-white text-[56.9px] tracking-[0] leading-normal whitespace-nowrap uppercase">
+                ESTA HECHO PARA VOS
+              </h1>
 
-          {/* Cards Section */}
-          <div className="relative flex justify-center items-center mb-16">
-            {/* Left Navigation Arrow */}
-            <button className="absolute left-0 z-10 bg-[#ff6200] rounded-full p-4 text-white">
-              <ChevronLeft size={24} />
-            </button>
+              <Separator className="bg-white/30 h-px my-8" />
 
-            {/* Social Media Posts */}
-            <div className="flex gap-4 w-[1164px] justify-center">
-              {[1, 2, 3, 4].map(item => <div key={item} className="bg-[#d9d9d9] rounded-lg w-[270px] h-[380px] relative">
-                  {/* Profile Header */}
-                  <div className="p-3 flex justify-between items-center">
-                    <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-full overflow-hidden">
-                        <img src="/placeholder.svg" alt="Profile" width={24} height={24} className="object-cover" />
-                      </div>
-                      <div className="text-xs">
-                        <div className="font-medium">nicknamehey01</div>
-                        <div className="text-[#3c3e40]">Mumbai, India</div>
-                      </div>
-                    </div>
-                    <button>
-                      <MoreHorizontal size={16} />
-                    </button>
-                  </div>
+              <p className="font-normal text-white text-[28px] md:text-[35px] tracking-[-0.53px] leading-[42.0px] mt-4">
+                Registrate y mira cómo crecen tus seguidores y tu comunidad en una semana
+              </p>
 
-                  {/* Content area */}
-                  <div className="flex-1 flex items-center justify-center">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#b762f7] to-transparent opacity-80"></div>
-                  </div>
-                </div>)}
+              <Button className="w-[197px] h-[58px] mt-16 bg-[#4f1092] hover:bg-[#4f1092]/90 rounded-[117.72px]">
+                <span className="font-bold text-white text-[25.9px] leading-[25.9px]">comenzar</span>
+              </Button>
             </div>
 
-            {/* Right Navigation Arrow */}
-            <button className="absolute right-0 z-10 bg-[#ff6200] rounded-full p-4 text-white">
-              <ChevronRight size={24} />
-            </button>
-          </div>
-        </div>
+            {/* Right Section - Social Cards */}
+            <div className="absolute right-[100px] md:right-[200px] lg:right-[400px] top-0 flex">
+              <div className="relative">
+                {/* First Card - Left */}
+                <div className="absolute top-11 left-0">
+                  <SocialCard size="normal" />
+                </div>
 
-        {/* Gradient blur background */}
-        <div className="absolute inset-0 w-full h-full overflow-hidden">
-          
+                {/* Middle Card - Center */}
+                <div className="absolute left-[180px] md:left-[250px] top-[79px]">
+                  <SocialCard size="large" />
+                </div>
+
+                {/* Last Card - Right */}
+                <div className="absolute left-[400px] md:left-[565px] top-11">
+                  <SocialCard size="normal" />
+
+                  {/* Checkmark Icon */}
+                  <div className="absolute w-[180px] h-[180px] md:w-[234px] md:h-[236px] top-[425px] left-[50px]">
+                    <div className="relative h-full">
+                      <div className="absolute w-[120px] h-[120px] md:w-[148px] md:h-[148px] top-0 left-0 bg-[#4f1092] rounded-[26.76px]" />
+                      <div className="absolute w-[160px] h-[160px] md:w-[197px] md:h-[197px] top-[30px] md:top-[39px] left-[30px] md:left-[37px]">
+                        <div className="relative w-full h-full -top-0.5 -left-0.5 bg-[#ffffff33] rounded-[26.76px] backdrop-blur-[16.73px] flex items-center justify-center">
+                          <svg width="102" height="87" viewBox="0 0 102 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 43.5L36.5 75L97 5" stroke="white" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
