@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import InstagramSearchBar from "@/components/ui/InstagramSearchBar";
 import { Link } from "react-router-dom";
@@ -75,12 +74,12 @@ export const Header: React.FC = () => {
               </Link>
             </li>
             <li>
-              <a
-                href="#estudios"
+              <Link
+                to="/case-studies"
                 className="text-white text-sm font-medium hover:text-[#B762F7] transition-colors block py-1"
               >
                 Estudios de caso
-              </a>
+              </Link>
             </li>
             <li>
               <a
