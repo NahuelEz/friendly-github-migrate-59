@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
@@ -8,7 +7,6 @@ import { Footer } from "../components/landing/Footer";
 const Pricing = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Navigation - using existing Header component */}
       <Header />
 
       {/* Hero Section */}
@@ -40,9 +38,9 @@ const Pricing = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-6">
             {/* Pack 1 */}
-            <div className="border rounded-lg overflow-hidden shadow-sm">
-              <div className="p-6 border-b">
-                <h2 className="text-2xl font-bold text-center">PACK 1</h2>
+            <div className="border rounded-lg overflow-hidden shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-gray-50/50 group">
+              <div className="p-6 border-b group-hover:bg-[#b762f7]/5">
+                <h2 className="text-2xl font-bold text-center group-hover:text-[#b762f7]">PACK 1</h2>
               </div>
               <div className="p-6 space-y-4">
                 <div className="flex items-start gap-2">
@@ -67,14 +65,14 @@ const Pricing = () => {
                 </div>
               </div>
               <div className="p-6 flex justify-center">
-                <button className="bg-[#b762f7] text-white px-8 py-2 rounded-full">comenzar</button>
+                <button className="bg-[#b762f7] text-white px-8 py-2 rounded-full transition-all duration-300 hover:bg-[#9f4ad8] hover:scale-105">comenzar</button>
               </div>
             </div>
 
             {/* Pack 2 */}
-            <div className="bg-[#b762f7] rounded-lg overflow-hidden shadow-sm text-white">
-              <div className="p-6 border-b border-white/20">
-                <h2 className="text-2xl font-bold text-center">PACK 2</h2>
+            <div className="bg-[#b762f7] rounded-lg overflow-hidden shadow-sm text-white transition-all duration-300 hover:scale-105 hover:shadow-xl group">
+              <div className="p-6 border-b border-white/20 group-hover:bg-[#4f1092]/10">
+                <h2 className="text-2xl font-bold text-center group-hover:text-white/90">PACK 2</h2>
               </div>
               <div className="p-6 space-y-4">
                 <div className="flex items-start gap-2">
@@ -103,14 +101,14 @@ const Pricing = () => {
                 </div>
               </div>
               <div className="p-6 flex justify-center">
-                <button className="bg-[#4f1092] text-white px-8 py-2 rounded-full">comenzar</button>
+                <button className="bg-[#4f1092] text-white px-8 py-2 rounded-full transition-all duration-300 hover:bg-[#3D0C70] hover:scale-105">comenzar</button>
               </div>
             </div>
 
             {/* Pack 3 */}
-            <div className="bg-[#4f1092] rounded-lg overflow-hidden shadow-sm text-white">
-              <div className="p-6 border-b border-white/20">
-                <h2 className="text-2xl font-bold text-center">PACK 3</h2>
+            <div className="bg-[#4f1092] rounded-lg overflow-hidden shadow-sm text-white transition-all duration-300 hover:scale-105 hover:shadow-xl group">
+              <div className="p-6 border-b border-white/20 group-hover:bg-[#fe6202]/10">
+                <h2 className="text-2xl font-bold text-center group-hover:text-white/90">PACK 3</h2>
               </div>
               <div className="p-6 space-y-4">
                 <div className="flex items-start gap-2">
@@ -151,7 +149,7 @@ const Pricing = () => {
                 </div>
               </div>
               <div className="p-6 flex justify-center">
-                <button className="bg-[#fe6202] text-white px-8 py-2 rounded-full">comenzar</button>
+                <button className="bg-[#fe6202] text-white px-8 py-2 rounded-full transition-all duration-300 hover:bg-[#ff6200] hover:scale-105">comenzar</button>
               </div>
             </div>
           </div>
@@ -199,7 +197,6 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* Footer - using existing Footer component */}
       <Footer />
     </div>
   );
