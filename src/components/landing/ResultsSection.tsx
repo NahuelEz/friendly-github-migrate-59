@@ -62,7 +62,7 @@ export const ResultsSection: React.FC = () => {
   return <section className="bg-[#181615] flex w-full flex-col items-center px-20 max-md:max-w-full max-md:px-5">
       <div className="z-10 flex mt-[-209px] mb-[-58px] w-full max-w-[1360px] flex-col items-stretch max-md:max-w-full max-md:mt-[-200px] max-md:mb-2.5">
         <div className="self-center w-[1164px] max-w-full">
-          <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
+          <div className="gap-8 flex max-md:flex-col max-md:items-stretch">
             {[1, 2, 3, 4].map(i => <div key={i} className="w-3/12 max-md:w-full max-md:ml-0">
                 <Card3DHover className="bg-[rgba(217,217,217,1)] flex gap-[9px] font-medium w-full pt-6 pb-[443px] px-[19px] max-md:mt-[19px] max-md:pl-5 max-md:pb-[100px]" showVideoButton={true}>
                   <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/125fec5088d807ae908654880b7b663832f38666a6c54192d365209cb57e0c4f?placeholderIfAbsent=true" alt="Profile" className="aspect-[1] object-contain w-[34px] shrink-0 rounded-[50%]" />
@@ -80,7 +80,7 @@ export const ResultsSection: React.FC = () => {
           </div>
         </div>
         <div className="mt-[69px] max-md:max-w-full max-md:mt-10">
-          <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
+          <div className="gap-8 flex max-md:flex-col max-md:items-stretch">
             {[1, 2, 3, 4].map(i => <div key={i} className="w-3/12 max-md:w-full max-md:ml-0">
                 <Card3DHover className="shadow-[3px_5px_20px_0px_rgba(0,0,0,0.50)] bg-white flex grow flex-col items-center text-center w-full py-10 px-6 rounded-[20px] max-md:mt-5" showVideoButton={false}>
                   <div className="text-[#181615] text-5xl font-bold">39,389</div>
