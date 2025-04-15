@@ -179,8 +179,7 @@ const CaseStudies = () => {
 
             {/* Social Media Posts */}
             <div className="flex gap-4 w-[1164px] justify-center">
-              {[1, 2, 3, 4].map((item) => (
-                <div key={item} className="bg-[#d9d9d9] rounded-lg w-[270px] h-[380px] relative">
+              {[1, 2, 3, 4].map(item => <div key={item} className="bg-[#d9d9d9] rounded-lg w-[270px] h-[380px] relative">
                   {/* Profile Header */}
                   <div className="p-3 flex justify-between items-center">
                     <div className="flex items-center gap-2">
@@ -201,8 +200,7 @@ const CaseStudies = () => {
                   <div className="flex-1 flex items-center justify-center">
                     <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#b762f7] to-transparent opacity-80"></div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             {/* Right Navigation Arrow */}
@@ -440,19 +438,7 @@ const CaseStudies = () => {
       </div>
 
       {/* Call to Action */}
-      <div className="bg-gradient-to-r from-purple-800 to-purple-900 py-16 text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            ¿Listo para ser nuestro próximo caso de éxito?
-          </h2>
-          <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
-            Empieza a crecer hoy mismo con nuestra estrategia de IA personalizada para tu cuenta de Instagram
-          </p>
-          <Link to="/pricing" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300">
-            Ver Planes
-          </Link>
-        </div>
-      </div>
+      
 
       {/* Footer */}
       <Footer />
