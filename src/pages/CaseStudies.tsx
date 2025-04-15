@@ -110,7 +110,7 @@ const CaseStudies = () => {
                   <div className={`${card.color} rounded-lg flex-shrink-0 shadow-md overflow-hidden`}>
                     <div className="flex flex-col items-center pt-6 pb-2">
                       <Avatar className="w-20 h-20 bg-white mb-2">
-                        <AvatarImage src="/placeholder.svg" alt={card.username} />
+                        <AvatarImage alt={card.username} src="/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png" />
                         <AvatarFallback>{card.username.slice(0, 2).toUpperCase()}</AvatarFallback>
                       </Avatar>
                       <h3 className="font-medium text-lg">{card.username}</h3>
