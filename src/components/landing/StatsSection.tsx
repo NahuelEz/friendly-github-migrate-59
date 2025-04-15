@@ -1,4 +1,3 @@
-
 import React from "react";
 import InstagramPost from "./InstagramPost";
 import StatsCard from "./StatsCard";
@@ -16,7 +15,6 @@ export const StatsSection: React.FC = () => {
                   imageUrl="/uploads/d6ad7714-19c0-444c-8297-fef26645b1f6.png"
                   likes="2.5K"
                   comments="384"
-                  isVideo={true}
                 />
               </div>
               <div className="w-[72%] ml-5 max-md:w-full max-md:ml-0">

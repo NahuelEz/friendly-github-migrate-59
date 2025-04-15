@@ -1,15 +1,13 @@
 
 import React from 'react';
-import VideoPlayButton from '../ui/VideoPlayButton';
 
 interface InstagramPostProps {
   imageUrl: string;
   likes: string;
   comments: string;
-  isVideo?: boolean;
 }
 
-const InstagramPost: React.FC<InstagramPostProps> = ({ imageUrl, likes, comments, isVideo = false }) => {
+const InstagramPost: React.FC<InstagramPostProps> = ({ imageUrl, likes, comments }) => {
   return (
     <div className="relative group bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
       <div className="relative aspect-square">
@@ -18,7 +16,6 @@ const InstagramPost: React.FC<InstagramPostProps> = ({ imageUrl, likes, comments
           alt="Instagram post" 
           className="w-full h-full object-cover"
         />
-        {isVideo && <VideoPlayButton />}
       </div>
       <div className="p-4">
         <div className="flex items-center space-x-4">

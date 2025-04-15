@@ -1,6 +1,6 @@
-
 import React, { useState, useRef, MouseEvent } from "react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import VideoPlayButton from '../ui/VideoPlayButton';
 
 interface CardHoverProps {
   children: React.ReactNode;
@@ -40,7 +40,7 @@ const Card3DHover: React.FC<CardHoverProps> = ({ children, className = "" }) => 
   return (
     <div
       ref={cardRef}
-      className={`${className} transition-all duration-300`}
+      className={`${className} relative transition-all duration-300`}
       style={{
         transform: isHovered ? `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg) scale(1.03)` : 'perspective(1000px) rotateX(0) rotateY(0)',
         transition: 'all 0.3s ease-out',
@@ -51,6 +51,7 @@ const Card3DHover: React.FC<CardHoverProps> = ({ children, className = "" }) => 
       onMouseLeave={handleMouseLeave}
     >
       {children}
+      <VideoPlayButton />
     </div>
   );
 };
@@ -89,4 +90,5 @@ export const ResultsSection: React.FC = () => {
       </div>
     </section>;
 };
+
 export default ResultsSection;
