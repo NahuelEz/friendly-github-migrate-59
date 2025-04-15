@@ -6,11 +6,11 @@ import SocialCard from './SocialCard';
 
 export const StartToday = () => {
   return (
-    <div className="bg-[#b762f7] flex flex-row justify-center w-full">
+    <div className="bg-[#b762f7] flex flex-row justify-center w-full overflow-hidden">
       <div className="w-full max-w-[1920px] min-h-[852px] relative py-16">
         <div className="relative w-full max-w-[1605px] mx-auto px-4">
           {/* Left Section */}
-          <div className="flex flex-col max-w-[440px] mt-16">
+          <div className="flex flex-col max-w-[440px] mt-16 z-10 relative">
             <h1 className="font-bold text-white text-[56.9px] tracking-[0] leading-normal whitespace-nowrap uppercase">
               COMIENZA HOY
             </h1>
@@ -26,8 +26,8 @@ export const StartToday = () => {
             </Button>
           </div>
 
-          {/* Right Section - Social Cards */}
-          <div className="absolute right-[100px] md:right-[200px] lg:right-[400px] top-0 flex">
+          {/* Right Section - Social Cards - Centered */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-x-0 md:left-auto md:right-10 lg:right-32 xl:right-64 top-0 flex">
             <div className="relative">
               {/* First Card - Left */}
               <div className="absolute top-11 left-0">
