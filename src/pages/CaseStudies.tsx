@@ -187,7 +187,7 @@ const CaseStudies = () => {
                 <div className="p-3 flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full overflow-hidden">
-                      <img src="/placeholder.svg" alt="Profile" width={24} height={24} className="object-cover" />
+                      <img alt="Profile" width={24} height={24} className="object-cover" src="/lovable-uploads/8a081d08-5289-4512-a158-6cc6922f5471.png" />
                     </div>
                     <div className="text-xs">
                       <div className="font-medium">nicknamehey01</div>
