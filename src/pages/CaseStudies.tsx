@@ -5,6 +5,7 @@ import Footer from '@/components/landing/Footer';
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+
 const CaseStudies = () => {
   const successCards = [{
     id: 1,
@@ -47,6 +48,7 @@ const CaseStudies = () => {
     followersGained: "36,743",
     avgLikes: "1,950+"
   }];
+
   return <div className="flex flex-col min-h-screen">
       {/* Header */}
       <Header />
@@ -58,11 +60,28 @@ const CaseStudies = () => {
           <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-2xl ml-auto text-white"> {/* Added ml-auto to push content to the right */}
-            <h1 className="text-5xl font-bold leading-tight mb-4 text-left md:text-6xl"> {/* Added text-right class */}
+          <div className="max-w-2xl ml-auto text-white">
+            <h1 className="text-5xl font-bold leading-tight mb-4 text-left md:text-6xl">
               HISTORIAS DE CLIENTES QUE DESTACAN SU CRECIMIENTO Y ÉXITO GRACIAS A SOCIAL AI
             </h1>
           </div>
+        </div>
+      </div>
+
+      {/* New section to showcase the uploaded image */}
+      <div className="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-center gap-8">
+        <div className="w-full md:w-1/2 text-center md:text-left">
+          <h2 className="text-3xl font-bold text-purple-900 mb-4">Nuestros Casos de Éxito</h2>
+          <p className="text-gray-600 mb-6">
+            Descubre cómo nuestros clientes han transformado su presencia en redes sociales con nuestra innovadora plataforma de IA.
+          </p>
+        </div>
+        <div className="w-full md:w-1/2 flex justify-center">
+          <img 
+            src="/lovable-uploads/60845a44-9cde-4308-a099-2b9ac4c70d0f.png" 
+            alt="Social Media Expert" 
+            className="max-w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+          />
         </div>
       </div>
 
@@ -521,4 +540,5 @@ const CaseStudies = () => {
       <div className="w-full h-2 bg-gradient-to-r from-purple-900 via-orange-500 to-purple-900"></div>
     </div>;
 };
+
 export default CaseStudies;
