@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import SocialCard from '@/components/social/SocialCard';
 import StartToday from '@/components/social/StartToday';
+import CaseStudiesHero from '@/components/landing/CaseStudiesHero';
 
 const CaseStudies = () => {
   const successCards = [{
@@ -53,7 +54,6 @@ const CaseStudies = () => {
     avgLikes: "1,950+"
   }];
   return <div className="flex flex-col min-h-screen">
-      {/* Header */}
       <Header />
 
       {/* Hero Section with gradient background */}
@@ -98,6 +98,9 @@ const CaseStudies = () => {
           </div>
         </div>
       </div>
+
+      {/* New Profile Section */}
+      <CaseStudiesHero />
 
       {/* Success Cases Section */}
       <div className="py-16 px-4">
@@ -318,4 +321,5 @@ const CaseStudies = () => {
       <div className="w-full h-2 bg-gradient-to-r from-purple-900 via-orange-500 to-purple-900"></div>
     </div>;
 };
+
 export default CaseStudies;
