@@ -65,7 +65,7 @@ const Index = () => {
         comenzar
       </CTAButton>
 
-      <div className="text-[rgba(79,16,146,1)] text-5xl  leading-[66px] text-center uppercase self-center w-[986px] mt-[166px] max-md:max-w-full max-md:text-[40px] max-md:leading-[49px] max-md:mt-10">
+      <div className="text-[rgba(79,16,146,1)] text-5xl  leading-[66px] text-center uppercase self-center w-[986px] mt-[166px] max-md:max-w-full max-md:text-[40px] max-md:leading-[49px] max-md:mt-10 font-bold">
         Confía en nuestra experiencia para desarrollar tu estrategia de
         crecimiento en Instagram.
       </div>
