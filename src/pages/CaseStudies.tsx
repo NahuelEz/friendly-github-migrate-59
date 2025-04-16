@@ -53,7 +53,8 @@ const CaseStudies = () => {
     followersGained: "36,743",
     avgLikes: "1,950+"
   }];
-  return <div className="flex flex-col min-h-screen">
+  return (
+    <div className="flex flex-col min-h-screen">
       <Header />
 
       {/* Hero Section with gradient background */}
@@ -101,7 +102,9 @@ const CaseStudies = () => {
 
       {/* Success Cases Section */}
       <div className="py-16 px-4">
-        <h2 className="text-5xl font-bold text-purple-900 mb-12">MAS DE X CASOS DE EXITOS</h2>
+        <h2 className="text-5xl font-bold text-purple-900 mb-12 transform scale-y-[2] origin-top">
+          MAS DE X CASOS DE EXITOS
+        </h2>
         
         {/* Updated card carousel */}
         <div className="relative">
@@ -111,7 +114,8 @@ const CaseStudies = () => {
             </CarouselPrevious>
             
             <CarouselContent className="pl-8 pr-8 md:pl-12 md:pr-12 py-0 px-[210px]">
-              {successCards.map(card => <CarouselItem key={card.id} className="md:basis-1/4">
+              {successCards.map(card => (
+                <CarouselItem key={card.id} className="md:basis-1/4">
                   <div className={`${card.color} rounded-lg flex-shrink-0 shadow-md overflow-hidden`}>
                     <div className="flex flex-col items-center pt-6 pb-2">
                       <Avatar className="w-20 h-20 bg-white mb-2">
@@ -137,20 +141,23 @@ const CaseStudies = () => {
                     </div>
 
                     {[{
-                  label: "Followers Gained",
-                  value: card.followersGained
-                }, {
-                  label: "Engagement Rate",
-                  value: "5.7%"
-                }, {
-                  label: "Account Growth",
-                  value: "+214%"
-                }].map((row, index) => <div key={index} className="grid grid-cols-2 border-t border-white/20">
+                      label: "Followers Gained",
+                      value: card.followersGained
+                    }, {
+                      label: "Engagement Rate",
+                      value: "5.7%"
+                    }, {
+                      label: "Account Growth",
+                      value: "+214%"
+                    }].map((row, index) => (
+                      <div key={index} className="grid grid-cols-2 border-t border-white/20">
                         <div className="py-3 px-4 text-white/80 text-sm">{row.label}</div>
                         <div className="py-3 px-4 text-right font-medium">{row.value}</div>
-                      </div>)}
+                      </div>
+                    ))}
                   </div>
-                </CarouselItem>)}
+                </CarouselItem>
+              ))}
             </CarouselContent>
             
             <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white border-none hover:bg-orange-600 z-20 rounded-full" />
@@ -210,6 +217,8 @@ const CaseStudies = () => {
 
       {/* Footer Line */}
       <div className="w-full h-2 bg-gradient-to-r from-purple-900 via-orange-500 to-purple-900"></div>
-    </div>;
+    </div>
+  );
 };
+
 export default CaseStudies;
