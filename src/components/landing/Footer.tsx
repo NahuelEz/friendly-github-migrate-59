@@ -35,7 +35,7 @@ export const Footer: React.FC = () => {
         {/* Navigation Links */}
         <div className="text-left">
           <nav className="text-xl font-bold">
-            <ul className="text-white space-y-2">
+            <ul className="text-white flex space-x-6 mb-3">
               <li><Link to="/pricing" className="hover:text-[#B762F7] transition-colors">Tarifas</Link></li>
               <li><a href="#clientes" className="hover:text-[#B762F7] transition-colors">Clientes</a></li>
               <li><a href="#contenido" className="hover:text-[#B762F7] transition-colors">Contenido</a></li>
