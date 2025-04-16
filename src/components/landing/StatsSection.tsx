@@ -1,12 +1,10 @@
-
 import React from "react";
 import InstagramPost from "./InstagramPost";
 import StatsCard from "./StatsCard";
 import ProfileCard from "./ProfileCard";
 import TrafficSource from "./TrafficSource";
-
 export const StatsSection: React.FC = () => {
-  return <section className="flex flex-col items-stretch pb-[72px]">
+  return <section className="flex flex-col items-stretch pb-[72px] mx-0 py-[100px]">
       <h1 className="rotate-[0.003745252016376141rad] text-[rgba(79,16,146,1)] text-6xl font-normal leading-[1.1] text-center uppercase self-center z-10 -mt-1 max-md:text-[40px]">
         TITULAR
       </h1>
@@ -19,11 +17,7 @@ export const StatsSection: React.FC = () => {
                 {/* Social Post Card Column */}
                 <div className="w-[28%] max-md:w-full max-md:ml-0">
                   <div className="mr-[-142px] my-auto max-md:mt-10 relative z-20">
-                    <InstagramPost 
-                      imageUrl="/uploads/d6ad7714-19c0-444c-8297-fef26645b1f6.png"
-                      likes="903"
-                      comments="384"
-                    />
+                    <InstagramPost imageUrl="/uploads/d6ad7714-19c0-444c-8297-fef26645b1f6.png" likes="903" comments="384" />
                   </div>
                 </div>
                 {/* Stats Column */}
@@ -56,5 +50,4 @@ export const StatsSection: React.FC = () => {
       </div>
     </section>;
 };
-
 export default StatsSection;
