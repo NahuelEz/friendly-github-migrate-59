@@ -7,12 +7,15 @@ interface CardHoverProps {
   children: React.ReactNode;
   className?: string;
   showVideoButton?: boolean;
+  videoUrl?: string;
 }
 
-const Card3DHover: React.FC<CardHoverProps> = ({ children, className = "", showVideoButton = false }) => {
+const Card3DHover: React.FC<CardHoverProps> = ({ children, className = "", showVideoButton = false, videoUrl = "" }) => {
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     if (cardRef.current) {
@@ -39,10 +42,21 @@ const Card3DHover: React.FC<CardHoverProps> = ({ children, className = "", showV
     setRotation({ x: 0, y: 0 });
   };
 
+  const handlePlayClick = () => {
+    if (videoUrl && videoRef.current) {
+      setShowVideo(true);
+      if (videoRef.current.paused) {
+        videoRef.current.play();
+      } else {
+        videoRef.current.pause();
+      }
+    }
+  };
+
   return (
     <div
       ref={cardRef}
-      className={`${className} relative transition-all duration-300`}
+      className={`${className} relative transition-all duration-300 overflow-hidden`}
       style={{
         transform: isHovered ? `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg) scale(1.03)` : 'perspective(1000px) rotateX(0) rotateY(0)',
         transition: 'all 0.3s ease-out',
@@ -52,19 +66,47 @@ const Card3DHover: React.FC<CardHoverProps> = ({ children, className = "", showV
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {children}
-      {showVideoButton && <VideoPlayButton />}
+      {showVideo && videoUrl ? (
+        <video 
+          ref={videoRef}
+          className="absolute inset-0 w-full h-full object-cover z-10" 
+          src={videoUrl}
+          controls={false}
+          onClick={handlePlayClick}
+        />
+      ) : (
+        children
+      )}
+      
+      {showVideoButton && (
+        <VideoPlayButton 
+          videoUrl={videoUrl} 
+          onClick={handlePlayClick}
+        />
+      )}
     </div>
   );
 };
 
 export const ResultsSection: React.FC = () => {
+  // Example video URLs - replace with actual videos
+  const videoUrls = [
+    "https://example.com/video1.mp4",
+    "https://example.com/video2.mp4",
+    "https://example.com/video3.mp4",
+    "https://example.com/video4.mp4"
+  ];
+
   return <section className="bg-[#181615] flex w-full flex-col items-center px-20 max-md:max-w-full max-md:px-5">
       <div className="z-10 flex mt-[-209px] mb-[-58px] w-full max-w-[1360px] flex-col items-stretch max-md:max-w-full max-md:mt-[-200px] max-md:mb-2.5">
         <div className="self-center w-[1164px] max-w-full">
           <div className="gap-8 flex max-md:flex-col max-md:items-stretch">
-            {[1, 2, 3, 4].map(i => <div key={i} className="w-3/12 max-md:w-full max-md:ml-0">
-                <Card3DHover className="bg-[rgba(217,217,217,1)] flex gap-[9px] font-medium w-full pt-6 pb-[443px] px-[19px] max-md:mt-[19px] max-md:pl-5 max-md:pb-[100px]" showVideoButton={true}>
+            {[1, 2, 3, 4].map((i, index) => <div key={i} className="w-3/12 max-md:w-full max-md:ml-0">
+                <Card3DHover 
+                  className="bg-[rgba(217,217,217,1)] flex gap-[9px] font-medium w-full pt-6 pb-[443px] px-[19px] max-md:mt-[19px] max-md:pl-5 max-md:pb-[100px]" 
+                  showVideoButton={true}
+                  videoUrl={videoUrls[index]}
+                >
                   <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/125fec5088d807ae908654880b7b663832f38666a6c54192d365209cb57e0c4f?placeholderIfAbsent=true" alt="Profile" className="aspect-[1] object-contain w-[34px] shrink-0 rounded-[50%]" />
                   <div className="flex flex-col items-stretch">
                     <div className="flex items-stretch gap-5 text-xs text-white whitespace-nowrap justify-between">
