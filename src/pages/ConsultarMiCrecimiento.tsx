@@ -6,13 +6,14 @@ import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
 import { Link } from 'react-router-dom';
 import { ArrowUp } from "lucide-react";
+
 const ConsultarMiCrecimiento = () => {
   return <>
       <Header />
       
       {/* Hero Section with Background Image */}
       <section className="min-h-[80vh] relative flex items-center" style={{
-      backgroundImage: "url('/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png')",
+      backgroundImage: "url('/lovable-uploads/d6cf9a25-fdf6-4e0a-a2ea-a94df382966a.png')",
       backgroundSize: "cover",
       backgroundPosition: "center"
     }}>
