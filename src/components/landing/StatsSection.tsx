@@ -5,7 +5,7 @@ import ProfileCard from "./ProfileCard";
 import TrafficSource from "./TrafficSource";
 export const StatsSection: React.FC = () => {
   return <section className="flex flex-col items-stretch pb-[72px] mx-0 py-[100px]">
-      <h1 className="rotate-[0.003745252016376141rad] text-[rgba(79,16,146,1)] text-6xl leading-[1.1] text-center uppercase self-center z-10 -mt-1 max-md:text-[40px] font-bold">
+      <h1 className="rotate-[0.003745252016376141rad] text-[rgba(79,16,146,1)] scale-y-[2] text-4xl leading-[1.1] text-center uppercase self-center z-10 -mt-1 max-md:text-[40px] font-bold">
         TITULAR
       </h1>
       <div className="w-full mt-[27px] max-md:max-w-full">
