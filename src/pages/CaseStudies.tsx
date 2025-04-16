@@ -106,7 +106,7 @@ const CaseStudies = () => {
           MAS DE X CASOS DE EXITOS
         </h2>
         
-        {/* Updated card carousel */}
+        {/* Updated card carousel with shadow */}
         <div className="relative">
           <Carousel className="w-full">
             <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white border-none hover:bg-orange-600 z-20 rounded-full">
@@ -116,7 +116,7 @@ const CaseStudies = () => {
             <CarouselContent className="pl-8 pr-8 md:pl-12 md:pr-12 py-0 px-[210px]">
               {successCards.map(card => (
                 <CarouselItem key={card.id} className="md:basis-1/4">
-                  <div className={`${card.color} rounded-lg flex-shrink-0 shadow-md overflow-hidden`}>
+                  <div className={`${card.color} rounded-lg flex-shrink-0 shadow-[0_0_20px_rgba(0,0,0,0.9)] overflow-hidden`}>
                     <div className="flex flex-col items-center pt-6 pb-2">
                       <Avatar className="w-20 h-20 bg-white mb-2">
                         <AvatarImage alt={card.username} src="/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png" />
