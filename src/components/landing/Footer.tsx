@@ -43,7 +43,9 @@ export const Footer: React.FC = () => {
             </ul>
           </nav>
           <div className="border-t border-[#B762F7] my-3"></div>
-          <a href="#legal" className="text-[#B762F7] text-xl font-bold hover:underline">Menciones legales</a>
+          <div className="text-center"> {/* Added text-center class */}
+            <a href="#legal" className="text-[#B762F7] text-xl font-bold hover:underline">Menciones legales</a>
+          </div>
         </div>
 
         {/* Newsletter */}
