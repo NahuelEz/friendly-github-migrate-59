@@ -45,7 +45,7 @@ const ProfileCarousel: React.FC = () => {
   };
 
   return (
-    <div className="self-center z-40 flex w-full max-w-[1516px] items-center gap-[40px_48px] max-md:max-w-full max-md:mt-10 max-md:mb-2.5 relative">
+    <div className="self-center z-40 flex w-full max-w-[1516px] items-center gap-[40px_48px] max-md:max-w-full max-md:mt-10 max-md:mb-2.5 relative justify-center"> {/* Added justify-center */}
       <button
         onClick={prevSlide}
         className="items-center bg-[#FF6200] self-stretch flex overflow-hidden w-[67px] h-[67px] my-auto px-[26px] py-[21px] rounded-[40px] max-md:px-5 z-50"
@@ -59,7 +59,7 @@ const ProfileCarousel: React.FC = () => {
       </button>
 
       <div className="self-stretch grow shrink basis-auto max-md:max-w-full">
-        <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
+        <div className="gap-5 flex max-md:flex-col max-md:items-stretch justify-center"> {/* Added justify-center */}
           {profiles.map((profile, index) => (
             <div key={profile.id} className="w-3/12 max-md:w-full max-md:ml-0 relative">
               <ProfileCardNew
@@ -90,3 +90,4 @@ const ProfileCarousel: React.FC = () => {
 };
 
 export default ProfileCarousel;
+
