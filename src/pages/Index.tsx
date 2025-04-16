@@ -38,9 +38,7 @@ const Index = () => {
         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8b9068c2a3b2c6f928899c25be29c05d7e132f954318e9ff7fea8282f9d67698?placeholderIfAbsent=true" alt="Divider" className="aspect-[2.56] object-contain w-full max-md:max-w-full" />
       </div>
 
-      <h2 className="rotate-[0.003745252016376141rad] text-[rgba(79,16,146,1)] text-6xl leading-[1.1] text-center uppercase self-center mt-[53px] max-md:text-[40px] max-md:mt-10 font-bold">
-        TITULAR
-      </h2>
+      
 
       <StatsSection />
 
