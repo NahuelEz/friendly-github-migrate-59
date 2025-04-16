@@ -1,12 +1,10 @@
 import React from 'react';
 import { Heart, MessageCircle, MoreHorizontal, Send } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-
 interface SocialCardProps {
   size?: "small" | "normal" | "large";
   className?: string;
 }
-
 const SocialCard: React.FC<SocialCardProps> = ({
   size = "normal",
   className = ""
@@ -43,7 +41,6 @@ const SocialCard: React.FC<SocialCardProps> = ({
       date: "text-[14px]"
     }
   };
-
   const styles = cardStyles[size];
   return <div className={`${styles.card} ${className} relative bg-[#141414] rounded-[20px] border-[1.25px] border-solid border-[#29292d] shadow-[0px_5px_30px_#0000004c] overflow-hidden`}>
       <div className="p-0">
@@ -65,14 +62,11 @@ const SocialCard: React.FC<SocialCardProps> = ({
         </div>
 
         {/* Post Image */}
-        <div 
-          className={`${styles.image} flex items-center justify-center bg-cover bg-center`} 
-          style={{ 
-            backgroundImage: `url('/lovable-uploads/d1779756-caad-477b-9fea-f4a13bd607d0.png')` 
-          }}
-        >
+        <div className={`${styles.image} flex items-center justify-center bg-cover bg-center`} style={{
+        backgroundImage: `url('/lovable-uploads/d1779756-caad-477b-9fea-f4a13bd607d0.png')`
+      }}>
           {/* Optional: Keep the existing gradient overlay or remove it */}
-          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#b762f7] to-transparent opacity-50"></div>
+          
         </div>
 
         {/* Action Buttons */}
@@ -92,5 +86,4 @@ const SocialCard: React.FC<SocialCardProps> = ({
       </div>
     </div>;
 };
-
 export default SocialCard;
