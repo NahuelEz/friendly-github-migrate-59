@@ -99,9 +99,6 @@ const CaseStudies = () => {
         </div>
       </div>
 
-      {/* New Profile Section */}
-      <CaseStudiesHero />
-
       {/* Success Cases Section */}
       <div className="py-16 px-4">
         <h2 className="text-5xl font-bold text-purple-900 mb-12">MAS DE X CASOS DE EXITOS</h2>
@@ -159,16 +156,10 @@ const CaseStudies = () => {
             <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white border-none hover:bg-orange-600 z-20 rounded-full" />
           </Carousel>
         </div>
-
-        {/* Additional Detailed Stats (Below the Carousel) */}
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
-          
-
-          
-
-          
-        </div>
       </div>
+
+      {/* New Profile Section */}
+      <CaseStudiesHero />
 
       {/* Testimonials section with orange decoration */}
       <div className="relative bg-white py-16 overflow-hidden">
