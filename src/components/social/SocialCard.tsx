@@ -1,16 +1,13 @@
-
 import React from 'react';
 import { Heart, MessageCircle, MoreHorizontal, Send } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-
 interface SocialCardProps {
   size?: "small" | "normal" | "large";
   className?: string;
 }
-
 const SocialCard: React.FC<SocialCardProps> = ({
   size = "normal",
-  className = "",
+  className = ""
 }) => {
   const cardStyles = {
     small: {
@@ -21,7 +18,7 @@ const SocialCard: React.FC<SocialCardProps> = ({
       location: "text-[12px]",
       icons: "w-5 h-5",
       likes: "text-[14px]",
-      date: "text-[12px]",
+      date: "text-[12px]"
     },
     normal: {
       card: "w-[320px] h-[520px]",
@@ -31,7 +28,7 @@ const SocialCard: React.FC<SocialCardProps> = ({
       location: "text-[12px]",
       icons: "w-5 h-5",
       likes: "text-[14px]",
-      date: "text-[12px]",
+      date: "text-[12px]"
     },
     large: {
       card: "w-[380px] h-[580px]",
@@ -41,19 +38,16 @@ const SocialCard: React.FC<SocialCardProps> = ({
       location: "text-[14px]",
       icons: "w-[23px] h-[23px]",
       likes: "text-[17px]",
-      date: "text-[14px]",
-    },
+      date: "text-[14px]"
+    }
   };
-
   const styles = cardStyles[size];
-
-  return (
-    <div className={`${styles.card} ${className} relative bg-[#141414] rounded-[20px] border-[1.25px] border-solid border-[#29292d] shadow-[0px_5px_30px_#0000004c] overflow-hidden`}>
+  return <div className={`${styles.card} ${className} relative bg-[#141414] rounded-[20px] border-[1.25px] border-solid border-[#29292d] shadow-[0px_5px_30px_#0000004c] overflow-hidden`}>
       <div className="p-0">
         {/* Header */}
         <div className="flex items-center p-5">
           <Avatar className={`${styles.avatar} bg-gray-600`}>
-            <AvatarImage src="/placeholder.svg" alt="Profile picture" />
+            <AvatarImage alt="Profile picture" src="/lovable-uploads/aa7b0892-e065-431f-9302-9402c93e2d22.png" />
             <AvatarFallback>PP</AvatarFallback>
           </Avatar>
 
@@ -87,8 +81,6 @@ const SocialCard: React.FC<SocialCardProps> = ({
         {/* Date */}
         <div className={`px-5 mt-2 font-medium text-[#76777e] ${styles.date}`}>Wed, 26 January 2021</div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default SocialCard;
