@@ -5,7 +5,6 @@ import { Input } from '../components/ui/input';
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
 import { Link } from 'react-router-dom';
-import { ArrowUp } from 'lucide-react';
 
 const ConsultarMiCrecimiento = () => {
   
@@ -13,36 +12,6 @@ const ConsultarMiCrecimiento = () => {
     <>
       <Header />
       <div className="container mx-auto max-w-7xl py-8 px-4">
-        {/* New Hero Section with Background Image */}
-        <section
-          className="min-h-[80vh] relative flex items-center mb-12"
-          style={{
-            backgroundImage: "url('/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
-            <div className="max-w-4xl">
-              <h1 className="text-white text-6xl md:text-8xl font-bold leading-tight uppercase">
-                Proyectemos
-                <br />
-                tu crecimiento
-              </h1>
-
-              <div className="relative mt-8 md:mt-0 md:absolute md:right-40 md:top-60">
-                <div className="bg-white/20 backdrop-blur-sm rounded-xl w-56 h-56 flex items-center justify-center">
-                  <div className="w-32 h-32 rounded-full border-2 border-white flex items-center justify-center">
-                    <ArrowUp className="w-12 h-12 text-white" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Rest of the existing ConsultarMiCrecimiento content */}
-        
         <h1 className="text-3xl font-bold text-[#4f1092] mb-8 text-center">Consulta tu Crecimiento</h1>
         <section className="w-full max-w-6xl mx-auto py-12 px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
