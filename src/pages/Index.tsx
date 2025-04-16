@@ -47,8 +47,8 @@ const Index = () => {
       </div>
 
       <div className="rotate-[0.003745252016376141rad] text-[rgba(79,16,146,1)] text-3xl font-bold leading-[0.8] scale-y-[2] origin-top text-center uppercase self-center w-[887px] mt-[27px] max-md:max-w-full max-md:text-[30px] max-md:leading-[49px]">
-        ¡comprueba de primera mano<br />
-        los resultados de nuestros clientes!
+        ¡comprueba de primera mano los resultados<br />
+        de nuestros clientes!
       </div>
 
       <div className="self-center z-10 flex w-full max-w-[1436px] items-stretch gap-5 flex-wrap justify-between mt-[215px] max-md:max-w-full max-md:mt-10">
