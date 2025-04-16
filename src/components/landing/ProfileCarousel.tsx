@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import ProfileCardNew from "./ProfileCardNew";
 
@@ -45,7 +44,7 @@ const ProfileCarousel: React.FC = () => {
   };
 
   return (
-    <div className="self-center z-10 flex w-full max-w-[1516px] items-center gap-[40px_48px] max-md:max-w-full max-md:mt-10 max-md:mb-2.5">
+    <div className="self-center z-20 flex w-full max-w-[1516px] items-center gap-[40px_48px] max-md:max-w-full max-md:mt-10 max-md:mb-2.5">
       <button
         onClick={prevSlide}
         className="items-center bg-[#FF6200] self-stretch flex overflow-hidden w-[67px] h-[67px] my-auto px-[26px] py-[21px] rounded-[40px] max-md:px-5"
