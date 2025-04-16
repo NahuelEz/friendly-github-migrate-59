@@ -62,10 +62,9 @@ const CaseStudies = () => {
           <img src="/lovable-uploads/41b34e54-7328-4cf4-ba81-2a3f85b0e59d.png" alt="People taking selfie on smartphone" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
         </div>
-
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl ml-auto text-white"> {/* Added ml-auto to push content to the right */}
-            <h1 className="text-5xl font-bold leading-tight mb-4 text-left md:text-6xl transform scale-y-[2] origin-top"> {/* Added text-right class */}
+            <h1 className="text-5xl font-bold leading-tight mb-4 text-left md:text-6xl"> {/* Added text-right class */}
               HISTORIAS DE CLIENTES QUE DESTACAN SU CRECIMIENTO Y ÉXITO GRACIAS A SOCIAL AI
             </h1>
           </div>
