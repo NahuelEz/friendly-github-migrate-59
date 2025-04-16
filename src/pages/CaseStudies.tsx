@@ -11,6 +11,7 @@ import SocialCard from '@/components/social/SocialCard';
 import StartToday from '@/components/social/StartToday';
 import CaseStudiesHero from '@/components/landing/CaseStudiesHero';
 import TestimonialCard from '@/components/landing/TestimonialCard';
+
 const CaseStudies = () => {
   const successCards = [{
     id: 1,
@@ -53,6 +54,7 @@ const CaseStudies = () => {
     followersGained: "36,743",
     avgLikes: "1,950+"
   }];
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -106,16 +108,16 @@ const CaseStudies = () => {
           MAS DE X CASOS DE EXITOS
         </h2>
         
-        {/* Updated card carousel with narrower cards */}
+        {/* Updated card carousel with cards aligned to the right */}
         <div className="relative py-8 px-4">
           <Carousel className="w-full">
             <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white border-none hover:bg-orange-600 z-20 rounded-full">
               <ChevronLeft className="w-5 h-5" />
             </CarouselPrevious>
             
-            <CarouselContent className="pl-8 pr-8 md:pl-12 md:pr-12 py-4 px-[210px]">
+            <CarouselContent className="pl-8 pr-8 md:pl-12 md:pr-12 py-4 justify-end"> {/* Added justify-end to align cards to the right */}
               {successCards.map(card => (
-                <CarouselItem key={card.id} className="md:basis-1/4 py-5 max-w-[280px]"> {/* Reduced width */}
+                <CarouselItem key={card.id} className="md:basis-1/4 py-5 max-w-[280px]">
                   <div className={`${card.color} rounded-lg flex-shrink-0 shadow-[0_0_20px_rgba(0,0,0,0.9)] overflow-hidden w-full`}>
                     <div className="flex flex-col items-center pt-6 pb-2">
                       <Avatar className="w-20 h-20 bg-white mb-2">
