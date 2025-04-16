@@ -111,7 +111,7 @@ const CaseStudies = () => {
         {/* Updated card carousel with cards aligned to the right */}
         <div className="relative py-8 px-4">
           <Carousel className="w-full">
-            <CarouselPrevious className="absolute right-[calc(100%+1rem)] top-1/2 -translate-y-1/2 bg-orange-500 text-white border-none hover:bg-orange-600 z-20 rounded-full">
+            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white border-none hover:bg-orange-600 z-20 rounded-full">
               <ChevronLeft className="w-5 h-5" />
             </CarouselPrevious>
             
