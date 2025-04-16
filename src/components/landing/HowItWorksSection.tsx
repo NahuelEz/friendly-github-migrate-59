@@ -3,7 +3,7 @@ import CTAButton from "@/components/ui/CTAButton";
 export const HowItWorksSection: React.FC = () => {
   return <section className="bg-[#4F1092] flex w-full flex-col py-24 px-8 lg:px-20">
       <div className="self-start max-w-[1627px] w-full">
-        <h2 className="text-white text-7xl leading-[0.9] uppercase mb-20 font-bold lg:text-8xl">
+        <h2 className="text-white text-7xl leading-[0.9] scale-y-[2] uppercase mb-20 font-bold lg:text-8xl">
           COMO FUNCIONA
         </h2>
         
