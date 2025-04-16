@@ -267,7 +267,7 @@ const CaseStudies = () => {
 
             {/* Fourth testimonial - large */}
             <div className="col-span-12 md:col-span-8 lg:col-span-4 md:col-start-3 lg:col-start-5">
-              <div className="bg-white rounded-lg p-5 shadow-md">
+              <div className="bg-white rounded-lg p-5 shadow-md mx-px py-[19px] ">
                 {/* Star rating */}
                 <div className="flex mb-3">
                   {[1, 2, 3, 4].map(star => <span key={star} className="text-[#ff6200]">
