@@ -69,7 +69,7 @@ export const HowItWorksSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="text-white text-4xl lg:text-6xl font-normal ml-20 leading-[0.9] uppercase text-center mt-32 max-md:mt-16">
+        <div className="text-white text-4xl lg:text-4xl font-normal ml-20 leading-[0.9] scale-y-[2] uppercase text-center mt-32 max-md:mt-16">
           ¿te interesa?
         </div>
         
