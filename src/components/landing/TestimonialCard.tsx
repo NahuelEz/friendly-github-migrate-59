@@ -1,5 +1,6 @@
 
 import React from "react";
+import AvatarCircle from "./AvatarCircle";
 
 // SVG components for filled and empty star icons
 const FilledStarIcon = () => (
@@ -19,6 +20,7 @@ interface TestimonialCardProps {
   title: string;
   content: string;
   rating?: number;
+  avatarSrc?: string;
 }
 
 export const TestimonialCard: React.FC<TestimonialCardProps> = ({
@@ -26,10 +28,16 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
   title,
   content,
   rating = 4,
+  avatarSrc = "/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png", // Default avatar
 }) => {
   return (
-    <div className="shadow-[3px_5px_20px_0px_rgba(0,0,0,0.20)] bg-white flex min-h-[300px] grow flex-col overflow-hidden w-full p-6 rounded-[20px] max-md:max-w-full max-md:mt-5">
-      <div className="flex w-full max-w-full flex-col">
+    <div className="shadow-[3px_5px_20px_0px_rgba(0,0,0,0.20)] bg-white flex min-h-[300px] grow flex-col overflow-hidden w-full p-6 rounded-[20px] relative max-md:max-w-full max-md:mt-5">
+      {/* Avatar in the top right */}
+      <div className="absolute top-4 right-4">
+        <AvatarCircle imageSrc={avatarSrc} className="w-16 h-16" />
+      </div>
+      
+      <div className="flex w-full max-w-full flex-col pr-20"> {/* Add right padding to avoid text overlapping with avatar */}
         <div className="flex gap-2 overflow-hidden">
           {/* Star rating - generates stars based on rating prop */}
           {[...Array(5)].map((_, i) => (

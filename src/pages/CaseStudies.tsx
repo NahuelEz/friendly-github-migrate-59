@@ -11,6 +11,7 @@ import SocialCard from '@/components/social/SocialCard';
 import StartToday from '@/components/social/StartToday';
 import CaseStudiesHero from '@/components/landing/CaseStudiesHero';
 import TestimonialCard from '@/components/landing/TestimonialCard';
+
 const CaseStudies = () => {
   const successCards = [{
     id: 1,
@@ -181,6 +182,7 @@ const CaseStudies = () => {
                     title="Designer"
                     content="Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque elit dictum."
                     rating={4}
+                    avatarSrc="/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png"
                   />
                 </div>
                 {/* Second testimonial */}
@@ -190,6 +192,7 @@ const CaseStudies = () => {
                     title="Designer"
                     content="Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque elit dictum."
                     rating={5}
+                    avatarSrc="/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png"
                   />
                 </div>
               </div>
@@ -203,6 +206,7 @@ const CaseStudies = () => {
                   title="Designer"
                   content="Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus pellentesque pretium urna magna. Tellus gravida vitae auctor malesuada vitae sagittis sed ac. Phasellus pellentesque est velit suspendisse pulvinar pharetra. Mauris ullamcorper euismod tellus neque neque. Ante ac tincidunt egestas sem. Adipiscing orci mauris amet eget mi condimentum."
                   rating={3}
+                  avatarSrc="/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png"
                 />
               </div>
             </div>
@@ -214,6 +218,7 @@ const CaseStudies = () => {
                 title="Designer"
                 content="Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque elit dictum."
                 rating={4}
+                avatarSrc="/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png"
               />
             </div>
           </div>

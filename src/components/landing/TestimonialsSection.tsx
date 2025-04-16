@@ -15,6 +15,7 @@ export const TestimonialsSection: React.FC = () => {
             title="Designer"
             content={testimonialContent}
             rating={4}
+            avatarSrc="/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png"
           />
         </div>
         <div className="w-[33%] ml-5 max-md:w-full max-md:ml-0">
@@ -23,6 +24,7 @@ export const TestimonialsSection: React.FC = () => {
             title="Designer"
             content={testimonialContent}
             rating={5}
+            avatarSrc="/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png"
           />
         </div>
         <div className="w-[33%] ml-5 max-md:w-full max-md:ml-0">
@@ -31,6 +33,7 @@ export const TestimonialsSection: React.FC = () => {
             title="Designer"
             content={testimonialContent}
             rating={3}
+            avatarSrc="/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png"
           />
         </div>
       </div>
