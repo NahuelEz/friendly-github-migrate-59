@@ -11,7 +11,7 @@ export const StartToday = () => {
         <div className="relative w-full max-w-[1605px] mx-auto px-4">
           {/* Left Section */}
           <div className="flex flex-col max-w-[440px] mt-16 z-10 relative">
-            <h1 className="font-bold text-white text-[56.9px] tracking-[0] leading-normal whitespace-nowrap uppercase">
+            <h1 className="font-bold text-white text-[56.9px] tracking-[0] leading-normal whitespace-nowrap uppercase transform scale-y-[2] origin-top">
               COMIENZA HOY
             </h1>
 
