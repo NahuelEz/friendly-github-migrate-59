@@ -160,146 +160,65 @@ const CaseStudies = () => {
       {/* New Profile Section */}
       <CaseStudiesHero />
 
-      {/* Testimonials section with orange decoration */}
-      <div className="relative bg-white py-16 overflow-hidden z-0">
-        {/* Orange hourglass decoration */}
-        <div className="absolute right-0 top-0 w-[400px] h-[800px]">
-          <div className="absolute top-[-190px] right-28 w-[400px] h-[400px] rounded-full bg-[#ff6200] translate-x-1/4 -translate-y-1/4 py-0 my-0"></div>
-          <div className="absolute bottom-52 right-12 w-[400px] h-[400px] rounded-full bg-[#ff6200] translate-x-1/4 translate-y-1/4 mx-0 px-0 my-[176px]"></div>
-        </div>
+<div className="relative bg-white py-16 overflow-hidden z-0">
+  <div className="absolute right-0 top-0 w-[400px] h-[800px]">
+    <div className="absolute top-[-190px] right-28 w-[400px] h-[400px] rounded-full bg-[#ff6200] translate-x-1/4 -translate-y-1/4"></div>
+    <div className="absolute bottom-52 right-12 w-[400px] h-[400px] rounded-full bg-[#ff6200] translate-x-1/4 translate-y-1/4"></div>
+  </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-12 gap-6">
-            {/* First testimonial - small */}
-            <div className="col-span-12 md:col-span-4 lg:col-span-3">
-              <div className="bg-white rounded-lg p-5 shadow-md">
-                {/* Star rating */}
-                <div className="flex mb-3">
-                  {[1, 2, 3, 4].map(star => <span key={star} className="text-[#ff6200]">
-                      ★
-                    </span>)}
-                  <span className="text-[#d9d9d9]">★</span>
-                </div>
-
-                {/* Profile */}
-                <div className="flex justify-between items-start mb-3">
-                  <div>
-                    <h3 className="font-bold">Regina Miles</h3>
-                    <p className="text-sm text-[#76777e]">Designer</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-full overflow-hidden">
-                    <img src="/placeholder.svg" alt="Regina Miles" width={48} height={48} className="object-cover" />
-                  </div>
-                </div>
-
-                {/* Testimonial text */}
-                <p className="text-xs text-[#3c3e40]">
-                  Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque
-                  elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus
-                  pellentesque pretium urna magna.
-                </p>
-              </div>
-            </div>
-
-            {/* Second testimonial - medium */}
-            <div className="col-span-12 md:col-span-8 lg:col-span-5">
-              <div className="bg-white rounded-lg p-5 shadow-md">
-                {/* Star rating */}
-                <div className="flex mb-3">
-                  {[1, 2, 3, 4].map(star => <span key={star} className="text-[#ff6200]">
-                      ★
-                    </span>)}
-                  <span className="text-[#d9d9d9]">★</span>
-                </div>
-
-                {/* Profile */}
-                <div className="flex justify-between items-start mb-3">
-                  <div>
-                    <h3 className="font-bold">Regina Miles</h3>
-                    <p className="text-sm text-[#76777e]">Designer</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-full overflow-hidden">
-                    <img src="/placeholder.svg" alt="Regina Miles" width={48} height={48} className="object-cover" />
-                  </div>
-                </div>
-
-                {/* Testimonial text */}
-                <p className="text-xs text-[#3c3e40]">
-                  Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque
-                  elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus
-                  pellentesque pretium urna magna. Tellus gravida vitae auctor malesuada vitae sagittis sed ac.
-                  Phasellus pellentesque est velit suspendisse pulvinar pharetra. Mauris ullamcorper euismod tellus
-                  neque neque. Ante ac tincidunt egestas sem. Adipiscing orci mauris amet eget mi condimentum.
-                </p>
-              </div>
-            </div>
-
-            {/* Third testimonial - small */}
-            <div className="col-span-12 md:col-span-4 lg:col-span-3">
-              <div className="bg-white rounded-lg p-5 shadow-md">
-                {/* Star rating */}
-                <div className="flex mb-3">
-                  {[1, 2, 3, 4].map(star => <span key={star} className="text-[#ff6200]">
-                      ★
-                    </span>)}
-                  <span className="text-[#d9d9d9]">★</span>
-                </div>
-
-                {/* Profile */}
-                <div className="flex justify-between items-start mb-3">
-                  <div>
-                    <h3 className="font-bold">Regina Miles</h3>
-                    <p className="text-sm text-[#76777e]">Designer</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-full overflow-hidden">
-                    <img src="/placeholder.svg" alt="Regina Miles" width={48} height={48} className="object-cover" />
-                  </div>
-                </div>
-
-                {/* Testimonial text */}
-                <p className="text-xs text-[#3c3e40]">
-                  Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque
-                  elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus
-                  pellentesque pretium urna magna.
-                </p>
-              </div>
-            </div>
-
-            {/* Fourth testimonial - large */}
-            <div className="col-span-12 md:col-span-8 lg:col-span-4 md:col-start-3 lg:col-start-5">
-              <div className="bg-white rounded-lg p-5 shadow-md mx-px py-[19px] ">
-                {/* Star rating */}
-                <div className="flex mb-3">
-                  {[1, 2, 3, 4].map(star => <span key={star} className="text-[#ff6200]">
-                      ★
-                    </span>)}
-                  <span className="text-[#d9d9d9]">★</span>
-                </div>
-
-                {/* Profile */}
-                <div className="flex justify-between items-start mb-3">
-                  <div>
-                    <h3 className="font-bold">Regina Miles</h3>
-                    <p className="text-sm text-[#76777e]">Designer</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-full overflow-hidden">
-                    <img src="/placeholder.svg" alt="Regina Miles" width={48} height={48} className="object-cover" />
-                  </div>
-                </div>
-
-                {/* Testimonial text */}
-                <p className="text-xs text-[#3c3e40]">
-                  Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque
-                  elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus
-                  pellentesque pretium urna magna. Tellus gravida vitae auctor malesuada vitae sagittis sed ac.
-                  Phasellus pellentesque est velit suspendisse pulvinar pharetra. Mauris ullamcorper euismod tellus
-                  neque neque. Ante ac tincidunt egestas sem. Adipiscing orci mauris amet eget mi condimentum.
-                </p>
-              </div>
-            </div>
+  <div className="container mx-auto px-4 relative z-10">
+    <div className="grid grid-cols-12 gap-6">
+    /* 1st card */
+      <div className="col-span-12 lg:col-span-4">
+        <div className="bg-white rounded-lg p-5 shadow-md">
+          <div className="flex mb-3">{[1, 2, 3, 4].map(star => <span key={star} className="text-[#ff6200]">★</span>)}<span className="text-[#d9d9d9]">★</span></div>
+          <div className="flex justify-between items-start mb-3">
+            <div><h3 className="font-bold">Regina Miles</h3><p className="text-sm text-[#76777e]">Designer</p></div>
+            <div className="w-12 h-12 rounded-full overflow-hidden"><img src="/placeholder.svg" alt="Regina Miles" width={48} height={48} className="object-cover" /></div>
           </div>
+          <p className="text-xs text-[#3c3e40]">Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id...</p>
         </div>
       </div>
+
+      /* 2nd card */
+      <div className="col-span-12 lg:col-span-4 lg:col-start-5">
+        <div className="bg-white rounded-lg p-5 shadow-md">
+          <div className="flex mb-3">{[1, 2, 3, 4].map(star => <span key={star} className="text-[#ff6200]">★</span>)}<span className="text-[#d9d9d9]">★</span></div>
+          <div className="flex justify-between items-start mb-3">
+            <div><h3 className="font-bold">Regina Miles</h3><p className="text-sm text-[#76777e]">Designer</p></div>
+            <div className="w-12 h-12 rounded-full overflow-hidden"><img src="/placeholder.svg" alt="Regina Miles" width={48} height={48} className="object-cover" /></div>
+          </div>
+          <p className="text-xs text-[#3c3e40]">Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id... condimentum.</p>
+        </div>
+      </div>
+
+      /* 3th card */
+      <div className="col-span-12 lg:col-span-4 mt-6 lg:col-start-2">
+        <div className="bg-white rounded-lg p-5 shadow-md">
+          <div className="flex mb-3">{[1, 2, 3, 4].map(star => <span key={star} className="text-[#ff6200]">★</span>)}<span className="text-[#d9d9d9]">★</span></div>
+          <div className="flex justify-between items-start mb-3">
+            <div><h3 className="font-bold">Regina Miles</h3><p className="text-sm text-[#76777e]">Designer</p></div>
+            <div className="w-12 h-12 rounded-full overflow-hidden"><img src="/placeholder.svg" alt="Regina Miles" width={48} height={48} className="object-cover" /></div>
+          </div>
+          <p className="text-xs text-[#3c3e40]">Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id...</p>
+        </div>
+      </div>
+
+      /* 4th card */
+      <div className="col-span-12 lg:col-span-4 lg:col-start-7 mt-6">
+        <div className="bg-white rounded-lg p-5 shadow-md">
+          <div className="flex mb-3">{[1, 2, 3, 4].map(star => <span key={star} className="text-[#ff6200]">★</span>)}<span className="text-[#d9d9d9]">★</span></div>
+          <div className="flex justify-between items-start mb-3">
+            <div><h3 className="font-bold">Regina Miles</h3><p className="text-sm text-[#76777e]">Designer</p></div>
+            <div className="w-12 h-12 rounded-full overflow-hidden"><img src="/placeholder.svg" alt="Regina Miles" width={48} height={48} className="object-cover" /></div>
+          </div>
+          <p className="text-xs text-[#3c3e40]">Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id... condimentum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       {/* Start Today Section - Now after testimonials */}
       <StartToday />
