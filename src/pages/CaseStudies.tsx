@@ -167,8 +167,8 @@ const CaseStudies = () => {
         {/* Orange hourglass decoration */}
         <div className="absolute right-0 top-0 w-[400px] h-[400px] overflow-hidden">
           <div className="absolute top-[-190px] right-28 w-[400px] h-[400px] rounded-full bg-[#ff6200] translate-x-1/4 -translate-y-1/4 py-0 my-0"></div>
-          <div className="absolute top-[200px] right-12 w-[400px] h-[200px] overflow-hidden">
-            <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-[#ff6200] translate-x-1/4"></div>
+          <div className="absolute top-[200px] right-0 w-[400px] h-[200px] overflow-hidden">
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-[#ff6200]"></div>
           </div>
         </div>
 
