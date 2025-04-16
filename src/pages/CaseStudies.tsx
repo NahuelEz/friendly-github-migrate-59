@@ -106,16 +106,16 @@ const CaseStudies = () => {
           MAS DE X CASOS DE EXITOS
         </h2>
         
-        {/* Updated card carousel with shadow */}
-        <div className="relative">
+        {/* Updated card carousel with shadow and extra padding for shadows */}
+        <div className="relative py-8 px-4"> {/* Added py-8 to give more vertical space for shadows */}
           <Carousel className="w-full">
             <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white border-none hover:bg-orange-600 z-20 rounded-full">
               <ChevronLeft className="w-5 h-5" />
             </CarouselPrevious>
             
-            <CarouselContent className="pl-8 pr-8 md:pl-12 md:pr-12 py-0 px-[210px]">
+            <CarouselContent className="pl-8 pr-8 md:pl-12 md:pr-12 py-4 px-[210px]"> {/* Added py-4 for vertical padding */}
               {successCards.map(card => (
-                <CarouselItem key={card.id} className="md:basis-1/4">
+                <CarouselItem key={card.id} className="md:basis-1/4 py-5"> {/* Added py-5 to CarouselItem for more shadow space */}
                   <div className={`${card.color} rounded-lg flex-shrink-0 shadow-[0_0_20px_rgba(0,0,0,0.9)] overflow-hidden`}>
                     <div className="flex flex-col items-center pt-6 pb-2">
                       <Avatar className="w-20 h-20 bg-white mb-2">
