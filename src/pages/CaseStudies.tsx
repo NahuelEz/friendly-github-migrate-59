@@ -11,7 +11,6 @@ import SocialCard from '@/components/social/SocialCard';
 import StartToday from '@/components/social/StartToday';
 import CaseStudiesHero from '@/components/landing/CaseStudiesHero';
 import TestimonialCard from '@/components/landing/TestimonialCard';
-
 const CaseStudies = () => {
   const successCards = [{
     id: 1,
@@ -166,7 +165,7 @@ const CaseStudies = () => {
       <div className="relative bg-white py-16 overflow-hidden z-0">
         {/* Orange hourglass decoration */}
         <div className="absolute right-0 top-0 w-[400px] h-[400px] overflow-hidden">
-          <div className="absolute top-[-190px] right-28 w-[400px] h-[400px] rounded-full bg-[#ff6200] translate-x-1/4 -translate-y-1/4 py-0 my-0"></div>
+          <div className="absolute top-[-200px] right-28 w-[400px] h-[400px] rounded-full bg-[#ff6200] translate-x-1/4 -translate-y-1/4 py-[5px] my-[5px]"></div>
           <div className="absolute top-[200px] right-0 w-[400px] h-[200px] overflow-hidden">
             <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-[#ff6200]"></div>
           </div>
@@ -179,23 +178,11 @@ const CaseStudies = () => {
               <div className="space-y-4">
                 {/* First testimonial */}
                 <div className="w-full">
-                  <TestimonialCard
-                    name="Regina Miles"
-                    title="Designer"
-                    content="Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque elit dictum."
-                    rating={4}
-                    avatarSrc="/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png"
-                  />
+                  <TestimonialCard name="Regina Miles" title="Designer" content="Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque elit dictum." rating={4} avatarSrc="/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png" />
                 </div>
                 {/* Second testimonial */}
                 <div className="w-full">
-                  <TestimonialCard
-                    name="Regina Miles"
-                    title="Designer"
-                    content="Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque elit dictum."
-                    rating={5}
-                    avatarSrc="/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png"
-                  />
+                  <TestimonialCard name="Regina Miles" title="Designer" content="Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque elit dictum." rating={5} avatarSrc="/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png" />
                 </div>
               </div>
             </div>
@@ -203,25 +190,13 @@ const CaseStudies = () => {
             {/* Middle column - One tall testimonial */}
             <div className="col-span-12 md:col-span-4">
               <div className="h-full flex">
-                <TestimonialCard
-                  name="Regina Miles"
-                  title="Designer"
-                  content="Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus pellentesque pretium urna magna. Tellus gravida vitae auctor malesuada vitae sagittis sed ac. Phasellus pellentesque est velit suspendisse pulvinar pharetra. Mauris ullamcorper euismod tellus neque neque. Ante ac tincidunt egestas sem. Adipiscing orci mauris amet eget mi condimentum."
-                  rating={3}
-                  avatarSrc="/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png"
-                />
+                <TestimonialCard name="Regina Miles" title="Designer" content="Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus pellentesque pretium urna magna. Tellus gravida vitae auctor malesuada vitae sagittis sed ac. Phasellus pellentesque est velit suspendisse pulvinar pharetra. Mauris ullamcorper euismod tellus neque neque. Ante ac tincidunt egestas sem. Adipiscing orci mauris amet eget mi condimentum." rating={3} avatarSrc="/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png" />
               </div>
             </div>
 
             {/* Right column - One testimonial aligned with bottom */}
             <div className="col-span-12 md:col-span-4 md:mt-auto">
-              <TestimonialCard
-                name="Regina Miles"
-                title="Designer"
-                content="Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque elit dictum."
-                rating={4}
-                avatarSrc="/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png"
-              />
+              <TestimonialCard name="Regina Miles" title="Designer" content="Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque elit dictum." rating={4} avatarSrc="/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png" />
             </div>
           </div>
         </div>
