@@ -18,7 +18,7 @@ const ProfileCardNew: React.FC<ProfileCardProps> = ({
 }) => {
   return (
     <div
-      className={`bg-[rgba(217,217,217,1)] flex gap-[9px] font-medium w-full pt-[21px] pb-[478px] px-[21px] max-md:mt-5 max-md:pr-5 max-md:pb-[100px] ${className}`}
+      className={`bg-[rgba(217,217,217,1)] flex gap-[9px] font-medium w-full pt-[21px] pb-[478px] px-[21px] max-md:mt-5 max-md:pr-5 max-md:pb-[100px] relative z-30 ${className}`}
     >
       <img
         src={avatarSrc}
