@@ -25,28 +25,28 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
   name,
   title,
   content,
-  rating = 4, // Default rating of 4 stars out of 5
+  rating = 4,
 }) => {
   return (
-    <div className="shadow-[3px_5px_20px_0px_rgba(0,0,0,0.20)] bg-white flex min-h-[498px] grow flex-col overflow-hidden w-full pl-10 pt-[30px] pb-[66px] rounded-[20px] max-md:max-w-full max-md:mt-5">
-      <div className="flex w-[359px] max-w-full flex-col">
+    <div className="shadow-[3px_5px_20px_0px_rgba(0,0,0,0.20)] bg-white flex min-h-[300px] grow flex-col overflow-hidden w-full p-6 rounded-[20px] max-md:max-w-full max-md:mt-5">
+      <div className="flex w-full max-w-full flex-col">
         <div className="flex gap-2 overflow-hidden">
           {/* Star rating - generates stars based on rating prop */}
           {[...Array(5)].map((_, i) => (
-            <span key={i} className="inline-block">
+            <span key={i} className="inline-block scale-75">
               {i < rating ? <FilledStarIcon /> : <EmptyStarIcon />}
             </span>
           ))}
         </div>
-        <div className="font-bold mt-8">
-          <div className="text-black text-2xl leading-none tracking-[0.1px]">
+        <div className="font-bold mt-4">
+          <div className="text-black text-xl leading-none tracking-[0.1px]">
             {name}
           </div>
-          <div className="text-[#D9D9D9] text-base tracking-[0.2px]">
+          <div className="text-[#D9D9D9] text-sm tracking-[0.2px]">
             {title}
           </div>
         </div>
-        <div className="text-[#181615] text-base font-normal leading-[26px] self-stretch mt-8">
+        <div className="text-[#181615] text-sm font-normal leading-[22px] self-stretch mt-4">
           {content}
         </div>
       </div>
