@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '../components/ui/avatar';
 import { Button } from '../components/ui/button';
@@ -13,10 +14,10 @@ const ConsultarMiCrecimiento = () => {
       
       {/* Hero Section with Background Image */}
       <section className="min-h-[80vh] relative flex items-center" style={{
-      backgroundImage: "url('/lovable-uploads/d6cf9a25-fdf6-4e0a-a2ea-a94df382966a.png')",
-      backgroundSize: "cover",
-      backgroundPosition: "center"
-    }}>
+        backgroundImage: "url('/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }}>
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="max-w-4xl">
             <h1 className="text-white text-6xl md:text-8xl font-bold leading-tight uppercase">
@@ -160,7 +161,6 @@ const ConsultarMiCrecimiento = () => {
           </div>
         </div>
       </section>
-      
       
       <Footer />
     </>;
