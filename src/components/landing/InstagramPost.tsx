@@ -1,4 +1,3 @@
-
 import React from 'react';
 interface InstagramPostProps {
   imageUrl: string;
@@ -10,7 +9,7 @@ const InstagramPost: React.FC<InstagramPostProps> = ({
   likes,
   comments
 }) => {
-  return <div className="bg-[rgba(20,20,20,1)] shadow-[3px_5px_20px_rgba(0,0,0,0.5)] border z-10 flex w-[85%] flex-col self-stretch items-stretch px-[5px] rounded-[20px] border-[rgba(41,41,46,1)] border-solid py-[14px] my-[13px]">
+  return <div className="bg-[rgba(20,20,20,1)] shadow-[3px_5px_20px_rgba(0,0,0,0.5)] border z-10 flex w-[85%] flex-col self-stretch items-stretch px-[5px] rounded-[20px] border-[rgba(41,41,46,1)] border-solid py-[14px] my-[13px] mx-[16px]">
       <div className="flex items-stretch gap-2.5 font-medium mx-2.5">
         <img src="https://cdn.builder.io/api/v1/image/assets/178ef81b8a124fbbb36fd103190391ae/2de249d35ef872632cbb3051ce541039f332c766?placeholderIfAbsent=true" className="aspect-[1] object-contain w-10 shrink-0 rounded-[50%]" alt="User avatar" />
         <div className="flex flex-col items-stretch my-auto">
@@ -51,5 +50,4 @@ const InstagramPost: React.FC<InstagramPostProps> = ({
       </div>
     </div>;
 };
-
 export default InstagramPost;
