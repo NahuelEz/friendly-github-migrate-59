@@ -1,4 +1,3 @@
-
 import React from "react";
 import AvatarCircle from "./AvatarCircle";
 
@@ -31,13 +30,13 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
   avatarSrc = "/lovable-uploads/5ffcefde-547a-4ded-8190-6bf2ed91ca0c.png", // Default avatar
 }) => {
   return (
-    <div className="shadow-[3px_5px_20px_0px_rgba(0,0,0,0.20)] bg-white flex min-h-[300px] grow flex-col overflow-hidden w-full p-6 rounded-[20px] relative max-md:max-w-full max-md:mt-5">
+    <div className="shadow-[3px_5px_20px_0px_rgba(0,0,0,0.20)] bg-white flex grow flex-col overflow-hidden w-full p-6 rounded-[20px] relative h-full max-md:max-w-full max-md:mt-5">
       {/* Avatar in the top right */}
       <div className="absolute top-4 right-4">
         <AvatarCircle imageSrc={avatarSrc} className="w-16 h-16" />
       </div>
       
-      <div className="flex w-full max-w-full flex-col pr-20"> {/* Add right padding to avoid text overlapping with avatar */}
+      <div className="flex w-full max-w-full flex-col pr-20">
         <div className="flex gap-2 overflow-hidden">
           {/* Star rating - generates stars based on rating prop */}
           {[...Array(5)].map((_, i) => (

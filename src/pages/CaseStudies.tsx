@@ -200,7 +200,7 @@ const CaseStudies = () => {
 
             {/* Middle column - One tall testimonial */}
             <div className="col-span-12 md:col-span-4">
-              <div className="h-full">
+              <div className="h-full flex">
                 <TestimonialCard
                   name="Regina Miles"
                   title="Designer"
