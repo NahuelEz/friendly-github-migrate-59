@@ -27,7 +27,7 @@ const Index = () => {
       </div>
 
       <div className="absolute w-auto-[800px] mt-[4800px] ml-[2px] z-10 opacity-40 rotate-180">
-        <img src="/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png" alt="Fondo degradado" className="w-full h-full object-cover" />
+        <img src="/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png" alt="Fondo degradado" className="w-full h-full object-cover z-0" />
       </div>
 
       <Header />
