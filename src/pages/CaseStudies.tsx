@@ -10,6 +10,7 @@ import { Separator } from "@/components/ui/separator";
 import SocialCard from '@/components/social/SocialCard';
 import StartToday from '@/components/social/StartToday';
 import CaseStudiesHero from '@/components/landing/CaseStudiesHero';
+import TestimonialCard from '@/components/landing/TestimonialCard';
 const CaseStudies = () => {
   const successCards = [{
     id: 1,
@@ -170,132 +171,50 @@ const CaseStudies = () => {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-12 gap-6">
-            {/* First testimonial - small */}
-            <div className="col-span-12 md:col-span-4 lg:col-span-3">
-              <div className="bg-white rounded-lg p-5 shadow-md">
-                {/* Star rating */}
-                <div className="flex mb-3">
-                  {[1, 2, 3, 4].map(star => <span key={star} className="text-[#ff6200]">
-                      ★
-                    </span>)}
-                  <span className="text-[#d9d9d9]">★</span>
+            {/* Left column - Two stacked testimonials */}
+            <div className="col-span-12 md:col-span-4">
+              <div className="space-y-6">
+                {/* First testimonial */}
+                <div className="w-full">
+                  <TestimonialCard
+                    name="Regina Miles"
+                    title="Designer"
+                    content="Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque elit dictum."
+                    rating={4}
+                  />
                 </div>
-
-                {/* Profile */}
-                <div className="flex justify-between items-start mb-3">
-                  <div>
-                    <h3 className="font-bold">Regina Miles</h3>
-                    <p className="text-sm text-[#76777e]">Designer</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-full overflow-hidden">
-                    <img src="/placeholder.svg" alt="Regina Miles" width={48} height={48} className="object-cover" />
-                  </div>
+                {/* Second testimonial */}
+                <div className="w-full">
+                  <TestimonialCard
+                    name="Regina Miles"
+                    title="Designer"
+                    content="Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque elit dictum."
+                    rating={5}
+                  />
                 </div>
-
-                {/* Testimonial text */}
-                <p className="text-xs text-[#3c3e40]">
-                  Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque
-                  elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus
-                  pellentesque pretium urna magna.
-                </p>
               </div>
             </div>
 
-            {/* Second testimonial - medium */}
-            <div className="col-span-12 md:col-span-8 lg:col-span-5">
-              <div className="bg-white rounded-lg p-5 shadow-md">
-                {/* Star rating */}
-                <div className="flex mb-3">
-                  {[1, 2, 3, 4].map(star => <span key={star} className="text-[#ff6200]">
-                      ★
-                    </span>)}
-                  <span className="text-[#d9d9d9]">★</span>
-                </div>
-
-                {/* Profile */}
-                <div className="flex justify-between items-start mb-3">
-                  <div>
-                    <h3 className="font-bold">Regina Miles</h3>
-                    <p className="text-sm text-[#76777e]">Designer</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-full overflow-hidden">
-                    <img src="/placeholder.svg" alt="Regina Miles" width={48} height={48} className="object-cover" />
-                  </div>
-                </div>
-
-                {/* Testimonial text */}
-                <p className="text-xs text-[#3c3e40]">
-                  Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque
-                  elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus
-                  pellentesque pretium urna magna. Tellus gravida vitae auctor malesuada vitae sagittis sed ac.
-                  Phasellus pellentesque est velit suspendisse pulvinar pharetra. Mauris ullamcorper euismod tellus
-                  neque neque. Ante ac tincidunt egestas sem. Adipiscing orci mauris amet eget mi condimentum.
-                </p>
+            {/* Middle column - One tall testimonial */}
+            <div className="col-span-12 md:col-span-4">
+              <div className="h-full">
+                <TestimonialCard
+                  name="Regina Miles"
+                  title="Designer"
+                  content="Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus pellentesque pretium urna magna. Tellus gravida vitae auctor malesuada vitae sagittis sed ac. Phasellus pellentesque est velit suspendisse pulvinar pharetra. Mauris ullamcorper euismod tellus neque neque. Ante ac tincidunt egestas sem. Adipiscing orci mauris amet eget mi condimentum."
+                  rating={3}
+                />
               </div>
             </div>
 
-            {/* Third testimonial - small */}
-            <div className="col-span-12 md:col-span-4 lg:col-span-3">
-              <div className="bg-white rounded-lg p-5 shadow-md">
-                {/* Star rating */}
-                <div className="flex mb-3">
-                  {[1, 2, 3, 4].map(star => <span key={star} className="text-[#ff6200]">
-                      ★
-                    </span>)}
-                  <span className="text-[#d9d9d9]">★</span>
-                </div>
-
-                {/* Profile */}
-                <div className="flex justify-between items-start mb-3">
-                  <div>
-                    <h3 className="font-bold">Regina Miles</h3>
-                    <p className="text-sm text-[#76777e]">Designer</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-full overflow-hidden">
-                    <img src="/placeholder.svg" alt="Regina Miles" width={48} height={48} className="object-cover" />
-                  </div>
-                </div>
-
-                {/* Testimonial text */}
-                <p className="text-xs text-[#3c3e40]">
-                  Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque
-                  elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus
-                  pellentesque pretium urna magna.
-                </p>
-              </div>
-            </div>
-
-            {/* Fourth testimonial - large */}
-            <div className="col-span-12 md:col-span-8 lg:col-span-4 md:col-start-3 lg:col-start-5">
-              <div className="bg-white rounded-lg p-5 shadow-md mx-px py-[19px] ">
-                {/* Star rating */}
-                <div className="flex mb-3">
-                  {[1, 2, 3, 4].map(star => <span key={star} className="text-[#ff6200]">
-                      ★
-                    </span>)}
-                  <span className="text-[#d9d9d9]">★</span>
-                </div>
-
-                {/* Profile */}
-                <div className="flex justify-between items-start mb-3">
-                  <div>
-                    <h3 className="font-bold">Regina Miles</h3>
-                    <p className="text-sm text-[#76777e]">Designer</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-full overflow-hidden">
-                    <img src="/placeholder.svg" alt="Regina Miles" width={48} height={48} className="object-cover" />
-                  </div>
-                </div>
-
-                {/* Testimonial text */}
-                <p className="text-xs text-[#3c3e40]">
-                  Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque
-                  elit dictum. Diam nunc eu purus mus nulla dignissim facilisi nec vestibulum. Mauris ornare tempus
-                  pellentesque pretium urna magna. Tellus gravida vitae auctor malesuada vitae sagittis sed ac.
-                  Phasellus pellentesque est velit suspendisse pulvinar pharetra. Mauris ullamcorper euismod tellus
-                  neque neque. Ante ac tincidunt egestas sem. Adipiscing orci mauris amet eget mi condimentum.
-                </p>
-              </div>
+            {/* Right column - One testimonial aligned with bottom */}
+            <div className="col-span-12 md:col-span-4 md:mt-auto">
+              <TestimonialCard
+                name="Regina Miles"
+                title="Designer"
+                content="Lorem ipsum dolor sit amet consectetur. Urna dui vulputate sed id. Gravida amet viverra euismod neque elit dictum."
+                rating={4}
+              />
             </div>
           </div>
         </div>
