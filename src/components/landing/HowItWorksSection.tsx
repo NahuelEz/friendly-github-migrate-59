@@ -15,11 +15,11 @@ export const HowItWorksSection: React.FC = () => {
               <span className="text-[#B762F7] text-5xl lg:text-7xl leading-[0.9] uppercase">
                 1.
               </span>
-              <div className="text-white text-4xl lg:text-5xl leading-[1.1] uppercase mt-6">
+              <div className="text-white text-4xl lg:text-4xl font-bold leading-[1.1]  scale-y-[1.6] uppercase mt-6">
                 Cuentanos <br />
                 tu objetivo
               </div>
-              <div className="text-white text-2xl lg:text-[2rem] leading-tight mt-4">
+              <div className="text-white text-2xl lg:text-[2rem]  scale-y-[1.6]font-bold leading-tight mt-4">
                 o deja que nuestra <br />IA lo descubra
               </div>
             </div>
@@ -32,7 +32,7 @@ export const HowItWorksSection: React.FC = () => {
               <span className="text-[#B762F7] text-5xl lg:text-7xl leading-[0.9] uppercase">
                 2.
               </span>
-              <div className="text-white text-4xl lg:text-5xl leading-[1.1] uppercase mt-6">
+              <div className="text-white text-4xl lg:text-5xl leading-[1.1] font-bold scale-y-[1.6] uppercase mt-6">
                 Llamamos <br />
                 atención
               </div>
@@ -46,7 +46,7 @@ export const HowItWorksSection: React.FC = () => {
               <span className="text-[#B762F7] text-5xl lg:text-7xl leading-[0.9] uppercase">
                 3.
               </span>
-              <div className="text-white text-4xl lg:text-5xl leading-[1.1] uppercase mt-6">
+              <div className="text-white text-4xl lg:text-4xl leading-[1.1] font-bold scale-y-[1.6] uppercase mt-6">
                 Hacemos <br />
                 crecer tu <br />
                 marca
@@ -61,7 +61,7 @@ export const HowItWorksSection: React.FC = () => {
               <span className="text-[#B762F7] text-5xl lg:text-7xl leading-[0.9] uppercase">
                 4.
               </span>
-              <div className="text-white text-3xl lg:text-5xl leading-[1.1] uppercase mt-6">
+              <div className="text-white text-3xl lg:text-5xl leading-[1.1]  font-bold scale-y-[1.6] uppercase mt-6">
                 generamos <br />
                 engagement <br />
               </div>

@@ -51,7 +51,7 @@ export const FAQSection: React.FC = () => {
 
   return (
     <section className="flex w-[1186px] max-w-full flex-col items-stretch ml-[91px] mt-[131px] max-md:mt-10">
-      <h2 className="text-[#4F1092] text-6xl font-normal leading-[0.9] uppercase max-md:max-w-full max-md:text-[40px]">
+      <h2 className="text-[#4F1092] text-4xl font-bold scale-y-[2] leading-[0.9] uppercase max-md:max-w-full max-md:text-[40px]">
         Preguntas frecuentes
       </h2>
       <div className="text-[rgba(79,16,146,1)] text-[32px] font-bold leading-9 mt-[42px] max-md:max-w-full max-md:mr-[7px] max-md:mt-10">

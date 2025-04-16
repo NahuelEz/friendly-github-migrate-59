@@ -18,7 +18,7 @@ export const ComparisonSection: React.FC = () => {
         <div className="w-1/2 max-md:w-full max-md:ml-0">
           <div className="shadow-[3px_5px_20px_0px_rgba(0,0,0,0.50)] bg-white w-[603px] h-[758px] flex-shrink-0 flex flex-col pt-[60px] pb-[60px] rounded-[20px] max-md:mt-9 max-md:w-full">
             <div className="flex flex-col items-center text-center mb-8">
-              <h2 className="text-[#181615] text-5xl leading-tight font-bold">
+              <h2 className="text-[#181615] text-3xl scale-y-[2] leading-tight font-bold">
                 OTRAS PÁGINAS
               </h2>
               <div className="w-full h-px bg-black mt-6" />
@@ -67,7 +67,7 @@ export const ComparisonSection: React.FC = () => {
         <div className="w-1/2 max-md:w-full max-md:ml-0">
           <div className="shadow-[3px_5px_20px_0px_rgba(0,0,0,0.50)] bg-[#B762F7] w-[603px] h-[866px] flex-shrink-0 flex flex-col pt-[50px] pb-[60px] rounded-[20px] max-md:mt-9 max-md:w-full py-[60px]">
             <div className="flex flex-col items-center text-center mb-8 py-0">
-              <h2 className="text-white text-5xl leading-tight font-bold">
+              <h2 className="text-white text-3xl leading-tight font-bold scale-y-[2]">
                 SOCIAL AI
               </h2>
               <div className="w-full h-px bg-white mt-5" />
