@@ -1,4 +1,3 @@
-
 import React from "react";
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
@@ -13,7 +12,8 @@ import ResultsSection from "@/components/landing/ResultsSection";
 import CTAButton from "@/components/ui/CTAButton";
 import GradientBlur from "@/components/ui/GradientBlur";
 const Index = () => {
-  return <div className="relative flex flex-col overflow-hidden w-full">
+  return (
+    <div className="relative flex flex-col overflow-hidden w-full">
       {/* Background gradient image */}
       <div className="absolute top-0 left-0 w-full h-[1060px] -z-10">
         <img src="/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png" alt="Fondo degradado" className="w-full h-full object-cover" />
@@ -43,11 +43,11 @@ const Index = () => {
 
       <StatsSection />
 
-      <div className="text-[rgba(79,16,146,1)] text-[31px] font-bold leading-none self-center mt-[137px] max-md:mt-10">
+      <div className="text-[rgba(79,16,146,1)] text-[31px] font-bold leading-none self-center mt-[137px] max-md:mt-10 font-formula uppercase">
         No te fíes de nosotros, 
       </div>
 
-      <div className="rotate-[0.003745252016376141rad] text-[rgba(79,16,146,1)] text-3xl font-bold leading-[0.8] scale-y-[2] origin-top text-center uppercase self-center w-[887px] mt-[27px] max-md:max-w-full max-md:text-[30px] max-md:leading-[49px]">
+      <div className="rotate-[0.003745252016376141rad] text-[rgba(79,16,146,1)] text-3xl font-bold leading-[0.8] scale-y-[2] origin-top text-center uppercase self-center w-[887px] mt-[27px] max-md:max-w-full max-md:text-[30px] max-md:leading-[49px] font-formula">
         ¡comprueba de primera mano los resultados<br />
         de nuestros clientes!
       </div>
@@ -67,7 +67,7 @@ const Index = () => {
         comenzar
       </CTAButton>
 
-      <div className="text-[rgba(79,16,146,1)] text-5xl  leading-[66px] text-center uppercase self-center w-[986px] mt-[166px] max-md:max-w-full max-md:text-[40px] max-md:leading-[49px] max-md:mt-10 font-bold">
+      <div className="text-[rgba(79,16,146,1)] text-5xl leading-[66px] text-center uppercase self-center w-[986px] mt-[166px] max-md:max-w-full max-md:text-[40px] max-md:leading-[49px] max-md:mt-10 font-bold font-formula uppercase">
         CONFÍA EN NUESTRA EXPERIENCIA <br />
         PARA DESARROLLAR TÚ <br />
         ESTRATEGIA DE CRECIMIENTO
@@ -116,6 +116,7 @@ const Index = () => {
       <ClientsSection />
       <FAQSection />
       <Footer />
-    </div>;
+    </div>
+  );
 };
 export default Index;
