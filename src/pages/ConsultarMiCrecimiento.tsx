@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '../components/ui/avatar';
 import { Button } from '../components/ui/button';
@@ -6,6 +7,10 @@ import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
 import { Link } from 'react-router-dom';
 import { ArrowUp } from "lucide-react";
+import { LineChart } from "@/components/line-chart";
+import { ProfileCard } from "@/components/profile-card";
+import { StatsCard } from "@/components/stats-card";
+
 const ConsultarMiCrecimiento = () => {
   return <>
       <Header />
@@ -154,6 +159,50 @@ const ConsultarMiCrecimiento = () => {
                     <span className="text-green-400 text-xs">+11.01%</span>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* New Advanced Growth Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="relative">
+            <div className="bg-[#b762f7] rounded-3xl p-6 shadow-lg">
+              <h2 className="text-white text-2xl font-medium mb-4">Our Growth</h2>
+              <LineChart />
+            </div>
+
+            <div className="absolute left-32 bottom-16 z-10">
+              <StatsCard title="Comments liked" value="7,265" percentage="+11.01%" />
+            </div>
+
+            <div className="absolute right-8 bottom-[-100px] z-20">
+              <ProfileCard
+                username="nkchaudhary01"
+                profession="Wildlife Photographer"
+                followers="61K Followers"
+                followersGained="39,389"
+                avgLikes="1,800+"
+              />
+            </div>
+          </div>
+
+          <div className="pt-16 lg:pt-24">
+            <div className="space-y-6">
+              <div>
+                <h2 className="text-[#4f1092] text-2xl md:text-4xl font-bold uppercase">Crecimiento con</h2>
+                <h1 className="text-[#4f1092] text-6xl md:text-8xl font-bold uppercase">Pack 2</h1>
+              </div>
+
+              <div className="space-y-8 mt-8">
+                {[1, 2, 3].map((item) => (
+                  <div key={item} className="space-y-1">
+                    <h3 className="text-[#4f1092] text-xl font-medium">Lorem ipsum</h3>
+                    <p className="text-[#4f1092]">Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
