@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import Header from "@/components/landing/Header";
+import Footer from "@/components/landing/Footer";
 import GradientBlur from "@/components/ui/GradientBlur";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -49,7 +50,7 @@ const Login = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <main className="relative w-full min-h-screen overflow-hidden">
+      <main className="relative w-full flex-grow overflow-hidden">
         <div className="absolute inset-0 z-0">
           <GradientBlur />
         </div>
@@ -132,6 +133,8 @@ const Login = () => {
           </div>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 };

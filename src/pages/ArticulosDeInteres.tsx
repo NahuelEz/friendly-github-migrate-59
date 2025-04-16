@@ -5,12 +5,11 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/landing/Header";
 import InstagramSearchBar from "@/components/ui/InstagramSearchBar";
+import Footer from "@/components/landing/Footer";
 
 export default function ArticulosDeInteres() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#4F1092] to-[#B762F7]">
-
-
       <Header />
 
       <main className="container mx-auto px-4 py-12">
@@ -88,60 +87,7 @@ export default function ArticulosDeInteres() {
         </div>
       </main>
 
-      <footer className="bg-[#4F1092] mt-16 py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <div className="text-white text-2xl font-bold mb-6">
-                <Link to="/">
-                  <div className="flex items-center">
-                    <span className="text-white">Social</span>
-                    <span className="text-white ml-1">AI</span>
-                  </div>
-                </Link>
-              </div>
-
-              <div className="text-white/80">
-                <p className="mb-1">IG. @socialai</p>
-                <p className="mb-1">M. info@socialai.com</p>
-                <p>T. +5491112341234</p>
-              </div>
-            </div>
-
-            <div className="flex flex-col md:flex-row md:justify-center gap-4 text-white/80">
-              <Link to="/pricing" className="hover:text-white">
-                Tarifas
-              </Link>
-              <Link to="/case-studies" className="hover:text-white">
-                Clientes
-              </Link>
-              <Link to="/articulos-de-interes" className="hover:text-white">
-                Contenido
-              </Link>
-              <Link to="#" className="hover:text-white">
-                Contacto
-              </Link>
-              <Link to="#" className="hover:text-white">
-                Menciones legales
-              </Link>
-            </div>
-
-            <div>
-              <p className="text-white mb-4">Suscríbete a nuestro boletín de noticias.</p>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Correo electrónico"
-                  className="bg-white/20 rounded-l-full px-4 py-2 text-white placeholder-white/60 outline-none flex-grow"
-                />
-                <Button className="rounded-r-full bg-white/20 hover:bg-white/30 text-white border-l border-white/20">
-                  Registrarse
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

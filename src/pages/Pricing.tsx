@@ -2,8 +2,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
-import { Header } from "../components/landing/Header";
-import { Footer } from "../components/landing/Footer";
+import Header from "@/components/landing/Header";
+import Footer from "@/components/landing/Footer";
 
 const Pricing = () => {
   return (
