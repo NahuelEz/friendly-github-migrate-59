@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '../components/ui/avatar';
 import { Button } from '../components/ui/button';
@@ -7,17 +6,16 @@ import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
 import { Link } from 'react-router-dom';
 import { ArrowUp } from "lucide-react";
-
 const ConsultarMiCrecimiento = () => {
   return <>
       <Header />
       
       {/* Hero Section with Background Image */}
       <section className="min-h-[80vh] relative flex items-center" style={{
-        backgroundImage: "url('/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center"
-      }}>
+      backgroundImage: "url('/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png')",
+      backgroundSize: "cover",
+      backgroundPosition: "center"
+    }}>
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="max-w-4xl">
             <h1 className="text-white text-6xl md:text-8xl font-bold leading-tight uppercase">
@@ -42,7 +40,7 @@ const ConsultarMiCrecimiento = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-between">
             <div className="flex items-center gap-4">
-              <img src="/uploads/444ad407-0b2e-40b7-8274-d0fb9db9bb5a.png" alt="Profile" width={80} height={80} className="rounded-full object-cover w-20 h-20" />
+              <img alt="Profile" width={80} height={80} className="rounded-full object-cover w-20 h-20" src="/lovable-uploads/10c9cb7c-f217-47ed-a9b4-fd116a7171e0.png" />
               <div>
                 <h3 className="text-[#4f1092] text-xl font-bold">cameron_will</h3>
                 <p className="text-gray-600">New Delhi, India</p>
