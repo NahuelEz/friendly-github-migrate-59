@@ -1,5 +1,5 @@
 
-import React, { useState, useRef, MouseEvent } from "react";
+import React, { useState, useRef, MouseEvent, useEffect } from "react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import VideoPlayButton from '../ui/VideoPlayButton';
 
@@ -88,6 +88,67 @@ const Card3DHover: React.FC<CardHoverProps> = ({ children, className = "", showV
   );
 };
 
+// Create a new CounterAnimation component for the animated numbers
+interface CounterAnimationProps {
+  end: number;
+  className?: string;
+  duration?: number;
+}
+
+const CounterAnimation: React.FC<CounterAnimationProps> = ({ 
+  end, 
+  className = "", 
+  duration = 2000 
+}) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const counterRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+    
+    let startTime: number | null = null;
+    let animationFrameId: number;
+    
+    const step = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      
+      setCount(Math.floor(progress * end));
+      
+      if (progress < 1) {
+        animationFrameId = requestAnimationFrame(step);
+      } else {
+        setCount(end);
+      }
+    };
+    
+    animationFrameId = requestAnimationFrame(step);
+    
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [end, duration, isVisible]);
+  
+  return <div ref={counterRef} className={className}>{count.toLocaleString()}</div>;
+};
+
 export const ResultsSection: React.FC = () => {
   // Example video URLs - replace with actual videos
   const videoUrls = [
@@ -123,9 +184,13 @@ export const ResultsSection: React.FC = () => {
         </div>
         <div className="mt-[69px] max-md:max-w-full max-md:mt-10">
           <div className="gap-8 flex max-md:flex-col max-md:items-stretch">
-            {[1, 2, 3, 4].map(i => <div key={i} className="w-3/12 max-md:w-full max-md:ml-0">
+            {[1, 2, 3, 4].map((i, index) => <div key={i} className="w-3/12 max-md:w-full max-md:ml-0">
                 <Card3DHover className="shadow-[3px_5px_20px_0px_rgba(0,0,0,0.50)] bg-white flex grow flex-col items-center text-center w-full py-10 px-6 rounded-[20px] max-md:mt-5" showVideoButton={false}>
-                  <div className="text-[#181615] text-5xl font-bold">39,389</div>
+                  <CounterAnimation 
+                    end={39389} 
+                    className="text-[#181615] text-5xl font-bold" 
+                    duration={2000}
+                  />
                   <div className="text-gray-600 text-sm mt-3">Followers Gained</div>
                 </Card3DHover>
               </div>)}
