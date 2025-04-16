@@ -79,7 +79,7 @@ const Index = () => {
           <GradientBlur />
         </div>
 
-        <div className="text-white text-7xl font-bold leading-[0.9] uppercase max-md:max-w-full max-md:text-[30px] relative z-10">
+        <div className="text-white text-7xl font-bold leading-[0.9] scale-y-[2] uppercase max-md:max-w-full max-md:text-[30px] relative z-10">
           esta PENSADO para vos
         </div>
 
