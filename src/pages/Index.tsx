@@ -1,3 +1,4 @@
+
 import React from "react";
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
@@ -74,7 +75,7 @@ const Index = () => {
 
       <TestimonialsSection />
 
-      <div className="bg-[rgba(79,16,146,1)] flex w-full flex-col overflow-hidden mt-[141px] pt-[93px] px-[54px] pb-[340px] relative max-md:max-w-full max-md:mt-10 max-md:px-5">
+      <div className="bg-[rgba(79,16,146,1)] flex w-full flex-col overflow-visible mt-[141px] pt-[93px] px-[54px] pb-[340px] relative max-md:max-w-full max-md:mt-10 max-md:px-5 z-0">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <GradientBlur />
         </div>
