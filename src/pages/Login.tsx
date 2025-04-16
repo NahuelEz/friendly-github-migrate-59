@@ -57,7 +57,7 @@ const Login = () => {
 
         <div className="relative z-10 flex flex-col items-center justify-center w-full h-full px-4 py-12">
           <h1 
-            className="text-[#4F1092] uppercase font-formula-condensed font-bold text-center leading-none absolute z-0"
+            className="text-[#4F1092] uppercase font-formula-condensed font-bold text-center leading-none absolute scale-y-[2] z-0"
             style={{
               fontFamily: "Formula Condensed-Regular, Helvetica",
               fontSize: isMobile ? "3rem" : "5rem",
