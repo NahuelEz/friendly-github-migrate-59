@@ -9,6 +9,7 @@ import { ArrowUp } from "lucide-react";
 import { LineChart } from "@/components/line-chart";
 import { ProfileCard } from "@/components/profile-card";
 import { StatsCard } from "@/components/stats-card";
+
 const ConsultarMiCrecimiento = () => {
   return <>
       <Header />
@@ -165,7 +166,7 @@ const ConsultarMiCrecimiento = () => {
       
       {/* New Advanced Growth Section */}
       <section className="py-16 bg-white">
-        <div className="flex flex-wrap items-center">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="relative">
             <div className="bg-[#b762f7] rounded-3xl p-6 shadow-lg">
               <h2 className="text-white text-2xl font-medium mb-4">Our Growth</h2>
@@ -177,7 +178,13 @@ const ConsultarMiCrecimiento = () => {
             </div>
 
             <div className="absolute right-8 bottom-[-100px] z-20">
-              <ProfileCard username="nkchaudhary01" profession="Wildlife Photographer" followers="61K Followers" followersGained="39,389" avgLikes="1,800+" />
+              <ProfileCard
+                username="nkchaudhary01"
+                profession="Wildlife Photographer"
+                followers="61K Followers"
+                followersGained="39,389"
+                avgLikes="1,800+"
+              />
             </div>
           </div>
 
@@ -189,10 +196,12 @@ const ConsultarMiCrecimiento = () => {
               </div>
 
               <div className="space-y-8 mt-8">
-                {[1, 2, 3].map(item => <div key={item} className="space-y-1">
+                {[1, 2, 3].map((item) => (
+                  <div key={item} className="space-y-1">
                     <h3 className="text-[#4f1092] text-xl font-medium">Lorem ipsum</h3>
                     <p className="text-[#4f1092]">Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.</p>
-                  </div>)}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
