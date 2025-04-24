@@ -30,8 +30,8 @@ export default function ArticulosDeInteres() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[1, 2, 3].map(item => <div key={item} className="bg-white rounded-lg overflow-hidden">
-              <div className="bg-gray-300 h-40"></div>
-              <div className="p-6">
+              <div className="bg-gray-300 h-40 my-0 py-[136px]"></div>
+              <div className="p-6 py-[50px]">
                 <h3 className="text-xl font-bold mb-2">Titular lorem ipsum dolor sit amet consectetur.</h3>
                 <p className="text-gray-700 mb-4">
                   Lorem ipsum dolor sit amet consectetur. Tempus hendrerit netus quam orci velit. Lacus commodo
