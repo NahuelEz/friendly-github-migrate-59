@@ -1,24 +1,29 @@
 
-import { Routes, Route } from 'react-router-dom';
-import Index from './pages/Index';
-import ArticulosDeInteres from './pages/ArticulosDeInteres';
-import CaseStudies from './pages/CaseStudies';
-import ConsultarMiCrecimiento from './pages/ConsultarMiCrecimiento';
-import Login from './pages/Login';
-import Pricing from './pages/Pricing';
-import NotFound from './pages/NotFound';
+import { Routes, Route } from "react-router-dom";
+import MainNav from "./components/ui/MainNav";
+import Index from "./pages/Index";
+import Pricing from "./pages/Pricing";
+import Login from "./pages/Login";
+import CaseStudies from "./pages/CaseStudies";
+import NotFound from "./pages/NotFound";
+import ConsultarMiCrecimiento from "./pages/ConsultarMiCrecimiento";
+import ArticulosDeInteres from "./pages/ArticulosDeInteres";
+import "@/App.css";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Index />} />
-      <Route path="/articulos-de-interes" element={<ArticulosDeInteres />} />
-      <Route path="/case-studies" element={<CaseStudies />} />
-      <Route path="/consultar-mi-crecimiento" element={<ConsultarMiCrecimiento />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/pricing" element={<Pricing />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <div className="min-h-screen flex flex-col">
+      <MainNav />
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/case-studies" element={<CaseStudies />} />
+        <Route path="/consultar-mi-crecimiento" element={<ConsultarMiCrecimiento />} />
+        <Route path="/articulos-de-interes" element={<ArticulosDeInteres />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </div>
   );
 }
 
