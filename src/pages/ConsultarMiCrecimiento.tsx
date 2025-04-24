@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '../components/ui/avatar';
 import { Button } from '../components/ui/button';
@@ -81,27 +80,19 @@ const ConsultarMiCrecimiento = () => {
   return <>
       <Header />
       
-      {/* Hero Section with Background Image */}
+      {/* Hero Section with New Background Image */}
       <section className="min-h-[80vh] relative flex items-center" style={{
-      backgroundImage: "url('/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png')",
-      backgroundSize: "cover",
-      backgroundPosition: "center"
-    }}>
-        <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
+        backgroundImage: "url('/lovable-uploads/2febf7b5-81a0-4fdf-8844-7a094ef061bf.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }}>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
             <h1 className="text-white text-6xl md:text-8xl font-bold leading-tight uppercase">
               Proyectemos
               <br />
               tu crecimiento
             </h1>
-
-            <div className="relative mt-8 md:mt-0 md:absolute md:right-40 md:top-60">
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl w-56 h-56 flex items-center justify-center">
-                <div className="w-32 h-32 rounded-full border-2 border-white flex items-center justify-center">
-                  <ArrowUp className="w-12 h-12 text-white" />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
