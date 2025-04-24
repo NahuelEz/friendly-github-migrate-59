@@ -110,7 +110,7 @@ export function GrowthDashboard() {
           </div>
 
           {/* Live reactions overlay */}
-          <div className="absolute -bottom-6 right-4 bg-[#181615] text-white p-4 rounded-xl shadow-lg">
+          <div className="absolute bottom-20 -right-[20%] bg-[#181615] text-white p-4 rounded-xl shadow-lg">
             <div className="flex justify-between items-center">
               <div>
                 <p className="text-sm text-gray-300">Live Reactions</p>
