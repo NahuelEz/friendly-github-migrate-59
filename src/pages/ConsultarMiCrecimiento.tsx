@@ -9,7 +9,6 @@ import { ArrowUp } from "lucide-react";
 import { LineChart } from "@/components/line-chart";
 import { ProfileCard } from "@/components/profile-card";
 import { StatsCard } from "@/components/stats-card";
-
 const ConsultarMiCrecimiento = () => {
   return <>
       <Header />
@@ -40,7 +39,7 @@ const ConsultarMiCrecimiento = () => {
       </section>
 
       {/* Profile Section */}
-      <section className="bg-[#fdfdfd] py-8">
+      <section className="py-8 bg-[D9D9D9] bg-[#d1d1d1]">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-between">
             <div className="flex items-center gap-4">
@@ -178,13 +177,7 @@ const ConsultarMiCrecimiento = () => {
             </div>
 
             <div className="absolute right-8 bottom-[-100px] z-20">
-              <ProfileCard
-                username="nkchaudhary01"
-                profession="Wildlife Photographer"
-                followers="61K Followers"
-                followersGained="39,389"
-                avgLikes="1,800+"
-              />
+              <ProfileCard username="nkchaudhary01" profession="Wildlife Photographer" followers="61K Followers" followersGained="39,389" avgLikes="1,800+" />
             </div>
           </div>
 
@@ -196,12 +189,10 @@ const ConsultarMiCrecimiento = () => {
               </div>
 
               <div className="space-y-8 mt-8">
-                {[1, 2, 3].map((item) => (
-                  <div key={item} className="space-y-1">
+                {[1, 2, 3].map(item => <div key={item} className="space-y-1">
                     <h3 className="text-[#4f1092] text-xl font-medium">Lorem ipsum</h3>
                     <p className="text-[#4f1092]">Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.</p>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
