@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '../components/ui/avatar';
 import { Button } from '../components/ui/button';
@@ -79,7 +78,7 @@ const ConsultarMiCrecimiento = () => {
       {/* Growth Section */}
       <section className="bg-[#fdfdfd] py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start"> {/* Changed gap-8 to gap-4 */}
             {/* Column 1: Title */}
             <div>
               <div className="mb-6">
