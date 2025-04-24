@@ -73,13 +73,15 @@ const ConsultarMiCrecimiento = () => {
       {/* Growth Section */}
       <section className="bg-[#fdfdfd] py-16">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap items-center">
+          <div className="flex flex-wrap items-start">
             <div className="w-full md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
               <div className="mb-6">
                 <h3 className="text-[#4f1092] text-xl uppercase font-medium">Crecimiento con</h3>
                 <h2 className="text-[#4f1092] text-6xl font-bold uppercase">Pack 1</h2>
               </div>
+            </div>
 
+            <div className="w-full md:w-1/2">
               <div className="space-y-6">
                 <div>
                   <p className="text-[#4f1092] font-medium">Lorem ipsum</p>
