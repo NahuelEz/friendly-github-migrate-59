@@ -5,11 +5,94 @@ import { Input } from '../components/ui/input';
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
 import { Link } from 'react-router-dom';
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, TrendingUp } from "lucide-react";
+import { Line } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
 import { LineChart } from "@/components/line-chart";
 import { ProfileCard } from "@/components/profile-card";
 import { StatsCard } from "@/components/stats-card";
+
+// Register ChartJS components
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
 const ConsultarMiCrecimiento = () => {
+  // Chart configuration
+  const chartData = {
+    labels: ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"],
+    datasets: [
+      {
+        data: [16, 25, 22, 32, 36],
+        borderColor: "#ffffff",
+        backgroundColor: "rgba(255, 255, 255, 0.1)",
+        tension: 0.4,
+        pointRadius: 4,
+        pointBackgroundColor: "#ffffff",
+      },
+    ],
+  };
+
+  const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      title: {
+        display: true,
+        text: "Our Growth",
+        color: "#ffffff",
+        font: {
+          size: 24,
+          weight: "bold",
+        },
+        padding: {
+          top: 10,
+          bottom: 30,
+        },
+        align: "center" as const,
+      },
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 40,
+        ticks: {
+          stepSize: 10,
+          color: "#ffffff",
+        },
+        grid: {
+          color: "rgba(255, 255, 255, 0.1)",
+        },
+      },
+      x: {
+        ticks: {
+          color: "#ffffff",
+        },
+        grid: {
+          display: false,
+        },
+      },
+    },
+  };
+
   return <>
       <Header />
       
@@ -73,91 +156,44 @@ const ConsultarMiCrecimiento = () => {
       {/* Growth Section */}
       <section className="bg-[#fdfdfd] py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-1 items-start"> {/* Changed gap-8 to gap-4 */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
             {/* Column 1: Title */}
             <div>
-              <div className="mb-6">
-                <h3 className="text-[#4f1092] text-xl uppercase font-medium">Crecimiento con</h3>
-                <h2 className="text-[#4f1092] text-6xl font-bold uppercase">Pack 1</h2>
-              </div>
+              <h1 className="text-[#4f1092] text-5xl md:text-6xl font-bold leading-tight">
+                CRECIMIENTO CON
+                <br />
+                <span className="text-7xl md:text-8xl">PACK 1</span>
+              </h1>
             </div>
 
             {/* Column 2: Lorem Ipsum content */}
-            <div className="space-y-6">
-              <div>
-                <p className="text-[#4f1092] font-medium">Lorem ipsum</p>
-                <p className="text-gray-600">Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.</p>
-              </div>
-              <div>
-                <p className="text-[#4f1092] font-medium">Lorem ipsum</p>
-                <p className="text-gray-600">Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.</p>
-              </div>
-              <div>
-                <p className="text-[#4f1092] font-medium">Lorem ipsum</p>
-                <p className="text-gray-600">Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.</p>
-              </div>
+            <div className="space-y-8">
+              {[1, 2, 3].map((index) => (
+                <div key={index} className="space-y-1">
+                  <h3 className="text-[#4f1092] text-xl font-semibold">Lorem ipsum</h3>
+                  <p className="text-[#4f1092]">Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.</p>
+                </div>
+              ))}
             </div>
 
             {/* Column 3: Chart */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-[#b762f7] to-[#4f1092] rounded-3xl p-6 relative">
-                <h3 className="text-white text-xl mb-4">Our Growth</h3>
-
-                <div className="h-64 relative">
-                  {/* Simple chart representation */}
-                  <div className="absolute inset-0 flex items-end">
-                    <div className="w-full h-full flex items-end">
-                      <div className="flex-1 flex items-end justify-center">
-                        <div className="w-1 bg-white h-[10%]"></div>
-                      </div>
-                      <div className="flex-1 flex items-end justify-center">
-                        <div className="w-1 bg-white h-[30%]"></div>
-                      </div>
-                      <div className="flex-1 flex items-end justify-center">
-                        <div className="w-1 bg-white h-[20%]"></div>
-                      </div>
-                      <div className="flex-1 flex items-end justify-center">
-                        <div className="w-1 bg-white h-[35%]"></div>
-                      </div>
-                      <div className="flex-1 flex items-end justify-center">
-                        <div className="w-1 bg-white h-[40%]"></div>
-                      </div>
-                    </div>
-
-                    {/* Line chart overlay */}
-                    <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                      <path d="M0,90 L20,70 L40,80 L60,65 L80,60" fill="none" stroke="white" strokeWidth="1" />
-                    </svg>
-                  </div>
-
-                  <div className="absolute bottom-0 w-full flex justify-between text-white text-xs">
-                    <span>Item 1</span>
-                    <span>Item 2</span>
-                    <span>Item 3</span>
-                    <span>Item 4</span>
-                    <span>Item 5</span>
-                  </div>
-
-                  <div className="absolute left-0 h-full flex flex-col justify-between text-white text-xs">
-                    <span>40</span>
-                    <span>30</span>
-                    <span>20</span>
-                    <span>10</span>
-                    <span>0</span>
-                  </div>
+              <div className="bg-[#b762f7] rounded-3xl p-6 h-[400px] w-full">
+                <div className="h-full">
+                  <Line data={chartData} options={chartOptions} />
                 </div>
+              </div>
 
-                {/* Live reactions card */}
-                <div className="absolute -bottom-10 right-10 bg-black text-white rounded-lg p-4 shadow-lg">
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="text-xs">Live Reactions</span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
+              {/* Live reactions overlay */}
+              <div className="absolute -bottom-6 right-4 bg-[#181615] text-white p-4 rounded-xl shadow-lg">
+                <div className="flex justify-between items-center">
+                  <div>
+                    <p className="text-sm text-gray-300">Live Reactions</p>
+                    <p className="text-4xl font-bold">7,265</p>
                   </div>
-                  <div className="flex items-end gap-2">
-                    <span className="text-2xl font-bold">7,265</span>
-                    <span className="text-green-400 text-xs">+11.01%</span>
+                  <div className="flex items-center gap-1 text-green-400 ml-4">
+                    <TrendingUp size={16} />
+                    <span className="font-medium">+11.01%</span>
                   </div>
                 </div>
               </div>
