@@ -1,6 +1,3 @@
-
-"use client"
-
 import { Line } from "react-chartjs-2"
 import {
   Chart as ChartJS,
@@ -80,7 +77,7 @@ export function GrowthDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-[#fdfdfd] flex items-center justify-center p-4">
+    <div className="bg-[#fdfdfd] py-16 flex items-center justify-center p-4">
       <div className="w-full max-w-7xl flex flex-col md:flex-row gap-8 items-start">
         {/* Left section - Title */}
         <div className="md:w-1/4 md:pt-1">
