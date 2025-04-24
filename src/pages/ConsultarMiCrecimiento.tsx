@@ -76,6 +76,7 @@ const ConsultarMiCrecimiento = () => {
       }
     }
   };
+  
   return <>
       <Header />
       
@@ -136,11 +137,13 @@ const ConsultarMiCrecimiento = () => {
         </div>
       </section>
 
-      {/* Growth Section */}
+      {/* Growth Section (Pack 1) */}
       <GrowthDashboard />
 
-      {/* New Advanced Growth Section */}
-      
+      {/* Separator */}
+      <div className="w-full py-8">
+        <hr className="border-gray-300" />
+      </div>
 
       {/* Pack 2 Growth Section */}
       <section className="bg-white py-16 relative">
@@ -253,6 +256,11 @@ const ConsultarMiCrecimiento = () => {
         </div>
       </section>
 
+      {/* Separator */}
+      <div className="w-full py-8">
+        <hr className="border-gray-300" />
+      </div>
+
       {/* Pack 3 Growth Section */}
       <Pack3Dashboard />
 
@@ -262,4 +270,5 @@ const ConsultarMiCrecimiento = () => {
       <Footer />
     </>;
 };
+
 export default ConsultarMiCrecimiento;
