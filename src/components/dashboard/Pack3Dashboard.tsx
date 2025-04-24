@@ -5,14 +5,14 @@ import { TrafficSourceDonutChart } from './TrafficSourceDonutChart';
 
 export const Pack3Dashboard = () => {
   return (
-    <div className="bg-[#fdfbf9] py-8 my-12">
-      <div className="max-w-7xl mx-auto">
+    <div className="bg-[#fdfbf9] py-8 my-12 mb-40">
+      <div className="max-w-[1700px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 relative">
           {/* Column 1: CRECIMIENTO CON PACK 3 - 3 columns wide */}
           <div className="lg:col-span-3">
             <div className="sticky top-8">
-              <h2 className="text-[#4f1092] text-2xl font-bold">CRECIMIENTO CON</h2>
-              <h1 className="text-[#4f1092] text-7xl font-bold leading-tight">PACK 3</h1>
+              <h2 className="text-[#4f1092] text-2xl font-bold scale-y-[1.5]">CRECIMIENTO CON</h2>
+              <h1 className="text-[#4f1092] text-7xl font-bold leading-tight scale-y-[2] mt-6">PACK 3</h1>
             </div>
           </div>
 

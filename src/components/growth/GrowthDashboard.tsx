@@ -78,13 +78,13 @@ export function GrowthDashboard() {
 
   return (
     <div className="bg-[#fdfdfd] py-16 flex items-center justify-center p-4">
-      <div className="w-full max-w-7xl flex flex-col md:flex-row gap-8 items-start">
+      <div className="w-full max-w-[1700px] flex flex-col md:flex-row gap-8 items-start">
         {/* Left section - Title */}
         <div className="md:w-1/4 md:pt-1">
-          <h1 className="text-[#4f1092] text-3xl md:text-4xl font-bold leading-tight">
+          <h1 className="text-[#4f1092] text-3xl md:text-2xl font-bold leading-tight scale-y-[1.5]">
             CRECIMIENTO CON
             <br />
-            <span className="text-5xl md:text-6xl">PACK 1</span>
+            <span className="text-5xl md:text-7xl scale-y-[2] mt-6">PACK 1</span>
           </h1>
         </div>
 
@@ -107,7 +107,7 @@ export function GrowthDashboard() {
           </div>
 
           {/* Live reactions overlay */}
-          <div className="absolute bottom-20 -right-[20%] bg-[#181615] text-white p-4 rounded-xl shadow-lg">
+          <div className="absolute bottom-20 -right-[10%] bg-[#181615] text-white p-4 rounded-xl shadow-lg">
             <div className="flex justify-between items-center">
               <div>
                 <p className="text-sm text-gray-300">Live Reactions</p>

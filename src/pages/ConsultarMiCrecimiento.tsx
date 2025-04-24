@@ -146,8 +146,8 @@ const ConsultarMiCrecimiento = () => {
       </div>
 
       {/* Pack 2 Growth Section */}
-      <section className="bg-white py-16 relative">
-        <div className="container mx-auto px-4">
+      <section className="bg-white py-32 relative">
+        <div className="container max-w-[1700px] px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Primera columna: Gráfico (ocupa 2 de 4 columnas) */}
             <div className="relative md:col-span-2">
@@ -194,7 +194,7 @@ const ConsultarMiCrecimiento = () => {
               </div>
 
               {/* Comments Liked Card */}
-              <div className="absolute left-[10%] bottom-[-40px] bg-[#181615] text-white rounded-2xl p-5 shadow-xl w-[280px]">
+              <div className="absolute left-[19%] bottom-[-40px] bg-[#181615] text-white rounded-2xl p-5 shadow-xl w-[280px]">
                 <div className="flex justify-between items-center">
                   <div className="text-sm text-gray-300">Comments liked</div>
                   <div className="bg-[#29292e] rounded-full p-1">
@@ -211,8 +211,8 @@ const ConsultarMiCrecimiento = () => {
             {/* Segunda columna: Título (ahora en el medio) */}
             <div className="flex flex-col md:pt-6">
               <div>
-                <h1 className="text-[#4f1092] text-4xl md:text-4xl font-bold uppercase">CRECIMIENTO CON</h1>
-                <h1 className="text-[#4f1092] text-6xl md:text-6xl font-bold uppercase leading-tight">PACK 2</h1>
+                <h1 className="text-[#4f1092] text-3xl md:text-2xl font-bold uppercase scale-y-[1.5]">CRECIMIENTO CON</h1>
+                <h1 className="text-[#4f1092] text-8xl md:text-7xl font-bold mt-8 uppercase leading-tight scale-y-[2]">PACK 2</h1>
               </div>
             </div>
 
@@ -220,7 +220,7 @@ const ConsultarMiCrecimiento = () => {
             <div className="flex flex-col md:pt-6">
               <div className="space-y-6">
                 {[1, 2, 3].map(i => <div key={i} className="max-w-xs">
-                    <h3 className="text-[#4f1092] text-lg font-medium">Lorem ipsum</h3>
+                    <h3 className="text-[#4f1092] text-lg font-bold">Lorem ipsum</h3>
                     <p className="text-[#4f1092] text-sm">
                       Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.
                     </p>
@@ -230,7 +230,7 @@ const ConsultarMiCrecimiento = () => {
           </div>
 
           {/* Profile Card */}
-          <div className="absolute left-[25%] bottom-[70px] md:left-[30%] md:bottom-[90px] bg-[#4f1092] rounded-3xl overflow-hidden shadow-xl w-[280px] z-10">
+          <div className="absolute left-[25%] bottom-[70px] md:left-[32%] md:bottom-[-10px] bg-[#4f1092] rounded-3xl overflow-hidden shadow-xl w-[280px] z-10">
             <div className="p-6 flex flex-col items-center">
               <div className="rounded-full overflow-hidden border-2 border-white w-20 h-20 mb-3">
                 <img src="/placeholder.svg" alt="Profile" width={80} height={80} className="object-cover" />
