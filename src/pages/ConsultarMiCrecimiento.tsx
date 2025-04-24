@@ -21,6 +21,7 @@ import { LineChart } from "@/components/line-chart";
 import { ProfileCard } from "@/components/profile-card";
 import { StatsCard } from "@/components/stats-card";
 import { GrowthDashboard } from '@/components/growth/GrowthDashboard';
+import { InstagramBanner } from '@/components/banners/InstagramBanner';
 
 // Register ChartJS components
 ChartJS.register(
@@ -205,6 +206,9 @@ const ConsultarMiCrecimiento = () => {
           />
         </div>
       </section>
+
+      {/* Instagram Banner */}
+      <InstagramBanner />
       
       <Footer />
     </>
