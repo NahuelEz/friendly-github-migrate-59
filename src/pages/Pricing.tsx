@@ -12,8 +12,8 @@ const Pricing = () => {
         <div className="absolute inset-0 overflow-hidden">
           <img src="/lovable-uploads/e2fb0665-1dcc-41d0-8506-fc55c3cd7e8d.png" alt="Purple gradient background" className="w-full h-full object-cover" />
         </div>
-        <div className="container mx-auto px-4 relative z-10 flex flex-col items-center">
-          <div className="bg-[#b762f7]/30 backdrop-blur-sm p-12 rounded-lg text-white text-center max-w-md">
+        <div className="container mx-auto px-4 relative z-10 flex flex-col items-center py-[41px]">
+          <div className="bg-[#b762f7]/30 backdrop-blur-sm p-12 rounded-lg text-white text-center max-w-md py-[71px]">
             <h1 className="text-6xl font-bold mb-2">50% OFF</h1>
             <div className="border-t border-b border-white py-2 mb-2">
               <p className="text-xl">EN PLANES ANUALES</p>
@@ -21,9 +21,7 @@ const Pricing = () => {
             <p className="text-xl">POR TIEMPO LIMITADO</p>
           </div>
 
-          <button className="mt-12 bg-[#fe6202] hover:bg-[#ff6200] text-white font-medium py-3 px-8 rounded-full">
-            empieza a crecer hoy
-          </button>
+          <button className="mt-12 bg-[#fe6202] hover:bg-[#ff6200] text-white font-medium py-3 px-8 rounded-full">Empezá a crecer hoy</button>
         </div>
       </section>
 
