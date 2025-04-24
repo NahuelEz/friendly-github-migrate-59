@@ -73,31 +73,35 @@ const ConsultarMiCrecimiento = () => {
       {/* Growth Section */}
       <section className="bg-[#fdfdfd] py-16">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap items-start">
-            <div className="w-full md:w-1/2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+            {/* Column 1: Title */}
+            <div>
               <div className="mb-6">
                 <h3 className="text-[#4f1092] text-xl uppercase font-medium">Crecimiento con</h3>
                 <h2 className="text-[#4f1092] text-6xl font-bold uppercase">Pack 1</h2>
               </div>
+            </div>
 
-              <div className="space-y-6 mb-8">
-                <div>
-                  <p className="text-[#4f1092] font-medium">Lorem ipsum</p>
-                  <p className="text-gray-600">Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.</p>
-                </div>
-                <div>
-                  <p className="text-[#4f1092] font-medium">Lorem ipsum</p>
-                  <p className="text-gray-600">Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.</p>
-                </div>
-                <div>
-                  <p className="text-[#4f1092] font-medium">Lorem ipsum</p>
-                  <p className="text-gray-600">Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.</p>
-                </div>
+            {/* Column 2: Lorem Ipsum content */}
+            <div className="space-y-6">
+              <div>
+                <p className="text-[#4f1092] font-medium">Lorem ipsum</p>
+                <p className="text-gray-600">Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.</p>
               </div>
+              <div>
+                <p className="text-[#4f1092] font-medium">Lorem ipsum</p>
+                <p className="text-gray-600">Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.</p>
+              </div>
+              <div>
+                <p className="text-[#4f1092] font-medium">Lorem ipsum</p>
+                <p className="text-gray-600">Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.</p>
+              </div>
+            </div>
 
-              <div className="relative">
-                <div className="bg-gradient-to-br from-[#b762f7] to-[#4f1092] rounded-3xl p-6 relative">
-                  <h3 className="text-white text-xl mb-4">Our Growth</h3>
+            {/* Column 3: Chart */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-[#b762f7] to-[#4f1092] rounded-3xl p-6 relative">
+                <h3 className="text-white text-xl mb-4">Our Growth</h3>
 
                   <div className="h-64 relative">
                     {/* Simple chart representation */}
