@@ -140,40 +140,7 @@ const ConsultarMiCrecimiento = () => {
       <GrowthDashboard />
 
       {/* New Advanced Growth Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="relative">
-            <div className="bg-[#b762f7] rounded-3xl p-6 shadow-lg">
-              <h2 className="text-white text-2xl font-medium mb-4">Our Growth</h2>
-              <LineChart />
-            </div>
-
-            <div className="absolute left-32 bottom-16 z-10">
-              <StatsCard title="Comments liked" value="7,265" percentage="+11.01%" />
-            </div>
-
-            <div className="absolute right-8 bottom-[-100px] z-20">
-              <ProfileCard username="nkchaudhary01" profession="Wildlife Photographer" followers="61K Followers" followersGained="39,389" avgLikes="1,800+" />
-            </div>
-          </div>
-
-          <div className="pt-16 lg:pt-24">
-            <div className="space-y-6">
-              <div>
-                <h2 className="text-[#4f1092] text-2xl md:text-4xl font-bold uppercase">Crecimiento con</h2>
-                <h1 className="text-[#4f1092] text-6xl md:text-8xl font-bold uppercase">Pack 2</h1>
-              </div>
-
-              <div className="space-y-8 mt-8">
-                {[1, 2, 3].map(item => <div key={item} className="space-y-1">
-                    <h3 className="text-[#4f1092] text-xl font-medium">Lorem ipsum</h3>
-                    <p className="text-[#4f1092]">Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.</p>
-                  </div>)}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Pack 2 Growth Section */}
       <section className="bg-white py-16 relative">
@@ -206,17 +173,11 @@ const ConsultarMiCrecimiento = () => {
 
                     {/* Horizontal grid lines */}
                     <div className="absolute left-[30px] top-0 right-0 h-full flex flex-col justify-between">
-                      {[0, 1, 2, 3, 4].map((i) => (
-                        <div key={i} className="border-t border-white/20 w-full h-0"></div>
-                      ))}
+                      {[0, 1, 2, 3, 4].map(i => <div key={i} className="border-t border-white/20 w-full h-0"></div>)}
                     </div>
 
                     {/* Line chart */}
-                    <svg
-                      className="absolute left-[30px] top-0 right-0 h-full w-[calc(100%-30px)]"
-                      viewBox="0 0 400 200"
-                      preserveAspectRatio="none"
-                    >
+                    <svg className="absolute left-[30px] top-0 right-0 h-full w-[calc(100%-30px)]" viewBox="0 0 400 200" preserveAspectRatio="none">
                       <path d="M0,180 L80,100 L160,140 L240,40 L320,20" fill="none" stroke="white" strokeWidth="2" />
                       {/* Data points */}
                       <circle cx="0" cy="180" r="4" fill="white" />
@@ -255,14 +216,12 @@ const ConsultarMiCrecimiento = () => {
             {/* Tercera columna: Lorem Ipsum (ahora al final) */}
             <div className="flex flex-col md:pt-6">
               <div className="space-y-6">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="max-w-xs">
+                {[1, 2, 3].map(i => <div key={i} className="max-w-xs">
                     <h3 className="text-[#4f1092] text-lg font-medium">Lorem ipsum</h3>
                     <p className="text-[#4f1092] text-sm">
                       Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.
                     </p>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -271,13 +230,7 @@ const ConsultarMiCrecimiento = () => {
           <div className="absolute left-[25%] bottom-[70px] md:left-[30%] md:bottom-[90px] bg-[#4f1092] rounded-3xl overflow-hidden shadow-xl w-[280px] z-10">
             <div className="p-6 flex flex-col items-center">
               <div className="rounded-full overflow-hidden border-2 border-white w-20 h-20 mb-3">
-                <img
-                  src="/placeholder.svg"
-                  alt="Profile"
-                  width={80}
-                  height={80}
-                  className="object-cover"
-                />
+                <img src="/placeholder.svg" alt="Profile" width={80} height={80} className="object-cover" />
               </div>
               <h3 className="text-white text-xl font-medium">nkchaudhary01</h3>
               <p className="text-white/80 text-sm">Wildlife Photographer</p>
@@ -309,5 +262,4 @@ const ConsultarMiCrecimiento = () => {
       <Footer />
     </>;
 };
-
 export default ConsultarMiCrecimiento;
