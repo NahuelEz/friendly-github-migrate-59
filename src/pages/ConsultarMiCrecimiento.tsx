@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '../components/ui/avatar';
 import { Button } from '../components/ui/button';
@@ -48,6 +49,7 @@ const ConsultarMiCrecimiento = () => {
     ],
   };
 
+  // Fix: Changed font weight from string "bold" to a valid value "bold" (as a literal type)
   const chartOptions = {
     responsive: true,
     maintainAspectRatio: false,
@@ -61,7 +63,7 @@ const ConsultarMiCrecimiento = () => {
         color: "#ffffff",
         font: {
           size: 24,
-          weight: "bold",
+          weight: "bold" as "bold", // Explicitly type as "bold" literal
         },
         padding: {
           top: 10,
@@ -93,7 +95,8 @@ const ConsultarMiCrecimiento = () => {
     },
   };
 
-  return <>
+  return (
+    <>
       <Header />
       
       {/* Hero Section with Background Image */}
@@ -239,6 +242,8 @@ const ConsultarMiCrecimiento = () => {
       </section>
       
       <Footer />
-    </>;
+    </>
+  );
 };
+
 export default ConsultarMiCrecimiento;
