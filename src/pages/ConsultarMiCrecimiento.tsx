@@ -82,7 +82,7 @@ const ConsultarMiCrecimiento = () => {
       
       {/* Hero Section with New Background Image */}
       <section className="min-h-[80vh] relative flex items-center" style={{
-        backgroundImage: "url('/lovable-uploads/2febf7b5-81a0-4fdf-8844-7a094ef061bf.png')",
+        backgroundImage: "url('/lovable-uploads/0edd4394-d04f-4304-9ee9-2b5a895dfb6a.png')",
         backgroundSize: "cover",
         backgroundPosition: "center"
       }}>
