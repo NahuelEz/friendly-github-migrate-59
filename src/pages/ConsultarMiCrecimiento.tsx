@@ -20,6 +20,7 @@ import {
 import { LineChart } from "@/components/line-chart";
 import { ProfileCard } from "@/components/profile-card";
 import { StatsCard } from "@/components/stats-card";
+import { GrowthDashboard } from '@/components/growth/GrowthDashboard';
 
 // Register ChartJS components
 ChartJS.register(
@@ -156,54 +157,8 @@ const ConsultarMiCrecimiento = () => {
       </section>
 
       {/* Growth Section */}
-      <section className="bg-[#fdfdfd] py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
-            {/* Column 1: Title */}
-            <div>
-              <h1 className="text-[#4f1092] text-5xl md:text-6xl font-bold leading-tight">
-                CRECIMIENTO CON
-                <br />
-                <span className="text-7xl md:text-8xl">PACK 1</span>
-              </h1>
-            </div>
+      <GrowthDashboard />
 
-            {/* Column 2: Lorem Ipsum content */}
-            <div className="space-y-8">
-              {[1, 2, 3].map((index) => (
-                <div key={index} className="space-y-1">
-                  <h3 className="text-[#4f1092] text-xl font-semibold">Lorem ipsum</h3>
-                  <p className="text-[#4f1092]">Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.</p>
-                </div>
-              ))}
-            </div>
-
-            {/* Column 3: Chart */}
-            <div className="relative">
-              <div className="bg-[#b762f7] rounded-3xl p-6 h-[400px] w-full">
-                <div className="h-full">
-                  <Line data={chartData} options={chartOptions} />
-                </div>
-              </div>
-
-              {/* Live reactions overlay */}
-              <div className="absolute -bottom-6 right-4 bg-[#181615] text-white p-4 rounded-xl shadow-lg">
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p className="text-sm text-gray-300">Live Reactions</p>
-                    <p className="text-4xl font-bold">7,265</p>
-                  </div>
-                  <div className="flex items-center gap-1 text-green-400 ml-4">
-                    <TrendingUp size={16} />
-                    <span className="font-medium">+11.01%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
       {/* New Advanced Growth Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
