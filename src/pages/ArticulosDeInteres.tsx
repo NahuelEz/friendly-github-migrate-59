@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/landing/Header";
 import InstagramSearchBar from "@/components/ui/InstagramSearchBar";
 import Footer from "@/components/landing/Footer";
+import SplitSection from "@/components/landing/SplitSection";
 
 export default function ArticulosDeInteres() {
   return (
@@ -86,6 +87,7 @@ export default function ArticulosDeInteres() {
         </div>
       </main>
 
+      <SplitSection />
       <Footer />
     </div>
   );
