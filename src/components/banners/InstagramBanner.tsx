@@ -4,7 +4,7 @@ export function InstagramBanner() {
       {/* Logo - Enlarged to match text height */}
       <div className="flex space-x-3">
         <img alt="Logo flower" className="w-32 h-32" src="/lovable-uploads/ec0a8a1f-5ce8-4e5d-9fdf-c882118d3f37.png" />
-        <img src="/lovable-uploads/9c6dab0a-2fb3-4e27-9f31-b23a80c5032a.png" alt="Logo square" className="w-32 h-32" />
+        <img alt="Logo square" className="w-32 h-32" src="/lovable-uploads/add2638f-1139-4d31-832a-9d2b29378692.png" />
       </div>
 
       {/* Text - Explicitly in 3 rows */}
