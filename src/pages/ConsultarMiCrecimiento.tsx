@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '../components/ui/avatar';
 import { Button } from '../components/ui/button';
@@ -9,16 +10,21 @@ import { ArrowUp } from "lucide-react";
 import { LineChart } from "@/components/line-chart";
 import { ProfileCard } from "@/components/profile-card";
 import { StatsCard } from "@/components/stats-card";
+
 const ConsultarMiCrecimiento = () => {
-  return <>
+  return (
+    <>
       <Header />
       
       {/* Hero Section with Background Image */}
-      <section className="min-h-[80vh] relative flex items-center" style={{
-      backgroundImage: "url('/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png')",
-      backgroundSize: "cover",
-      backgroundPosition: "center"
-    }}>
+      <section 
+        className="min-h-[80vh] relative flex items-center" 
+        style={{
+          backgroundImage: "url('/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}
+      >
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="max-w-4xl">
             <h1 className="text-white text-6xl md:text-8xl font-bold leading-tight uppercase">
@@ -103,62 +109,61 @@ const ConsultarMiCrecimiento = () => {
               <div className="bg-gradient-to-br from-[#b762f7] to-[#4f1092] rounded-3xl p-6 relative">
                 <h3 className="text-white text-xl mb-4">Our Growth</h3>
 
-                  <div className="h-64 relative">
-                    {/* Simple chart representation */}
-                    <div className="absolute inset-0 flex items-end">
-                      <div className="w-full h-full flex items-end">
-                        <div className="flex-1 flex items-end justify-center">
-                          <div className="w-1 bg-white h-[10%]"></div>
-                        </div>
-                        <div className="flex-1 flex items-end justify-center">
-                          <div className="w-1 bg-white h-[30%]"></div>
-                        </div>
-                        <div className="flex-1 flex items-end justify-center">
-                          <div className="w-1 bg-white h-[20%]"></div>
-                        </div>
-                        <div className="flex-1 flex items-end justify-center">
-                          <div className="w-1 bg-white h-[35%]"></div>
-                        </div>
-                        <div className="flex-1 flex items-end justify-center">
-                          <div className="w-1 bg-white h-[40%]"></div>
-                        </div>
+                <div className="h-64 relative">
+                  {/* Simple chart representation */}
+                  <div className="absolute inset-0 flex items-end">
+                    <div className="w-full h-full flex items-end">
+                      <div className="flex-1 flex items-end justify-center">
+                        <div className="w-1 bg-white h-[10%]"></div>
                       </div>
-
-                      {/* Line chart overlay */}
-                      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <path d="M0,90 L20,70 L40,80 L60,65 L80,60" fill="none" stroke="white" strokeWidth="1" />
-                      </svg>
+                      <div className="flex-1 flex items-end justify-center">
+                        <div className="w-1 bg-white h-[30%]"></div>
+                      </div>
+                      <div className="flex-1 flex items-end justify-center">
+                        <div className="w-1 bg-white h-[20%]"></div>
+                      </div>
+                      <div className="flex-1 flex items-end justify-center">
+                        <div className="w-1 bg-white h-[35%]"></div>
+                      </div>
+                      <div className="flex-1 flex items-end justify-center">
+                        <div className="w-1 bg-white h-[40%]"></div>
+                      </div>
                     </div>
 
-                    <div className="absolute bottom-0 w-full flex justify-between text-white text-xs">
-                      <span>Item 1</span>
-                      <span>Item 2</span>
-                      <span>Item 3</span>
-                      <span>Item 4</span>
-                      <span>Item 5</span>
-                    </div>
-
-                    <div className="absolute left-0 h-full flex flex-col justify-between text-white text-xs">
-                      <span>40</span>
-                      <span>30</span>
-                      <span>20</span>
-                      <span>10</span>
-                      <span>0</span>
-                    </div>
+                    {/* Line chart overlay */}
+                    <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                      <path d="M0,90 L20,70 L40,80 L60,65 L80,60" fill="none" stroke="white" strokeWidth="1" />
+                    </svg>
                   </div>
 
-                  {/* Live reactions card */}
-                  <div className="absolute -bottom-10 right-10 bg-black text-white rounded-lg p-4 shadow-lg">
-                    <div className="flex justify-between items-center mb-1">
-                      <span className="text-xs">Live Reactions</span>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
-                    <div className="flex items-end gap-2">
-                      <span className="text-2xl font-bold">7,265</span>
-                      <span className="text-green-400 text-xs">+11.01%</span>
-                    </div>
+                  <div className="absolute bottom-0 w-full flex justify-between text-white text-xs">
+                    <span>Item 1</span>
+                    <span>Item 2</span>
+                    <span>Item 3</span>
+                    <span>Item 4</span>
+                    <span>Item 5</span>
+                  </div>
+
+                  <div className="absolute left-0 h-full flex flex-col justify-between text-white text-xs">
+                    <span>40</span>
+                    <span>30</span>
+                    <span>20</span>
+                    <span>10</span>
+                    <span>0</span>
+                  </div>
+                </div>
+
+                {/* Live reactions card */}
+                <div className="absolute -bottom-10 right-10 bg-black text-white rounded-lg p-4 shadow-lg">
+                  <div className="flex justify-between items-center mb-1">
+                    <span className="text-xs">Live Reactions</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <div className="flex items-end gap-2">
+                    <span className="text-2xl font-bold">7,265</span>
+                    <span className="text-green-400 text-xs">+11.01%</span>
                   </div>
                 </div>
               </div>
@@ -193,10 +198,12 @@ const ConsultarMiCrecimiento = () => {
               </div>
 
               <div className="space-y-8 mt-8">
-                {[1, 2, 3].map(item => <div key={item} className="space-y-1">
+                {[1, 2, 3].map(item => (
+                  <div key={item} className="space-y-1">
                     <h3 className="text-[#4f1092] text-xl font-medium">Lorem ipsum</h3>
                     <p className="text-[#4f1092]">Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.</p>
-                  </div>)}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -204,6 +211,8 @@ const ConsultarMiCrecimiento = () => {
       </section>
       
       <Footer />
-    </>;
+    </>
+  );
 };
+
 export default ConsultarMiCrecimiento;
