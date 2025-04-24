@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowUpRight } from "lucide-react";
 import { GrowthLineChart } from './GrowthLineChart';
@@ -6,7 +5,7 @@ import { TrafficSourceDonutChart } from './TrafficSourceDonutChart';
 
 export const Pack3Dashboard = () => {
   return (
-    <div className="bg-[#fdfbf9] py-8">
+    <div className="bg-[#fdfbf9] py-8 my-12">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 relative">
           {/* Column 1: CRECIMIENTO CON PACK 3 - 3 columns wide */}
