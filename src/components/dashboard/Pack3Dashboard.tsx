@@ -6,9 +6,9 @@ import { TrafficSourceDonutChart } from './TrafficSourceDonutChart';
 
 export const Pack3Dashboard = () => {
   return (
-    <div className="min-h-screen bg-[#fdfbf9] p-8">
+    <div className="bg-[#fdfbf9] py-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 relative">
           {/* Column 1: CRECIMIENTO CON PACK 3 - 3 columns wide */}
           <div className="lg:col-span-3">
             <div className="sticky top-8">
@@ -47,7 +47,7 @@ export const Pack3Dashboard = () => {
               </div>
 
               {/* Profile Card */}
-              <div className="absolute -bottom-32 -right-4 bg-[#4f1092] text-white p-6 rounded-lg shadow-lg w-64">
+              <div className="absolute -bottom-16 -right-4 bg-[#4f1092] text-white p-6 rounded-lg shadow-lg w-64">
                 <div className="flex flex-col items-center mb-4">
                   <div className="w-16 h-16 rounded-full overflow-hidden mb-2 border-2 border-white">
                     <img
