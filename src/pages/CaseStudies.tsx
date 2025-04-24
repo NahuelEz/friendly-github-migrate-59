@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '@/components/landing/Header';
@@ -12,7 +11,6 @@ import SocialCard from '@/components/social/SocialCard';
 import StartToday from '@/components/social/StartToday';
 import CaseStudiesHero from '@/components/landing/CaseStudiesHero';
 import TestimonialCard from '@/components/landing/TestimonialCard';
-
 const CaseStudies = () => {
   const successCards = [{
     id: 1,
@@ -55,9 +53,7 @@ const CaseStudies = () => {
     followersGained: "36,743",
     avgLikes: "1,950+"
   }];
-
-  return (
-    <div className="flex flex-col min-h-screen">
+  return <div className="flex flex-col min-h-screen">
       <Header />
 
       {/* Hero Section with gradient background */}
@@ -66,7 +62,7 @@ const CaseStudies = () => {
           <img src="/lovable-uploads/41b34e54-7328-4cf4-ba81-2a3f85b0e59d.png" alt="People taking selfie on smartphone" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
         </div>
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10 py-[70px]">
           <div className="max-w-2xl ml-auto text-white"> {/* Added ml-auto to push content to the right */}
             <h1 className="text-5xl font-bold leading-tight mb-4 text-left md:text-6xl"> {/* Added text-right class */}
               HISTORIAS DE CLIENTES QUE DESTACAN SU CRECIMIENTO Y ÉXITO GRACIAS A SOCIAL AI
@@ -117,8 +113,7 @@ const CaseStudies = () => {
             </CarouselPrevious>
             
             <CarouselContent className="pl-8 pr-8 md:pl-12 md:pr-12 py-4 justify-end"> {/* Added justify-end to align cards to the right */}
-              {successCards.map(card => (
-                <CarouselItem key={card.id} className="md:basis-1/4 py-5 max-w-[280px]">
+              {successCards.map(card => <CarouselItem key={card.id} className="md:basis-1/4 py-5 max-w-[280px]">
                   <div className={`${card.color} rounded-lg flex-shrink-0 shadow-[0_0_20px_rgba(0,0,0,0.9)] overflow-hidden w-full`}>
                     <div className="flex flex-col items-center pt-6 pb-2">
                       <Avatar className="w-20 h-20 bg-white mb-2">
@@ -144,23 +139,20 @@ const CaseStudies = () => {
                     </div>
 
                     {[{
-                      label: "Followers Gained",
-                      value: card.followersGained
-                    }, {
-                      label: "Engagement Rate",
-                      value: "5.7%"
-                    }, {
-                      label: "Account Growth",
-                      value: "+214%"
-                    }].map((row, index) => (
-                      <div key={index} className="grid grid-cols-2 border-t border-white/20">
+                  label: "Followers Gained",
+                  value: card.followersGained
+                }, {
+                  label: "Engagement Rate",
+                  value: "5.7%"
+                }, {
+                  label: "Account Growth",
+                  value: "+214%"
+                }].map((row, index) => <div key={index} className="grid grid-cols-2 border-t border-white/20">
                         <div className="py-3 px-4 text-white/80 text-sm">{row.label}</div>
                         <div className="py-3 px-4 text-right font-medium">{row.value}</div>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
-                </CarouselItem>
-              ))}
+                </CarouselItem>)}
             </CarouselContent>
             
             <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white border-none hover:bg-orange-600 z-20 rounded-full" />
@@ -220,8 +212,6 @@ const CaseStudies = () => {
 
       {/* Footer Line */}
       <div className="w-full h-2 bg-gradient-to-r from-purple-900 via-orange-500 to-purple-900"></div>
-    </div>
-  );
+    </div>;
 };
-
 export default CaseStudies;
