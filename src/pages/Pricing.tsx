@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
@@ -160,11 +159,10 @@ const Pricing = () => {
       <section className="py-24 relative">
         <div className="absolute inset-0 overflow-hidden">
           <img 
-            src="/lovable-uploads/9c6dab0a-2fb3-4e27-9f31-b23a80c5032a.png" 
-            alt="Person using smartphone" 
+            src="/lovable-uploads/9d722558-b268-4515-958b-c06ffb9418e6.png" 
+            alt="Esta pensado para vos background" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10">
           <div className="md:w-1/2 text-white mb-8 md:mb-0">
