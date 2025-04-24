@@ -80,21 +80,13 @@ const ConsultarMiCrecimiento = () => {
   return <>
       <Header />
       
-      {/* Hero Section with New Background Image */}
-      <section className="min-h-[80vh] relative flex items-center" style={{
-        backgroundImage: "url('/lovable-uploads/0edd4394-d04f-4304-9ee9-2b5a895dfb6a.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center"
-      }}>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl">
-            <h1 className="text-white text-6xl md:text-8xl font-bold leading-tight uppercase">
-              Proyectemos
-              <br />
-              tu crecimiento
-            </h1>
-          </div>
-        </div>
+      {/* Hero Section */}
+      <section className="w-full relative">
+        <img 
+          src="/lovable-uploads/ef927e21-2320-454e-963a-73067a376083.png"
+          alt="Proyectemos tu crecimiento"
+          className="w-full object-cover"
+        />
       </section>
 
       {/* Profile Section */}
