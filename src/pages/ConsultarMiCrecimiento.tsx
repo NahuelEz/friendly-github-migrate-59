@@ -9,21 +9,16 @@ import { ArrowUp } from "lucide-react";
 import { LineChart } from "@/components/line-chart";
 import { ProfileCard } from "@/components/profile-card";
 import { StatsCard } from "@/components/stats-card";
-
 const ConsultarMiCrecimiento = () => {
-  return (
-    <>
+  return <>
       <Header />
       
       {/* Hero Section with Background Image */}
-      <section 
-        className="min-h-[80vh] relative flex items-center" 
-        style={{
-          backgroundImage: "url('/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center"
-        }}
-      >
+      <section className="min-h-[80vh] relative flex items-center" style={{
+      backgroundImage: "url('/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png')",
+      backgroundSize: "cover",
+      backgroundPosition: "center"
+    }}>
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="max-w-4xl">
             <h1 className="text-white text-6xl md:text-8xl font-bold leading-tight uppercase">
@@ -78,7 +73,7 @@ const ConsultarMiCrecimiento = () => {
       {/* Growth Section */}
       <section className="bg-[#fdfdfd] py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start"> {/* Changed gap-8 to gap-4 */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-1 items-start"> {/* Changed gap-8 to gap-4 */}
             {/* Column 1: Title */}
             <div>
               <div className="mb-6">
@@ -197,12 +192,10 @@ const ConsultarMiCrecimiento = () => {
               </div>
 
               <div className="space-y-8 mt-8">
-                {[1, 2, 3].map(item => (
-                  <div key={item} className="space-y-1">
+                {[1, 2, 3].map(item => <div key={item} className="space-y-1">
                     <h3 className="text-[#4f1092] text-xl font-medium">Lorem ipsum</h3>
                     <p className="text-[#4f1092]">Dolor sit amet consectetur. Eget faucibus fringilla sed bibendum.</p>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -210,8 +203,6 @@ const ConsultarMiCrecimiento = () => {
       </section>
       
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default ConsultarMiCrecimiento;
