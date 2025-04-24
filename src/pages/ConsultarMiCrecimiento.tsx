@@ -7,16 +7,7 @@ import Footer from "@/components/landing/Footer";
 import { Link } from 'react-router-dom';
 import { ArrowUp, TrendingUp } from "lucide-react";
 import { Line } from "react-chartjs-2";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from "chart.js";
 import { LineChart } from "@/components/line-chart";
 import { ProfileCard } from "@/components/profile-card";
 import { StatsCard } from "@/components/stats-card";
@@ -24,30 +15,19 @@ import { GrowthDashboard } from '@/components/growth/GrowthDashboard';
 import { InstagramBanner } from '@/components/banners/InstagramBanner';
 
 // Register ChartJS components
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
-
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 const ConsultarMiCrecimiento = () => {
   // Chart configuration
   const chartData = {
     labels: ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"],
-    datasets: [
-      {
-        data: [16, 25, 22, 32, 36],
-        borderColor: "#ffffff",
-        backgroundColor: "rgba(255, 255, 255, 0.1)",
-        tension: 0.4,
-        pointRadius: 4,
-        pointBackgroundColor: "#ffffff",
-      },
-    ],
+    datasets: [{
+      data: [16, 25, 22, 32, 36],
+      borderColor: "#ffffff",
+      backgroundColor: "rgba(255, 255, 255, 0.1)",
+      tension: 0.4,
+      pointRadius: 4,
+      pointBackgroundColor: "#ffffff"
+    }]
   };
 
   // Fix: Changed font weight from string "bold" to a valid value "bold" (as a literal type)
@@ -56,7 +36,7 @@ const ConsultarMiCrecimiento = () => {
     maintainAspectRatio: false,
     plugins: {
       legend: {
-        display: false,
+        display: false
       },
       title: {
         display: true,
@@ -64,14 +44,14 @@ const ConsultarMiCrecimiento = () => {
         color: "#ffffff",
         font: {
           size: 24,
-          weight: "bold" as "bold", // Explicitly type as "bold" literal
+          weight: "bold" as "bold" // Explicitly type as "bold" literal
         },
         padding: {
           top: 10,
-          bottom: 30,
+          bottom: 30
         },
-        align: "center" as const,
-      },
+        align: "center" as const
+      }
     },
     scales: {
       y: {
@@ -79,25 +59,23 @@ const ConsultarMiCrecimiento = () => {
         max: 40,
         ticks: {
           stepSize: 10,
-          color: "#ffffff",
+          color: "#ffffff"
         },
         grid: {
-          color: "rgba(255, 255, 255, 0.1)",
-        },
+          color: "rgba(255, 255, 255, 0.1)"
+        }
       },
       x: {
         ticks: {
-          color: "#ffffff",
+          color: "#ffffff"
         },
         grid: {
-          display: false,
-        },
-      },
-    },
+          display: false
+        }
+      }
+    }
   };
-
-  return (
-    <>
+  return <>
       <Header />
       
       {/* Hero Section with Background Image */}
@@ -197,22 +175,12 @@ const ConsultarMiCrecimiento = () => {
       </section>
 
       {/* Pack 3 Growth Section */}
-      <section className="w-full bg-white">
-        <div className="container mx-auto px-4 py-16">
-          <img 
-            src="/lovable-uploads/a25e65ab-7df7-45d5-8e7b-6300b60ab8a6.png"
-            alt="Growth Pack 3 Statistics"
-            className="w-full h-auto object-contain"
-          />
-        </div>
-      </section>
+      
 
       {/* Instagram Banner */}
       <InstagramBanner />
       
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default ConsultarMiCrecimiento;
