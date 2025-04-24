@@ -13,6 +13,7 @@ import { ProfileCard } from "@/components/profile-card";
 import { StatsCard } from "@/components/stats-card";
 import { GrowthDashboard } from '@/components/growth/GrowthDashboard';
 import { InstagramBanner } from '@/components/banners/InstagramBanner';
+import { Pack3Dashboard } from '@/components/dashboard/Pack3Dashboard';
 
 // Register ChartJS components
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
@@ -175,7 +176,7 @@ const ConsultarMiCrecimiento = () => {
       </section>
 
       {/* Pack 3 Growth Section */}
-      
+      <Pack3Dashboard />
 
       {/* Instagram Banner */}
       <InstagramBanner />
@@ -183,4 +184,5 @@ const ConsultarMiCrecimiento = () => {
       <Footer />
     </>;
 };
+
 export default ConsultarMiCrecimiento;
