@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '../components/ui/avatar';
 import { Button } from '../components/ui/button';
@@ -238,6 +237,17 @@ const ConsultarMiCrecimiento = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Pack 3 Growth Section */}
+      <section className="w-full bg-white">
+        <div className="container mx-auto px-4 py-16">
+          <img 
+            src="/lovable-uploads/d268f405-2cbc-44a8-8e2f-7e7edc03f0ec.png"
+            alt="Growth Pack 3 Statistics"
+            className="w-full h-auto object-contain"
+          />
         </div>
       </section>
       
