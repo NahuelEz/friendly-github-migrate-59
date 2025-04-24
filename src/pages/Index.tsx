@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "@/components/landing/Header";
+import { Header } from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
 import StatsSection from "@/components/landing/StatsSection";
 import TestimonialsSection from "@/components/landing/TestimonialsSection";
@@ -11,6 +11,7 @@ import ClientsSection from "@/components/landing/ClientsSection";
 import ResultsSection from "@/components/landing/ResultsSection";
 import CTAButton from "@/components/ui/CTAButton";
 import GradientBlur from "@/components/ui/GradientBlur";
+
 const Index = () => {
   return (
     <div className="relative flex flex-col overflow-hidden w-full">
@@ -38,8 +39,6 @@ const Index = () => {
       <div className="relative -mt-24 z-30">
         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8b9068c2a3b2c6f928899c25be29c05d7e132f954318e9ff7fea8282f9d67698?placeholderIfAbsent=true" alt="Divider" className="aspect-[2.56] object-contain w-full max-md:max-w-full" />
       </div>
-
-      
 
       <StatsSection />
 
@@ -119,4 +118,5 @@ const Index = () => {
     </div>
   );
 };
+
 export default Index;

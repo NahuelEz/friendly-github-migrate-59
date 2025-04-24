@@ -1,8 +1,9 @@
+
 import React from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '../components/ui/avatar';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
-import Header from "@/components/landing/Header";
+import { Header } from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
 import { Link } from 'react-router-dom';
 import { ArrowUp, TrendingUp } from "lucide-react";

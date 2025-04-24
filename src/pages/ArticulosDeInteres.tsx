@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Header from "@/components/landing/Header";
+import { Header } from "@/components/landing/Header";
 import InstagramSearchBar from "@/components/ui/InstagramSearchBar";
 import Footer from "@/components/landing/Footer";
 
