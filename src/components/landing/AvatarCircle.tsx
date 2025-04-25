@@ -1,26 +1,14 @@
-
 import React from "react";
-
 interface AvatarCircleProps {
   imageSrc: string;
   className?: string;
 }
-
 const AvatarCircle: React.FC<AvatarCircleProps> = ({
   imageSrc,
-  className = "",
+  className = ""
 }) => {
-  return (
-    <div
-      className={`rounded-full overflow-hidden ${className}`}
-    >
-      <img
-        src={imageSrc}
-        className="w-full h-full object-cover"
-        alt="Avatar"
-      />
-    </div>
-  );
+  return <div className={`rounded-full overflow-hidden ${className}`}>
+      
+    </div>;
 };
-
 export default AvatarCircle;
