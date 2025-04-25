@@ -11,6 +11,7 @@ import ClientsSection from "@/components/landing/ClientsSection";
 import ResultsSection from "@/components/landing/ResultsSection";
 import CTAButton from "@/components/ui/CTAButton";
 import GradientBlur from "@/components/ui/GradientBlur";
+
 const Index = () => {
   return <div className="relative flex flex-col overflow-hidden w-full">
       {/* Background gradient image */}
@@ -77,7 +78,13 @@ const Index = () => {
 
       <TestimonialsSection />
 
-      
+      <div className="w-full relative">
+        <img 
+          src="/lovable-uploads/94a42eac-6973-48b0-91ea-e31862b61b41.png" 
+          alt="Esta pensado para vos" 
+          className="w-full h-auto object-cover"
+        />
+      </div>
 
       <HowItWorksSection />
       <ComparisonSection />
