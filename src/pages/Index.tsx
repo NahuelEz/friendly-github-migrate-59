@@ -77,41 +77,7 @@ const Index = () => {
 
       <TestimonialsSection />
 
-      <div className="bg-[rgba(79,16,146,1)] flex w-full flex-col overflow-visible mt-[141px] pt-[93px] px-[54px] pb-[340px] relative max-md:max-w-full max-md:mt-10 max-md:px-5 z-0">
-        <div className="absolute inset-0 w-full h-full overflow-hidden">
-          <GradientBlur />
-        </div>
-
-        <div className="text-white text-7xl font-bold leading-[0.9] scale-y-[2] uppercase max-md:max-w-full max-md:text-[30px] relative z-10">
-          esta PENSADO para vos
-        </div>
-
-        <div className="flex justify-end w-full mt-12 relative z-10">
-          <div className="flex gap-6 items-end">
-            <div className="bg-[rgba(217,217,217,1)] w-[400px] h-[500px] rounded-[20px_20px_0px_0px] relative">
-              <div className="bg-white absolute bottom-0 left-0 right-0 py-4 text-center">
-                <span className="text-[#4F1092] text-2xl font-normal uppercase">INFLUENCERS</span>
-              </div>
-            </div>
-
-            <div className="bg-[rgba(217,217,217,1)] w-[150px] h-[250px] rounded-[20px_20px_0px_0px] relative">
-              <div className="bg-white absolute bottom-0 left-0 right-0 py-4 text-center">
-                <span className="text-[#4F1092] text-2xl font-normal uppercase">MARCAS</span>
-              </div>
-            </div>
-
-            <div className="bg-[rgba(217,217,217,1)] w-[150px] h-[250px] rounded-[20px_20px_0px_0px] relative">
-              <div className="bg-white absolute bottom-0 left-0 right-0 py-4 text-center">
-                <span className="text-[#4F1092] text-2xl font-normal uppercase">MODA</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <button className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 items-center bg-[#FF6200] flex overflow-hidden w-[67px] h-[67px] px-[26px] py-[21px] rounded-[40px] max-md:px-5 z-10">
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f7f9f5a06611f9f55cecdd5959c2f173384aebb805f6d6c359042b7b6fca4c31?placeholderIfAbsent=true" alt="Previous" className="aspect-[0.6] object-contain w-[15px] self-stretch my-auto" />
-        </button>
-      </div>
+      
 
       <HowItWorksSection />
       <ComparisonSection />
