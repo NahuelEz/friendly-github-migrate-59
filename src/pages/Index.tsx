@@ -35,7 +35,7 @@ const Index = () => {
 
       {/* New image section */}
       <div className="w-full relative z-30">
-        <img src="/lovable-uploads/5261649a-8606-49de-940d-180947a4a2ad.png" alt="Seguidores reales y orgánicos en Instagram" className="w-full h-auto object-none" />
+        <img src="/lovable-uploads/5261649a-8606-49de-940d-180947a4a2ad.png" alt="Seguidores reales y orgánicos en Instagram" className="w-full h-auto object-none pb-20" />
       </div>
 
       {/* Existing divider image */}
