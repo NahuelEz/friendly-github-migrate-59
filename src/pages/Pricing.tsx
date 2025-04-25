@@ -21,15 +21,15 @@ const Pricing = () => {
         </div>
         <div className="container mx-auto px-4 relative z-10 flex flex-col items-center">
           <div className="bg-[#b762f7]/30 backdrop-blur-sm p-12 rounded-lg text-white text-center max-w-md">
-            <h1 className="text-6xl font-bold mb-2">50% OFF</h1>
+            <h1 className="text-6xl font-bold mb-2 scale-y-[2] pb-2">50% OFF</h1>
             <div className="border-t border-b border-white py-2 mb-2">
-              <p className="text-xl">EN PLANES ANUALES</p>
+              <p className="text-xl scale-y-[2] py-2">EN PLANES ANUALES</p>
             </div>
-            <p className="text-xl">POR TIEMPO LIMITADO</p>
+            <p className="text-xl scale-y-[2] py-2">POR TIEMPO LIMITADO</p>
           </div>
 
           <button className="mt-12 bg-[#fe6202] hover:bg-[#ff6200] text-white font-medium py-3 px-8 rounded-full">
-            empieza a crecer hoy
+            empezá a crecer hoy
           </button>
         </div>
       </section>
@@ -38,7 +38,7 @@ const Pricing = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-6">
             {/* Pack 1 */}
-            <div className="border rounded-lg overflow-hidden shadow-lg shadow-black/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black/20 group">
+            <div className="border rounded-lg overflow-hidden shadow-xl shadow-black/40 transition-all duration-300 hover:scale-105 hover:shadow-3xl hover:shadow-black/20 group">
               <div className="p-6 border-b group-hover:bg-[#b762f7]/5">
                 <h2 className="text-2xl font-bold text-center group-hover:text-[#b762f7]">PACK 1</h2>
               </div>
@@ -70,7 +70,7 @@ const Pricing = () => {
             </div>
 
             {/* Pack 2 */}
-            <div className="bg-[#b762f7] rounded-lg overflow-hidden shadow-lg shadow-black/20 text-white transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black/30 group">
+            <div className="bg-[#b762f7] rounded-lg overflow-hidden shadow-xl shadow-black/40 text-white transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black/30 group">
               <div className="p-6 border-b border-white/20 group-hover:bg-[#4f1092]/10">
                 <h2 className="text-2xl font-bold text-center group-hover:text-white/90">PACK 2</h2>
               </div>
@@ -106,7 +106,7 @@ const Pricing = () => {
             </div>
 
             {/* Pack 3 */}
-            <div className="bg-[#4f1092] rounded-lg overflow-hidden shadow-lg shadow-black/30 text-white transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black/40 group">
+            <div className="bg-[#4f1092] rounded-lg overflow-hidden shadow-xl shadow-black/40 text-white transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black/40 group">
               <div className="p-6 border-b border-white/20 group-hover:bg-[#fe6202]/10">
                 <h2 className="text-2xl font-bold text-center group-hover:text-white/90">PACK 3</h2>
               </div>
