@@ -11,7 +11,6 @@ import ClientsSection from "@/components/landing/ClientsSection";
 import ResultsSection from "@/components/landing/ResultsSection";
 import CTAButton from "@/components/ui/CTAButton";
 import GradientBlur from "@/components/ui/GradientBlur";
-
 const Index = () => {
   return <div className="relative flex flex-col overflow-hidden w-full">
       {/* Background gradient image */}
@@ -28,7 +27,7 @@ const Index = () => {
       </div>
 
       <div className="absolute w-auto-[800px] mt-[4800px] ml-[2px] z-10 opacity-40 rotate-180">
-        <img src="/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png" alt="Fondo degradado" className="w-full h-full object-cover z-0" />
+        
       </div>
 
       <Header />
@@ -79,11 +78,7 @@ const Index = () => {
       <TestimonialsSection />
 
       <div className="w-full relative">
-        <img 
-          src="/lovable-uploads/94a42eac-6973-48b0-91ea-e31862b61b41.png" 
-          alt="Esta pensado para vos" 
-          className="w-full h-auto object-cover"
-        />
+        <img src="/lovable-uploads/94a42eac-6973-48b0-91ea-e31862b61b41.png" alt="Esta pensado para vos" className="w-full h-auto object-cover mt-60" />
       </div>
 
       <HowItWorksSection />
