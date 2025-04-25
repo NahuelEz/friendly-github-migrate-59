@@ -45,7 +45,7 @@ const Index = () => {
 
       <StatsSection />
 
-      <div className="text-[rgba(79,16,146,1)] text-[31px] font-bold leading-none self-center mt-[137px] max-md:mt-10 font-formula uppercase">
+      <div className="text-[rgba(79,16,146,1)] text-[25px] font-bold leading-none self-center mt-[137px] max-md:mt-10 font-formula uppercase">
         No te fíes de nosotros, 
       </div>
 
@@ -69,7 +69,7 @@ const Index = () => {
         comenzar
       </CTAButton>
 
-      <div className="text-[rgba(79,16,146,1)] text-5xl leading-[66px] text-center uppercase self-center w-[986px] mt-[166px] max-md:max-w-full max-md:text-[40px] max-md:leading-[49px] max-md:mt-10 font-bold font-formula uppercase">
+      <div className="text-[rgba(79,16,146,1)] text-5xl leading-[66px] text-center uppercase self-center w-[986px] mt-[166px] max-md:max-w-full max-md:text-[40px] max-md:leading-[49px] max-md:mt-10 font-normal font-formula uppercase">
         CONFÍA EN NUESTRA EXPERIENCIA <br />
         PARA DESARROLLAR TÚ <br />
         ESTRATEGIA DE CRECIMIENTO
