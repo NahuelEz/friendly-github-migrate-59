@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
           </div>
           <form onSubmit={handleNewsletterSubmit}>
             <div className="bg-[rgba(255,255,255,0.2)] flex items-center justify-between rounded-full px-6 py-3">
-              <input type="email" placeholder="correo electrónico" className="text-[#B762F7] bg-transparent outline-none border-none w-full" required />
+              <input type="email" placeholder="correo electrónico" className="text-[#B762F7] bg-transparent outline-none border-none w-full placeholder-[#B762F7]" required />
               <button type="submit" className="text-white whitespace-nowrap cursor-pointer hover:text-[#FF6200] transition-colors">
                 | Registrarse
               </button>

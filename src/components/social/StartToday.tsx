@@ -15,7 +15,7 @@ export const StartToday = () => {
               COMIENZA HOY
             </h1>
 
-            <Separator className="bg-white/30 h-px my-8" />
+            <Separator className="bg-white/30 h-px my-12" />
 
             <p className="font-normal text-white text-[28px] md:text-[35px] tracking-[-0.53px] leading-[42.0px] mt-4">
               Registrate y mira cómo crecen tus seguidores y tu comunidad en una semana
