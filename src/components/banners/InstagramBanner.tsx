@@ -9,7 +9,7 @@ export function InstagramBanner() {
 
       {/* Text - Explicitly in 3 rows */}
       <div className="max-w-xl">
-        <h1 className="text-[#4f1092] font-bold text-2xl leading-tight uppercase">
+        <h1 className="text-[#4f1092] font-bold text-2xl leading-tight uppercase scale-y-[1.5] pr-10">
           <span className="block font-bold text-left">Haz crecer tu cuenta en Instagram</span>
           <span className="block">con más de 3000 seguidores al mes</span>
           <span className="block">registrandote hoy mismo</span>
