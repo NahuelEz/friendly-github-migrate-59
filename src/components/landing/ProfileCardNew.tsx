@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, MouseEvent } from "react";
 import VideoPlayButton from '../ui/VideoPlayButton';
 
@@ -31,11 +30,9 @@ const ProfileCardNew: React.FC<ProfileCardProps> = ({
     if (cardRef.current) {
       const rect = cardRef.current.getBoundingClientRect();
       
-      // Calculate mouse position relative to card
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
       
-      // Calculate rotation based on mouse position
       const rotateX = ((y / rect.height) - 0.5) * -10;
       const rotateY = ((x / rect.width) - 0.5) * 10;
       
@@ -70,7 +67,9 @@ const ProfileCardNew: React.FC<ProfileCardProps> = ({
       style={{
         transform: isHovered ? `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg) scale(1.03)` : 'perspective(1000px) rotateX(0) rotateY(0)',
         transition: 'all 0.3s ease-out',
-        boxShadow: isHovered ? '0 10px 20px rgba(0,0,0,0.2)' : '0 4px 8px rgba(0,0,0,0.1)'
+        boxShadow: isHovered ? '0 10px 20px rgba(0,0,0,0.2)' : '0 4px 8px rgba(0,0,0,0.1)',
+        marginBottom: '-100px',
+        zIndex: isHovered ? '40' : '30'
       }}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
@@ -85,7 +84,7 @@ const ProfileCardNew: React.FC<ProfileCardProps> = ({
           onClick={handlePlayClick}
         />
       ) : (
-        <div className="flex gap-[9px] font-medium w-full pt-[21px] pb-[478px] px-[21px] max-md:mt-5 max-md:pr-5 max-md:pb-[100px]">
+        <div className="flex gap-[9px] font-medium w-full pt-[21px] pb-[300px] px-[21px] max-md:mt-5 max-md:pr-5 max-md:pb-[200px]">
           <img
             src={avatarSrc}
             className="aspect-[1] object-contain w-[37px] shrink-0 rounded-[50%]"
