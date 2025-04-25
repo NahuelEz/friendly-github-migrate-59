@@ -83,7 +83,7 @@ const Index = () => {
           esta PENSADO para vos
         </div>
 
-        <div className="flex justify-end w-full mt-24 relative z-10">
+        <div className="flex justify-end w-full mt-12 relative z-10">
           <div className="flex gap-6 items-end">
             <div className="bg-[rgba(217,217,217,1)] w-[400px] h-[500px] rounded-[20px_20px_0px_0px] relative">
               <div className="bg-white absolute bottom-0 left-0 right-0 py-4 text-center">
