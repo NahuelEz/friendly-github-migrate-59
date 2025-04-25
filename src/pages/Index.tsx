@@ -11,10 +11,8 @@ import ClientsSection from "@/components/landing/ClientsSection";
 import ResultsSection from "@/components/landing/ResultsSection";
 import CTAButton from "@/components/ui/CTAButton";
 import GradientBlur from "@/components/ui/GradientBlur";
-
 const Index = () => {
-  return (
-    <div className="relative flex flex-col overflow-hidden w-full">
+  return <div className="relative flex flex-col overflow-hidden w-full">
       {/* Background gradient image */}
       <div className="absolute top-0 left-0 w-full h-[1060px] -z-10">
         <img src="/uploads/c01c6e3d-0dfc-4182-af71-88efc4879bab.png" alt="Fondo degradado" className="w-full h-full object-cover" />
@@ -37,11 +35,7 @@ const Index = () => {
 
       {/* New image section */}
       <div className="w-full relative z-30">
-        <img 
-          src="/lovable-uploads/5261649a-8606-49de-940d-180947a4a2ad.png" 
-          alt="Seguidores reales y orgánicos en Instagram" 
-          className="w-full h-auto object-contain"
-        />
+        <img src="/lovable-uploads/5261649a-8606-49de-940d-180947a4a2ad.png" alt="Seguidores reales y orgánicos en Instagram" className="w-full h-auto object-none" />
       </div>
 
       {/* Existing divider image */}
@@ -124,8 +118,6 @@ const Index = () => {
       <ClientsSection />
       <FAQSection />
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
