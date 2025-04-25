@@ -1,26 +1,14 @@
-
 import React from "react";
-
 interface TestimonialAvatarCircleProps {
   imageSrc: string;
   className?: string;
 }
-
 const TestimonialAvatarCircle: React.FC<TestimonialAvatarCircleProps> = ({
   imageSrc,
-  className = "",
+  className = ""
 }) => {
-  return (
-    <div
-      className={`rounded-full overflow-hidden ${className}`}
-    >
-      <img
-        src={imageSrc}
-        className="w-full h-full object-cover"
-        alt="Testimonial Avatar"
-      />
-    </div>
-  );
+  return <div className={`rounded-full overflow-hidden ${className}`}>
+      
+    </div>;
 };
-
 export default TestimonialAvatarCircle;
