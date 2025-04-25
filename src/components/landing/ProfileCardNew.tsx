@@ -84,7 +84,7 @@ const ProfileCardNew: React.FC<ProfileCardProps> = ({
           onClick={handlePlayClick}
         />
       ) : (
-        <div className="flex gap-[9px] font-medium w-full pt-[21px] pb-[300px] px-[21px] max-md:mt-5 max-md:pr-5 max-md:pb-[200px]">
+        <div className="flex gap-[9px] font-medium w-full pt-[21px] pb-[400px] px-[21px] max-md:mt-5 max-md:pr-5 max-md:pb-[300px]">
           <img
             src={avatarSrc}
             className="aspect-[1] object-contain w-[37px] shrink-0 rounded-[50%]"
