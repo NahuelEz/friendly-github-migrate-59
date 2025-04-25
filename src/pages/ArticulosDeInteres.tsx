@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -7,15 +6,8 @@ import { Header } from "@/components/landing/Header";
 import InstagramSearchBar from "@/components/ui/InstagramSearchBar";
 import Footer from "@/components/landing/Footer";
 import SplitSection from "@/components/landing/SplitSection";
-
 export default function ArticulosDeInteres() {
-  return (
-    <div 
-      className="min-h-screen bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: 'url("/lovable-uploads/8a8288e3-0927-48b7-85f5-7d5ad72c7bc5.png")'
-      }}
-    >
+  return <div className="min-h-screen bg-gradient-to-b from-[#4F1092] to-[#B762F7]">
       <Header />
 
       <main className="container mx-auto px-4 py-12">
@@ -61,6 +53,5 @@ export default function ArticulosDeInteres() {
 
       <SplitSection />
       <Footer />
-    </div>
-  );
+    </div>;
 }
